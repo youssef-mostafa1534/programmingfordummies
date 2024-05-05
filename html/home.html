@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming For Dummies</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../highlight/styles/a11y-dark.css">
+    <script src="../highlight/highlight.min.js"></script>
+    <script src="../highlight/languages/x86asm.min.js"></script>
+
+    <script>hljs.highlightAll();</script>
+</head>
+
+<body>
+    <header>
+        <h1>Programming For Dummies<br>By <a href="about.html" id="sec">Youssef Mostafa</a></h1>
+    </header>
+    <main>
+        <h1>Welcome</h1>
+        <p style="color: rgb(255, 126, 126);font-size: small;">NOTE: Website is not fully responsive yet, preffered
+            viewing device: PC</p>
+        <div id="options">
+            <a class="option" id="op1" href="cpp.html">
+                <h2 class="opTitle">C++</h2>
+                <pre>
+                    <code class="language-cpp block">
+#include <iostream>
+using namespace std;
+
+int main() {
+    cout << "Hello World!" << endl;
+    return 0;
+}
+                    </code>
+                </pre>
+            </a>
+            <a class="option" id="op2" href="py.html">
+                <h2 class="opTitle">Python</h2>
+                <pre>
+                    <code class="language-python block">
+def main() -> None:
+    print('Hello World')
+
+if __name__ == __main__:
+    main()
+                    </code>
+                </pre>
+            </a>
+            <a class="option" id="op3" href="mpy.html">
+                <h2 class="opTitle">MicroPython</h2>
+                <pre>
+                    <code class="language-python block">
+from machine import *
+from time import sleep
+led = Pin(0, Pin.OUT)
+
+while True:
+    led.toggle()
+    sleep(1)
+                    </code>
+                </pre>
+            </a>
+            <a class="option" id="op4" href="asm.html">
+                <h2 class="opTitle">Assembly</h2>
+                <pre>
+                    <code class="language-x86asm block">
+global _start
+_start:
+mov ebx, 10 ; set 10 to ebx
+mov eax, 1  ; sys_exit
+add ebx, 5  ; add 5 to ebx
+syscall     ; syscall
+                    </code>
+                </pre>
+            </a>
+            <a class="option" id="op5" href="#">
+                <h2>*COMING SOON!*</h2>
+                <pre>
+                    <code class="language-cpp block">
+void setup(){
+    pinMode(0, OUTPUT);
+} void loop(){
+    digitalWrite(0, HIGH);
+    delay(500);
+    digitalWrite(0, LOW)
+    delay(500);
+}
+                    </code>
+                </pre>
+            </a>
+        </div>
+        <p>
+            MORE LANGUAGES COMING SOON!!!!
+        </p>
+    </main>
+</body>
+
+</html>

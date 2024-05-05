@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
+
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+::-webkit-scrollbar-track {
+    background: #276690;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #0086e5;
+    border-radius: 16px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #008e68;
+}
+
+/* html,
+body {
+    margin: 0;
+    height: 100%;
+} */
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #051f2d;
+    color: #fff;
+    font-size: 16px;
+    font-family: 'Fira Code';
+    position: relative;
+    user-select: none;
+}
+
+code {
+    display: inline-block;
+    color: #1cafff;
+    font-family: 'Fira Code';
+    user-select: text;
+}
+
+.block {
+    text-align: left;
+    outline: 2px solid #215470;
+    box-shadow: 0 0 10px 0 #000;
+    width: 372px;
+    height: 225px;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #0e1c17;
+    margin: 20px;
+    border-radius: 16px;
+    background-color: #173c57;
+    width: 65%;
+}
+
+header h1 {
+    background-color: #6ec5d2;
+    padding: 25px;
+    border-radius: 8px;
+}
+
+#btns {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 10px;
+    background-color: #008e68;
+    padding: 25px;
+    width: max-content;
+    height: 100%;
+    border-radius: 8px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #225875;
+    margin: 20px;
+    border-radius: 16px;
+    padding: 10px;
+    width: 95%;
+}
+
+#options {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: left;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #051f2d;
+    width: 85%;
+}
+/* rgba(151, 65, 252, 0.2) 0 15px 30px -5px */
+.option {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: #051f2d;
+    background-color: #6ec5d2;
+    padding: 20px;
+    border-radius: 4px;
+    margin: 15px;
+    width: 410px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.option:hover {
+    background-color: #008e68;
+    color: white;
+    transform: translateY(-35px) scale(1.1);
+    box-shadow: 0 0 10px 5px #64d0ff;
+}
+
+.option:active {
+    background-color: #004533;
+    transform: translateY(-35px) scale(1);
+}
+
+a[href="html/about.html"] {
+    text-decoration: none;
+    background: linear-gradient(to right, rgb(245, 81, 62), rgb(47, 15, 255));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@media only screen and (max-width: 1538px) {
+
+    .block {
+        width: 275px;
+        height: 160px;
+        font-size: 13px;
+    }
+
+    .option {
+        height: 320px;
+        width: 305px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+
+    .block {
+        width: 220px;
+        height: 140px;
+        font-size: 10px;
+    }
+
+    .option {
+        height: 250px;
+        width: 240px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    body {
+        overflow: scroll;
+    }
+
+    #options {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 770px) {
+    header h1 {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 525px) {
+    #options {
+        background-color: transparent;
+    }
+
+    header h1 {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    header h1 {
+        font-size: 12px;
+    }
+
+    .option {
+        transform: scale(0.8);
+    }
+}

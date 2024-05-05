@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MicroPython</title>
+    <link rel="stylesheet" href="../css/py.css">
+    <link rel="stylesheet" href="../highlight/styles/a11y-dark.css">
+    <script src="../highlight/highlight.min.js"></script>
+
+    <script>hljs.highlightAll();</script>
+</head>
+
+<body>
+    <header>
+        <h1>MicroPython</h1>
+        <nav id="btns">
+            <a href="../index.html" class="btn">Home</a>
+            <a href="about.html" class="btn">About</a>
+        </nav>
+    </header>
+    <main>
+        <h3
+            id="note-to-fully-understand-whats-going-on-here-you-should-go-back-to-the-python-page-to-learn-the-basics-and-syntax">
+            NOTE: To fully understand what&#39;s going on here, you should go back to the <a
+                href="https://youssef-mostafa1534.github.io/programmingfordummies/html/py.html">Python</a> page to learn
+            the basics and syntax.</h3>
+        <h1 id="1-basics-✨">1. Basics ✨:</h1>
+        <h3
+            id="micropython-is-a-modified-version-of-python-modified-and-configured-to-fit-the-needs-of-embedded-systems-it-has-special-functions-classes-and-modules-that-will-benefit-us-in-our-learning-journey">
+            MicroPython is a modified version of Python, modified and configured to fit the needs of embedded systems,
+            it has special functions, classes, and modules that will benefit us in our learning journey.</h3>
+        <h3
+            id="our-microcontroller-of-choice-which-well-be-referring-to-as-the-mcu-from-now-on-is-the-raspberry-pi-pico-since-it-is-the-most-common-mcu-used-when-working-with-micropython">
+            Our microcontroller of choice (which we&#39;ll be referring to as the MCU from now on) is the Raspberry Pi
+            Pico, since it is the most common MCU used when working with MicroPython.</h3>
+        <h3 id="heres-our-default-configuration">Here&#39;s our default configuration:</h3>
+        <pre><code class="language-python">def main() -&gt; None:
+    # Code Here
+
+if __name__ == &#39;__main__&#39;:
+    main()
+</code></pre>
+        <h3
+            id="here-we-define-a-main-function-with-a-return-type-of-none-specifying-the-return-type-isnt-necessary-but-we-do-it-for-organization-and-readability-the-if-__name__--__main__-block-ensures-that-the-code-inside-it-is-only-executed-when-the-script-is-run-directly-not-when-imported-as-a-module">
+            Here we define a <code>main()</code> function with a return type of <code>None</code>, specifying the return
+            type isn&#39;t necessary but we do it for organization and readability, the
+            <code>if __name__ == &#39;__main__&#39;:</code> block ensures that the code inside it is only executed when
+            the script is run directly (not when imported as a module).</h3>
+        <h3 id="our-code-will-be-split-into-three-sections">Our code will be split into three sections:</h3>
+        <ol>
+            <li>
+                <p><strong>The Setup</strong>: It&#39;s where we declare our variable, functions and classes, we use it
+                    to initialize our pins, and import our libraries/modules. This section is located above the
+                    <code>main</code> function.</p>
+            </li>
+            <li>
+                <p><strong>The Main Function</strong>: We don&#39;t need to use a <code>main()</code> function in our
+                    code but it&#39;s good practice, the main function is where all our working code (anything that
+                    doesn&#39;t identify as set-up code) is located, this includes the main loop, pin operations and
+                    more.</p>
+            </li>
+            <li>
+                <p><strong>The Main Loop</strong>: the main loop is a while loop that&#39;s located inside the
+                    <code>main()</code> function that continuously runs the code, this loop is VERY necessary since
+                    without it, once the code executes, the program will quit and our microcontroller is going to do
+                    nothing.</p>
+            </li>
+        </ol>
+        <hr>
+        <h1 id="2-the-machine-module-🦾">2. The Machine Module 🦾:</h1>
+        <h3
+            id="the-biggest-difference-between-python-and-micropython-is-the-machine-module-its-module-thats-not-present-in-traditional-python-that-lets-you-interact-with-the-hardware-of-the-mcu-it-allows-you-to-control-the-gpio-pins-set-hardware-timers-and-more">
+            The biggest difference between python and MicroPython is the <code>machine</code> module, it&#39;s module
+            that&#39;s not present in traditional python that let&#39;s you interact with the hardware of the MCU, it
+            allows you to control the GPIO pins, set hardware timers, and more.</h3>
+        <h3 id="you-import-it-by-typing-this-as-the-first-line">you import it by typing this as the first line:</h3>
+        <pre><code class="language-python">import machine
+</code></pre>
+        <hr>
+        <h1 id="3-initializing-gpio-pins-⚡️">3. Initializing GPIO pins ⚡️:</h1>
+        <h3
+            id="when-we-initialize-a-pin-were-just-telling-the-mcu-what-mode-we-want-the-pin-to-be-in-is-it-input-or-output-is-it-pull_up-or-pull_down-we-are-supposed-to-answer-these-questions-by-initializing-our-pins">
+            When we initialize a pin, we&#39;re just telling the MCU what mode we want the pin to be in, is it
+            <code>INPUT</code> or <code>OUTPUT</code>? Is it <code>PULL_UP</code> or <code>PULL_DOWN</code>? We are
+            supposed to answer these questions by initializing our pins.</h3>
+        <pre><code class="language-python">import machine
+pin1 = machine.Pin(0, machine.Pin.OUT)
+pin2 = machine.Pin(1, machine.Pin.IN)
+</code></pre>
+        <h3
+            id="here-we-declared-2-variable-pin1-and-pin2-then-we-used-the-pin-class-from-the-machine-module-to-initialize-pin1-and-pin2-as-pin-objects-the-first-argument-for-the-pin-class-is-the-pin-number-the-second-argument-is-what-decides-whether-the-pin-is-output-or-input-if-input-the-the-second-argument-should-be-machinepinin-and-if-output-then-it-should-be-machinepinout">
+            Here, we declared 2 variable, <code>pin1</code> and <code>pin2</code>, then we used the <code>Pin</code>
+            class from the machine module to initialize <code>pin1</code> and <code>pin2</code> as <code>Pin</code>
+            objects, the first argument for the pin class is the pin number, the second argument is what decides whether
+            the pin is output or input, if input the the second argument should be <code>machine.Pin.IN</code>, and if
+            output then it should be <code>machine.Pin.OUT</code>.</h3>
+        <h3
+            id="we-can-shorten-this-code-by-using-a-star-import-which-you-should-have-learned-from-the-import-section-on-the-python-page">
+            We can shorten this code by using a star import (which you should have learned from the <a
+                href="https://youssef-mostafa1534.github.io/programmingfordummies/html/py.html#23-using-external-librariesmodule-%F0%9F%93%9A%EF%B8%8F">Import</a>
+            section on the python page):</h3>
+        <pre><code class="language-python">from machine import *
+pin1 = Pin(0, Pin.OUT)
+pin2 = Pin(1, Pin.IN)
+</code></pre>
+        <hr>
+        <h1 id="4-working-with-gpio-pins-🧷-continued">4. Working with GPIO Pins 🧷 (Continued):</h1>
+        <h3
+            id="once-weve-initialized-our-gpio-pins-we-can-start-working-with-them-which-involves-tasks-like-setting-their-state-reading-their-state-and-toggling-them-lets-delve-into-each-of-these-tasks">
+            Once we&#39;ve initialized our GPIO pins, we can start working with them, which involves tasks like setting
+            their state, reading their state, and toggling them. Let&#39;s delve into each of these tasks.</h3>
+        <h3 id="setting-the-state">Setting the State:</h3>
+        <pre><code class="language-python">import machine
+from time import sleep
+pin1 = machine.Pin(0, machine.Pin.OUT)
+
+def main() -&gt; None:
+    pin1.value(1)  # Sets pin1 high (3.3V)
+    sleep(1)
+    pin1.value(0)  # Sets pin1 low (0V)
+if __name__ == &#39;__main__&#39;:
+    main()
+</code></pre>
+        <h3
+            id="here-we-use-the-value-method-on-pin1-to-set-its-state-passing-1-sets-it-high-33v-while-passing-0-sets-it-low-0v">
+            Here, we use the <code>value()</code> method on <code>pin1</code> to set its state. Passing <code>1</code>
+            sets it high (3.3V), while passing <code>0</code> sets it low (0V).</h3>
+        <h3 id="other-methods-of-setting-values">Other Methods of Setting Values:</h3>
+        <pre><code class="language-python">import machine
+from time import sleep
+pin1 = machine.Pin(0, machine.Pin.OUT)
+
+def main() -&gt; None:
+    pin1.on()  # Sets pin1 high (3.3V)
+    sleep(1)
+    pin1.off() # Sets pin1 low (0V)
+if __name__ == &#39;__main__&#39;:
+    main()
+</code></pre>
+        <h3
+            id="alternatively-we-can-use-the-on-method-to-set-pin1-high-and-the-off-method-to-set-it-low-these-methods-offer-a-more-intuitive-approach-when-dealing-with-simple-state-changes">
+            Alternatively, we can use the <code>on()</code> method to set <code>pin1</code> high and the
+            <code>off()</code> method to set it low. These methods offer a more intuitive approach when dealing with
+            simple state changes.</h3>
+        <h3 id="reading-the-state">Reading the State:</h3>
+        <pre><code class="language-python">import machine
+from time import sleep
+pin1 = machine.Pin(0, machine.Pin.OUT)
+pin2 = machine.Pin(1, machine.Pin.IN)
+
+def main() -&gt; None:
+    pin1.value(1)  # Sets pin1 high (3.3V)
+    sleep(1)
+    pin1.value(pin2.value())  # Sets pin1 low (0V)
+if __name__ == &#39;__main__&#39;:
+    main()
+</code></pre>
+        <h3
+            id="with-the-value-method-we-can-also-read-the-state-of-an-input-pin-like-pin2-this-method-returns-1-if-the-pin-is-high-and-0-if-its-low">
+            With the <code>value()</code> method, we can also read the state of an input pin like <code>pin2</code>.
+            This method returns <code>1</code> if the pin is high and <code>0</code> if it&#39;s low.</h3>
+        <h3 id="toggling-the-state">Toggling the State:</h3>
+        <pre><code class="language-python">import machine
+from time import sleep
+pin1 = machine.Pin(0, machine.Pin.OUT)
+
+def main() -&gt; None:
+    pin1.toggle()  # Sets pin1 high (3.3V)
+    sleep(1)
+    pin1.toggle()  # Sets pin1 low (0V)
+if __name__ == &#39;__main__&#39;:
+    main()
+</code></pre>
+        <h3
+            id="to-toggle-a-pins-state-we-use-the-toggle-method-if-the-pin-is-high-it-will-switch-to-low-and-vice-versa">
+            To toggle a pin&#39;s state, we use the <code>toggle()</code> method. If the pin is high, it will switch to
+            low, and vice versa.</h3>
+        <h3
+            id="by-mastering-these-operations-we-can-effectively-control-the-behavior-of-our-gpio-pins-enabling-us-to-interact-with-external-components-and-peripherals-seamlessly">
+            By mastering these operations, we can effectively control the behavior of our GPIO pins, enabling us to
+            interact with external components and peripherals seamlessly.</h3>
+        <hr>
+        <h1 id="5-pull-up-and-pull-down-resistors-🧱">5. Pull-Up and Pull-Down Resistors 🧱:</h1>
+        <h3
+            id="in-electronics-pull-up-and-pull-down-resistors-play-a-crucial-role-in-ensuring-the-stability-and-reliability-of-digital-signals-especially-in-scenarios-where-pins-are-configured-as-inputs-lets-explore-what-pull-up-and-pull-down-resistors-are-and-how-they-are-used-in-micropython-with-examples">
+            In electronics, pull-up and pull-down resistors play a crucial role in ensuring the stability and
+            reliability of digital signals, especially in scenarios where pins are configured as inputs. Let&#39;s
+            explore what pull-up and pull-down resistors are and how they are used in MicroPython with examples.</h3>
+        <h3 id="what-are-pull-up-and-pull-down-resistors"><strong>What are Pull-Up and Pull-Down Resistors?</strong>
+        </h3>
+        <h3
+            id="pull-up-and-pull-down-resistors-are-passive-components-usually-resistors-connected-between-a-digital-input-pin-and-a-voltage-source-for-pull-up-or-ground-for-pull-down-they-serve-to-ensure-that-the-input-pin-has-a-defined-voltage-level-when-its-not-being-actively-driven-by-an-external-signal">
+            Pull-up and pull-down resistors are passive components (usually resistors) connected between a digital input
+            pin and a voltage source (for pull-up) or ground (for pull-down). They serve to ensure that the input pin
+            has a defined voltage level when it&#39;s not being actively driven by an external signal.</h3>
+        <h3 id="why-are-they-used"><strong>Why are They Used?</strong></h3>
+        <h3
+            id="when-a-digital-input-pin-is-left-floating-ie-not-connected-to-any-signal-source-it-can-randomly-fluctuate-between-high-and-low-states-due-to-environmental-noise-pull-up-and-pull-down-resistors-provide-a-stable-reference-voltage-preventing-such-fluctuations-and-ensuring-predictable-behavior-of-the-input-pin">
+            When a digital input pin is left floating (i.e., not connected to any signal source), it can randomly
+            fluctuate between high and low states due to environmental noise. Pull-up and pull-down resistors provide a
+            stable reference voltage, preventing such fluctuations and ensuring predictable behavior of the input pin.
+        </h3>
+        <h3 id="using-pull-up-and-pull-down-resistors-in-micropython"><strong>Using Pull-Up and Pull-Down Resistors in
+                MicroPython:</strong></h3>
+        <h3
+            id="in-micropython-configuring-pull-up-and-pull-down-resistors-is-straightforward-using-the-pin-class-from-the-machine-module">
+            In MicroPython, configuring pull-up and pull-down resistors is straightforward using the <code>Pin</code>
+            class from the <code>machine</code> module.</h3>
+        <h3 id="pull-up-configuration"><strong>Pull-Up Configuration:</strong></h3>
+        <pre><code class="language-python">from machine import Pin
+
+# Configuring pin3 with pull-up resistor
+pin3 = Pin(3, Pin.IN, Pin.PULL_UP)
+</code></pre>
+        <h3
+            id="in-this-example-we-initialize-pin3-as-an-input-pin-with-a-pull-up-resistor-enabled-when-the-pin-is-not-externally-driven-low-the-pull-up-resistor-ensures-that-it-remains-at-a-logic-high-level-33v-in-most-cases">
+            In this example, we initialize <code>pin3</code> as an input pin with a pull-up resistor enabled. When the
+            pin is not externally driven low, the pull-up resistor ensures that it remains at a logic high level (3.3V
+            in most cases).</h3>
+        <h3 id="pull-down-configuration"><strong>Pull-Down Configuration:</strong></h3>
+        <pre><code class="language-python">from machine import Pin
+
+# Configuring pin4 with pull-down resistor
+pin4 = Pin(4, Pin.IN, Pin.PULL_DOWN)
+</code></pre>
+        <h3
+            id="here-pin4-is-initialized-as-an-input-pin-with-a-pull-down-resistor-enabled-when-the-pin-is-not-externally-driven-high-the-pull-down-resistor-ensures-that-it-remains-at-a-logic-low-level-0v">
+            Here, <code>pin4</code> is initialized as an input pin with a pull-down resistor enabled. When the pin is
+            not externally driven high, the pull-down resistor ensures that it remains at a logic low level (0V).</h3>
+        <h3 id="usage-scenarios"><strong>Usage Scenarios:</strong></h3>
+        <h3 id="pull-up-and-pull-down-resistors-are-commonly-used-in-various-applications-including">Pull-up and
+            pull-down resistors are commonly used in various applications, including:</h3>
+        <ul>
+            <li><strong>Button Inputs:</strong> Ensuring a stable state when a button is not pressed.</li>
+            <li><strong>Sensor Interfaces:</strong> Providing a stable reference voltage for sensors.</li>
+            <li><strong>Communication Interfaces:</strong> Maintaining defined logic levels in serial communication
+                lines.</li>
+        </ul>
+        <h3 id="example-using-a-button-to-control-an-led"><strong>Example: Using a Button to Control an LED:</strong>
+        </h3>
+        <h3 id="lets-illustrate-the-usage-of-pull-up-resistors-with-an-example-where-pressing-a-button-turns-on-an-led">
+            Let&#39;s illustrate the usage of pull-up resistors with an example where pressing a button turns on an LED.
+        </h3>
+        <pre><code class="language-python">from machine import Pin
+import time
+
+def main() -&gt; None:
+    button_pin = Pin(3, Pin.IN, Pin.PULL_UP)  # Button pin with pull-up resistor
+    led_pin = Pin(4, Pin.OUT)  # LED pin
+
+    while True:
+        if button_pin.value() == 0:  # Button pressed (active low)
+            led_pin.value(1)  # Turn on the LED
+        else:
+            led_pin.value(0)  # Turn off the LED
+        time.sleep(0.1)  # Small delay for stability
+
+if __name__ == &#39;__main__&#39;:
+    main()
+</code></pre>
+        <h3
+            id="in-this-example-we-configure-button_pin-with-a-pull-up-resistor-when-the-button-is-pressed-it-connects-the-pin-to-ground-causing-its-value-to-read-low-when-the-button-is-released-the-pull-up-resistor-pulls-the-pin-high-we-use-this-behavior-to-detect-button-presses-and-control-the-led-accordingly">
+            In this example, we configure <code>button_pin</code> with a pull-up resistor. When the button is pressed,
+            it connects the pin to ground, causing its value to read low. When the button is released, the pull-up
+            resistor pulls the pin high. We use this behavior to detect button presses and control the LED accordingly.
+        </h3>
+        <h3
+            id="by-understanding-and-utilizing-pull-up-and-pull-down-resistors-effectively-we-can-improve-the-reliability-and-accuracy-of-our-micropython-projects-especially-when-interfacing-with-external-components-and-sensors">
+            By understanding and utilizing pull-up and pull-down resistors effectively, we can improve the reliability
+            and accuracy of our MicroPython projects, especially when interfacing with external components and sensors.
+        </h3>
+        <hr>
+        <h3 id="6-interrupts-🚨">6. Interrupts 🚨:</h3>
+        <h3 id="introduction-to-interrupts">Introduction to Interrupts:</h3>
+        <h3
+            id="interrupts-in-micropython-allow-you-to-respond-to-external-events-or-signals-without-the-need-for-continuous-polling-when-an-interrupt-occurs-the-processor-temporarily-suspends-its-current-execution-to-handle-the-interrupt-ensuring-timely-responses-to-critical-events-interrupts-also-count-as-being-setup-elements-so-they-arent-included-in-the-main-function">
+            Interrupts in MicroPython allow you to respond to external events or signals without the need for continuous
+            polling. When an interrupt occurs, the processor temporarily suspends its current execution to handle the
+            interrupt, ensuring timely responses to critical events, interrupts also count as being setup elements so
+            they aren&#39;t included in the <code>main()</code> function.</h3>
+        <h3 id="configuring-interrupts"><strong>Configuring Interrupts:</strong></h3>
+        <h3
+            id="micropython-provides-support-for-configuring-interrupts-on-gpio-pins-you-can-specify-whether-an-interrupt-should-trigger-on-rising-edges-falling-edges-or-both-depending-on-the-nature-of-the-event-you-want-to-detect">
+            MicroPython provides support for configuring interrupts on GPIO pins. You can specify whether an interrupt
+            should trigger on rising edges, falling edges, or both, depending on the nature of the event you want to
+            detect.</h3>
+        <h3 id="example-usage"><strong>Example Usage:</strong></h3>
+        <pre><code class="language-python">from machine import Pin
+
+def button_handler(pin):
+    print(&quot;Button pressed!&quot;)
+
+button_pin = Pin(3, Pin.IN)
+button_pin.irq(trigger=Pin.IRQ_FALLING, handler=button_handler)
+</code></pre>
+        <h3
+            id="in-this-example-an-interrupt-is-configured-on-pin-3-to-trigger-when-the-button-connected-to-it-is-pressed-falling-edge-when-the-button-is-pressed-the-button_handler-function-is-called-indicating-that-the-button-has-been-pressed">
+            In this example, an interrupt is configured on pin 3 to trigger when the button connected to it is pressed
+            (falling edge). When the button is pressed, the <code>button_handler</code> function is called, indicating
+            that the button has been pressed.</h3>
+        <h3 id="debouncing-mechanical-switches">Debouncing Mechanical Switches:</h3>
+        <h3
+            id="when-using-interrupts-with-mechanical-switches-or-buttons-its-essential-to-debounce-the-input-signal-to-prevent-false-triggering-caused-by-mechanical-bounce-debouncing-involves-adding-a-delay-or-filtering-mechanism-to-smooth-out-the-signal-and-ensure-reliable-detection-of-button-presses">
+            When using interrupts with mechanical switches or buttons, it&#39;s essential to debounce the input signal
+            to prevent false triggering caused by mechanical bounce. Debouncing involves adding a delay or filtering
+            mechanism to smooth out the signal and ensure reliable detection of button presses.</h3>
+        <h3 id="example-with-debounce">Example with Debounce:</h3>
+        <pre><code class="language-python">from machine import Pin, Timer
+
+button_pin = Pin(3, Pin.IN)
+debounce_timer = Timer(-1)
+
+def button_handler(pin):
+    print(&quot;Button pressed!&quot;)
+
+def debounce_callback(timer):
+    if button_pin.value() == 0:  # Check if button is still pressed after debounce period
+        button_handler(button_pin)
+
+def button_interrupt_handler(pin):
+    debounce_timer.deinit()  # Stop debounce timer
+    debounce_timer.init(period=50, mode=Timer.ONE_SHOT, callback=debounce_callback)  # Start debounce timer
+
+button_pin.irq(trigger=Pin.IRQ_FALLING, handler=button_interrupt_handler)
+</code></pre>
+        <h3
+            id="in-this-example-a-debounce-mechanism-is-introduced-to-prevent-false-triggering-of-the-interrupt-caused-by-mechanical-bounce-when-the-button-is-pressed-the-button_interrupt_handler-function-is-called-which-starts-a-debounce-timer-after-the-debounce-period-50-milliseconds-in-this-case-the-debounce_callback-function-is-called-to-check-if-the-button-is-still-pressed-if-it-is-the-button_handler-function-is-called-to-handle-the-button-press-event">
+            In this example, a debounce mechanism is introduced to prevent false triggering of the interrupt caused by
+            mechanical bounce. When the button is pressed, the <code>button_interrupt_handler</code> function is called,
+            which starts a debounce timer. After the debounce period (50 milliseconds in this case), the
+            <code>debounce_callback</code> function is called to check if the button is still pressed. If it is, the
+            <code>button_handler</code> function is called to handle the button press event.</h3>
+        <h3
+            id="by-incorporating-debounce-into-your-interrupt-handling-logic-you-can-ensure-reliable-and-stable-detection-of-button-presses-enhancing-the-usability-and-robustness-of-your-micropython-projects">
+            By incorporating debounce into your interrupt handling logic, you can ensure reliable and stable detection
+            of button presses, enhancing the usability and robustness of your MicroPython projects.</h3>
+        <h3 id="7-analog-pins-📊">7. Analog Pins 📊:</h3>
+        <h3 id="introduction-to-analog-pins">Introduction to Analog Pins:</h3>
+        <h3
+            id="analog-pins-in-micropython-allow-you-to-read-analog-signals-from-sensors-or-other-devices-that-provide-continuous-voltage-levels-unlike-digital-pins-which-can-only-represent-discrete-logic-levels-high-or-low">
+            Analog pins in MicroPython allow you to read analog signals from sensors or other devices that provide
+            continuous voltage levels, unlike digital pins which can only represent discrete logic levels (high or low).
+        </h3>
+        <h3 id="reading-analog-inputs">Reading Analog Inputs:</h3>
+        <h3
+            id="micropython-provides-an-adc-analog-to-digital-converter-module-for-configuring-and-reading-analog-inputs-you-can-specify-the-resolution-and-reference-voltage-of-the-adc-to-suit-your-application-requirements">
+            MicroPython provides an <code>ADC</code> (Analog-to-Digital Converter) module for configuring and reading
+            analog inputs. You can specify the resolution and reference voltage of the ADC to suit your application
+            requirements.</h3>
+        <h3 id="example-usage-1">Example Usage:</h3>
+        <pre><code class="language-python">from machine import Pin, ADC
+from time import sleep
+
+adc = ADC(Pin(36))
+adc.width(ADC.WIDTH_12BIT)  # Set ADC resolution to 12 bits
+adc.atten(ADC.ATTN_11DB)    # Set ADC attenuation to 11 dB
+
+def main() -&gt; None:
+    while True:
+        value = adc.read()
+        print(&quot;Analog value:&quot;, value)
+        sleep(0.5)
+</code></pre>
+        <h3
+            id="in-this-example-an-analog-pin-pin-36-is-configured-for-reading-analog-inputs-the-resolution-is-set-to-12-bits-and-the-attenuation-is-set-to-11-db-the-read-method-is-then-used-to-obtain-the-analog-value-from-the-pin">
+            In this example, an analog pin (pin 36) is configured for reading analog inputs. The resolution is set to 12
+            bits, and the attenuation is set to 11 dB. The <code>read()</code> method is then used to obtain the analog
+            value from the pin.</h3>
+        <hr>
+        <h1 id="9-pulse-width-modulation-🌊">9. Pulse Width Modulation 🌊:</h1>
+        <h3 id="introduction-to-pwm">Introduction to PWM:</h3>
+        <h3
+            id="pulse-width-modulation-pwm-is-a-technique-used-to-generate-analog-like-signals-with-digital-devices-in-micropython-pwm-signals-are-commonly-used-for-tasks-such-as-controlling-the-brightness-of-leds-generating-audio-tones-or-controlling-the-speed-of-motors">
+            Pulse Width Modulation (PWM) is a technique used to generate analog-like signals with digital devices. In
+            MicroPython, PWM signals are commonly used for tasks such as controlling the brightness of LEDs, generating
+            audio tones, or controlling the speed of motors.</h3>
+        <h3 id="configuring-pwm-outputs">Configuring PWM Outputs:</h3>
+        <h3
+            id="micropython-provides-support-for-configuring-pwm-outputs-on-specific-gpio-pins-using-the-pwm-module-you-can-specify-parameters-such-as-the-frequency-and-duty-cycle-of-the-pwm-signal-to-achieve-the-desired-behavior">
+            MicroPython provides support for configuring PWM outputs on specific GPIO pins using the <code>PWM</code>
+            module. You can specify parameters such as the frequency and duty cycle of the PWM signal to achieve the
+            desired behavior.</h3>
+        <h3 id="example-usage-controlling-led-brightness">Example Usage: Controlling LED Brightness:</h3>
+        <pre><code class="language-python">from machine import Pin, PWM
+import time
+
+led_pin = Pin(2, Pin.OUT)
+pwm = PWM(led_pin)
+
+pwm.freq(1000)  # Set PWM frequency to 1000 Hz
+pwm.duty(512)   # Set PWM duty cycle to 50% (512/1024)
+
+# Change duty cycle gradually to simulate fading effect
+def main() -&gt; None:
+    while True:
+        for duty_cycle in range(1024):
+            pwm.duty(duty_cycle)
+            time.sleep_ms(10)
+if __name__ == &#39;__main__&#39;:
+    main()
+</code></pre>
+        <h3
+            id="in-this-example-a-pwm-signal-is-configured-on-pin-2-with-a-frequency-of-1000-hz-and-a-duty-cycle-of-50-the-duty-cycle-is-then-gradually-increased-from-0-to-100-over-time-simulating-a-fading-effect-on-an-led-connected-to-the-pin">
+            In this example, a PWM signal is configured on pin 2 with a frequency of 1000 Hz and a duty cycle of 50%.
+            The duty cycle is then gradually increased from 0 to 100% over time, simulating a fading effect on an LED
+            connected to the pin.</h3>
+        <h3 id="usage-scenarios-1">Usage Scenarios:</h3>
+        <ul>
+            <li><strong>LED Brightness Control:</strong> Adjusting the brightness of LEDs for lighting or display
+                purposes.</li>
+            <li><strong>Motor Speed Control:</strong> Controlling the speed of DC motors or servo motors.</li>
+            <li><strong>Audio Generation:</strong> Generating tones and audio signals for simple sound playback.</li>
+        </ul>
+        <h3 id="considerations">Considerations:</h3>
+        <h3
+            id="when-using-pwm-signals-its-essential-to-consider-factors-such-as-the-frequency-of-the-pwm-signal-the-resolution-of-the-duty-cycle-and-the-load-capabilities-of-the-output-pins-to-ensure-optimal-performance-and-compatibility-with-external-devices">
+            When using PWM signals, it&#39;s essential to consider factors such as the frequency of the PWM signal, the
+            resolution of the duty cycle, and the load capabilities of the output pins to ensure optimal performance and
+            compatibility with external devices.</h3>
+        <h3
+            id="by-mastering-pwm-signals-in-micropython-you-can-implement-a-wide-range-of-applications-that-require-precise-control-of-analog-like-signals-adding-versatility-and-functionality-to-your-embedded-projects">
+            By mastering PWM signals in MicroPython, you can implement a wide range of applications that require precise
+            control of analog-like signals, adding versatility and functionality to your embedded projects.</h3>
+        <hr>
+        <h3 id="9-timers-⏱️">9. Timers ⏱️:</h3>
+        <h3 id="introduction-to-timers">Introduction to Timers:</h3>
+        <h3
+            id="timers-in-micropython-provide-a-versatile-way-to-schedule-tasks-generate-pwm-signals-or-measure-time-intervals-accurately-they-are-essential-for-various-timing-related-applications-in-embedded-systems">
+            Timers in MicroPython provide a versatile way to schedule tasks, generate PWM signals, or measure time
+            intervals accurately. They are essential for various timing-related applications in embedded systems.</h3>
+        <h3 id="configuring-timers">Configuring Timers:</h3>
+        <h3
+            id="micropythons-timer-module-allows-you-to-configure-and-manage-timers-efficiently-you-can-specify-the-timer-frequency-mode-and-callback-functions-to-execute-tasks-at-predetermined-intervals">
+            MicroPython&#39;s <code>Timer</code> module allows you to configure and manage timers efficiently. You can
+            specify the timer frequency, mode, and callback functions to execute tasks at predetermined intervals.</h3>
+        <h3 id="example-usage-2">Example Usage:</h3>
+        <pre><code class="language-python">from machine import Timer
+
+def timer_callback(timer):
+    print(&quot;Timer fired!&quot;)
+
+timer = Timer(0)
+timer.init(period=1000, mode=Timer.PERIODIC, callback=timer_callback)
+</code></pre>
+        <h3
+            id="in-this-example-a-timer-with-id-0-is-configured-to-fire-every-1000-milliseconds-1-second-in-periodic-mode-when-the-timer-expires-the-timer_callback-function-is-called-indicating-that-the-timer-has-fired">
+            In this example, a timer with ID 0 is configured to fire every 1000 milliseconds (1 second) in periodic
+            mode. When the timer expires, the <code>timer_callback</code> function is called, indicating that the timer
+            has fired.</h3>
+        <h3
+            id="by-incorporating-these-features-into-your-micropython-projects-you-can-enhance-their-functionality-and-versatility-opening-up-new-possibilities-for-embedded-system-development">
+            By incorporating these features into your MicroPython projects, you can enhance their functionality and
+            versatility, opening up new possibilities for embedded system development.</h3>
+        <hr>
+        <h2
+            id="and-there-you-go-that-was-micropython-very-simple-of-course-this-isnt-all-of-it-and-you-have-to-go-deeper-but-the-rest-of-the-stuff-youll-see-other-than-this-requires-external-librariesmodules-anyways-but-for-now-the-basics-will-have-to-do">
+            And there you go, that was MicroPython, very simple, of course, this isn&#39;t all of it and you have to go
+            deeper but the rest of the stuff you&#39;ll see other than this requires external libraries/modules anyways,
+            but for now, the basics will have to do.</h2>
+
+    </main>
+</body>
+
+</html>
