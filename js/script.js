@@ -27,7 +27,7 @@ function checkPass() {
         setCookie("passCorrect", true, 1); // Set cookie to true for 1 day
         window.location.href = "html/home.html";
     } else {
-        dialog.style.display = "block";
+        dialog.classList.add("appear");
     }
 }
 
