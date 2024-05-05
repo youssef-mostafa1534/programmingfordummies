@@ -22,7 +22,7 @@ function hashPassword(password) {
 function checkPass() {
     const pass = inp.value;
     const hashedPass = hashPassword(pass); // Hash the entered password
-    const hashedCorrectPass = "f5d838dd5c88aa140a399308d299303562c33619bab682a95d4c5ffabb6d38ce"; // Precomputed hash of "1234"
+    const hashedCorrectPass = "f5d838dd5c88aa140a399308d299303562c33619bab682a95d4c5ffabb6d38ce";
     if (hashedPass === hashedCorrectPass) {
         setCookie("passCorrect", true, 1); // Set cookie to true for 1 day
         window.location.href = "html/home.html";
