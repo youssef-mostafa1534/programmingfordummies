@@ -52,8 +52,9 @@ code {
 
 header {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
     color: #0e1c17;
     margin: 20px;
     border-radius: 16px;
@@ -62,6 +63,7 @@ header {
 }
 
 header h1 {
+    text-align: center;
     background-color: #6ec5d2;
     padding: 25px;
     border-radius: 8px;
@@ -136,6 +138,14 @@ a[href="about.html"] {
     background: linear-gradient(to right, rgb(245, 81, 62), rgb(47, 15, 255));
     background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+img {
+    display: block;
+    height: 135px;
+    width: 135px;
+    margin: 10px;
+    border-radius: 8px;
 }
 
 @media only screen and (max-width: 1538px) {
