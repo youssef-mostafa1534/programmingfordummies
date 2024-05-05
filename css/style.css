@@ -131,7 +131,7 @@ main {
     transform: translateY(-35px) scale(1);
 }
 
-a[href="html/about.html"] {
+a[href="about.html"] {
     text-decoration: none;
     background: linear-gradient(to right, rgb(245, 81, 62), rgb(47, 15, 255));
     background-clip: text;
