@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/cpp.css">
+    <link rel="shortcut icon"
+        href="https://github.com/youssef-mostafa1534/programmingfordummies/blob/main/img/_9b1e200d-9842-49f0-9819-fef3902533e5.jpeg?raw=true"
+        type="image/x-icon">
+    <link rel="stylesheet" href="../highlight/styles/a11y-dark.css">
+    <script src="../highlight/highlight.min.js"></script>
+
+    <script>hljs.highlightAll();</script>
+    <title>Arduino C</title>
+</head>
+
+<body>
+    <header>
+        <h1>Arduino C</h1>
+        <nav id="btns">
+            <a href="home.html" class="btn">Home</a>
+            <a href="about.html" class="btn">About</a>
+        </nav>
+    </header>
+    <main>
+        <h3
+            id="welcome-to-the-arduino-c-programming-guide-this-comprehensive-guide-will-walk-you-through-the-fundamentals-of-programming-arduino-boards-using-c-covering-everything-from-basic-syntax-to-advanced-techniques-for-building-interactive-projects-make-sure-youve-read-the-c-page-first">
+            Welcome to the Arduino C Programming Guide! This comprehensive guide will walk you through the fundamentals
+            of programming Arduino boards using C, covering everything from basic syntax to advanced techniques for
+            building interactive projects, make sure you&#39;ve read the <a
+                href="https://youssef-mostafa1534.github.io/programmingfordummies/html/cpp.html">C++</a> page first.
+        </h3>
+
+        <h1 id="1-introduction-to-arduino-c-🤖">1. Introduction to Arduino C 🤖:</h1>
+        <h3
+            id="arduino-c-also-known-as-arduino-wiring-is-a-simplified-version-of-the-c-programming-language-specifically-tailored-for-arduino-microcontrollers-it-provides-a-beginner-friendly-approach-to-programming-embedded-systems-while-offering-powerful-capabilities-for-controlling-hardware-peripherals-and-interfacing-with-external-devices">
+            Arduino C, also known as Arduino Wiring, is a simplified version of the C programming language specifically
+            tailored for Arduino microcontrollers. It provides a beginner-friendly approach to programming embedded
+            systems while offering powerful capabilities for controlling hardware peripherals and interfacing with
+            external devices.</h3>
+        <hr>
+        <h1 id="2-setting-up-your-development-environment-💼">2. Setting Up Your Development Environment 💼:</h1>
+        <h3 id="before-you-start-coding-youll-need-to-set-up-your-development-environment-heres-what-youll-need">Before
+            you start coding, you&#39;ll need to set up your development environment. Here&#39;s what you&#39;ll need:
+        </h3>
+        <ul>
+            <li>An Arduino board (e.g., Arduino Uno, Arduino Nano)</li>
+            <li>The Arduino IDE (Integrated Development Environment) installed on your computer</li>
+            <li>USB cable to connect your Arduino board to your computer</li>
+        </ul>
+        <h3 id="once-you-have-everything-set-up-youre-ready-to-write-your-first-arduino-c-program">Once you have
+            everything set up, you&#39;re ready to write your first Arduino C program.</h3>
+        <hr>
+        <h1 id="3-understanding-the-arduino-sketch-structure-📓">3. Understanding the Arduino Sketch Structure 📓:</h1>
+        <h3
+            id="an-arduino-program-commonly-referred-to-as-a-sketch-consists-of-two-main-functions-setup-and-loop-lets-take-a-closer-look-at-each-of-these-functions">
+            An Arduino program, commonly referred to as a sketch, consists of two main functions: <code>setup()</code>
+            and <code>loop()</code>. Let&#39;s take a closer look at each of these functions:</h3>
+        <h3 id="setup-function"><code>setup()</code> Function:</h3>
+        <h3
+            id="the-setup-function-is-called-once-when-the-arduino-board-is-powered-on-or-reset-its-where-you-initialize-variables-configure-pin-modes-and-set-up-any-necessary-peripherals-heres-an-example">
+            The <code>setup()</code> function is called once when the Arduino board is powered on or reset. It&#39;s
+            where you initialize variables, configure pin modes, and set up any necessary peripherals. Here&#39;s an
+            example:</h3>
+        <pre><code class="language-cpp">void setup() {
+    // Initialization code goes here
+}
+</code></pre>
+        <h3 id="loop-function"><code>loop()</code> Function:</h3>
+        <h3
+            id="the-loop-function-is-where-the-main-logic-of-your-program-resides-its-executed-repeatedly-as-long-as-the-arduino-board-is-powered-on-heres-an-example">
+            The <code>loop()</code> function is where the main logic of your program resides. It&#39;s executed
+            repeatedly as long as the Arduino board is powered on. Here&#39;s an example:</h3>
+        <pre><code class="language-cpp">void loop() {
+    // Main code goes here
+}
+</code></pre>
+        <h3
+            id="by-dividing-your-code-into-the-setup-and-loop-functions-you-can-organize-your-programs-initialization-and-runtime-logic-effectively">
+            By dividing your code into the <code>setup()</code> and <code>loop()</code> functions, you can organize your
+            program&#39;s initialization and runtime logic effectively.</h3>
+        <hr>
+        <h1 id="4-working-with-gpio-pins-and-digital-io-⚡️">4. Working with GPIO Pins and Digital I/O ⚡️:</h1>
+        <h3
+            id="gpio-general-purpose-inputoutput-pins-allow-you-to-interface-with-external-devices-and-components-in-arduino-c-you-can-control-gpio-pins-for-digital-input-and-output-operations-heres-how-you-work-with-gpio-pins">
+            GPIO (General Purpose Input/Output) pins allow you to interface with external devices and components. In
+            Arduino C, you can control GPIO pins for digital input and output operations. Here&#39;s how you work with
+            GPIO pins:</h3>
+        <h3 id="initializing-pins">Initializing Pins:</h3>
+        <h3
+            id="before-using-a-pin-you-need-to-specify-its-mode-as-either-input-or-output-you-can-do-this-in-the-setup-function-using-the-pinmode-function-for-example">
+            Before using a pin, you need to specify its mode as either input or output. You can do this in the
+            <code>setup()</code> function using the <code>pinMode()</code> function. For example:
+        </h3>
+        <pre><code class="language-cpp">void setup() {
+    pinMode(13, OUTPUT); // Set pin 13 as an output
+}
+</code></pre>
+        <h3 id="writing-digital-output">Writing Digital Output:</h3>
+        <h3
+            id="to-set-the-state-of-a-digital-output-pin-eg-to-turn-an-led-on-or-off-you-use-the-digitalwrite-function-for-example">
+            To set the state of a digital output pin (e.g., to turn an LED on or off), you use the
+            <code>digitalWrite()</code> function. For example:
+        </h3>
+        <pre><code class="language-cpp">void loop() {
+    digitalWrite(13, HIGH); // Turn on the LED connected to pin 13
+    delay(1000); // Delay for 1 second
+    digitalWrite(13, LOW); // Turn off the LED
+    delay(1000); // Delay for 1 second
+}
+</code></pre>
+        <h3 id="reading-digital-input">Reading Digital Input:</h3>
+        <h3 id="to-read-the-state-of-a-digital-input-pin-eg-a-push-button-you-use-the-digitalread-function-for-example">
+            To read the state of a digital input pin (e.g., a push button), you use the <code>digitalRead()</code>
+            function. For example:</h3>
+        <pre><code class="language-cpp">void loop() {
+    int buttonState = digitalRead(2); // Read the state of the button connected to pin 2
+    if (buttonState == HIGH) {
+        // Button is pressed
+    } else {
+        // Button is not pressed
+    }
+}
+</code></pre>
+        <h3
+            id="understanding-digital-input-and-output-operations-is-essential-for-interacting-with-external-sensors-switches-and-actuators">
+            Understanding digital input and output operations is essential for interacting with external sensors,
+            switches, and actuators.</h3>
+        <hr>
+        <h1 id="5-analog-input-and-output-📊">5. Analog Input and Output 📊:</h1>
+        <h3
+            id="in-addition-to-digital-io-arduino-boards-also-support-analog-input-and-output-operations-this-capability-allows-you-to-interface-with-analog-sensors-and-devices-heres-how-you-work-with-analog-signals">
+            In addition to digital I/O, Arduino boards also support analog input and output operations. This capability
+            allows you to interface with analog sensors and devices. Here&#39;s how you work with analog signals:</h3>
+        <h3 id="reading-analog-input">Reading Analog Input:</h3>
+        <h3
+            id="analog-sensors-provide-continuous-voltage-levels-that-can-be-measured-by-the-arduinos-analog-to-digital-converter-adc-to-read-an-analog-input-you-use-the-analogread-function-for-example">
+            Analog sensors provide continuous voltage levels that can be measured by the Arduino&#39;s analog-to-digital
+            converter (ADC). To read an analog input, you use the <code>analogRead()</code> function. For example:</h3>
+        <pre><code class="language-cpp">void setup() {
+    Serial.begin(9600); // Initialize serial communication
+}
+
+void loop() {
+    int sensorValue = analogRead(A0); // Read analog input from pin A0
+    Serial.println(sensorValue); // Print the sensor value to the serial monitor
+    delay(1000); // Delay for 1 second
+}
+</code></pre>
+        <h3 id="generating-analog-output-with-pwm">Generating Analog Output with PWM:</h3>
+        <h3
+            id="pulse-width-modulation-pwm-allows-you-to-simulate-analog-output-using-digital-pins-pwm-is-commonly-used-for-tasks-like-controlling-led-brightness-or-motor-speed-you-can-generate-pwm-signals-using-the-analogwrite-function-for-example">
+            Pulse Width Modulation (PWM) allows you to simulate analog output using digital pins. PWM is commonly used
+            for tasks like controlling LED brightness or motor speed. You can generate PWM signals using the
+            <code>analogWrite()</code> function. For example:
+        </h3>
+        <pre><code class="language-cpp">void setup() {
+    pinMode(3, OUTPUT); // Set pin 3 as PWM output
+}
+
+void loop() {
+    analogWrite(3, 128); // Set PWM duty cycle to 50% (0-255)
+    delay(1000); // Delay for 1 second
+}
+</code></pre>
+        <h3
+            id="by-understanding-analog-input-and-output-operations-you-can-interface-with-a-wide-range-of-sensors-and-actuators-in-your-projects">
+            By understanding analog input and output operations, you can interface with a wide range of sensors and
+            actuators in your projects.</h3>
+        <h3
+            id="got-it-lets-continue-with-the-remaining-sections-while-incorporating-emojis-and-maintaining-the-headings-as-requested">
+            Got it! Let&#39;s continue with the remaining sections while incorporating emojis and maintaining the
+            headings as requested.</h3>
+        <hr>
+        <h1 id="6-interrupts-🚨">6. Interrupts 🚨:</h1>
+        <h3
+            id="interrupts-in-arduino-c-allow-you-to-respond-to-external-events-or-signals-without-the-need-for-continuous-polling-when-an-interrupt-occurs-the-processor-temporarily-suspends-its-current-execution-to-handle-the-interrupt-ensuring-timely-responses-to-critical-events">
+            Interrupts in Arduino C allow you to respond to external events or signals without the need for continuous
+            polling. When an interrupt occurs, the processor temporarily suspends its current execution to handle the
+            interrupt, ensuring timely responses to critical events.</h3>
+        <h3 id="configuring-interrupts">Configuring Interrupts:</h3>
+        <h3
+            id="arduino-boards-support-interrupts-on-specific-gpio-pins-you-can-specify-whether-an-interrupt-should-trigger-on-rising-edges-falling-edges-or-both-depending-on-the-nature-of-the-event-you-want-to-detect">
+            Arduino boards support interrupts on specific GPIO pins. You can specify whether an interrupt should trigger
+            on rising edges, falling edges, or both, depending on the nature of the event you want to detect.</h3>
+        <pre><code class="language-cpp">void setup() {
+    attachInterrupt(digitalPinToInterrupt(2), interruptHandler, CHANGE);
+}
+
+void loop() {
+    // Main code here
+}
+
+void interruptHandler() {
+    // Interrupt handler code here
+}
+</code></pre>
+        <h3
+            id="in-this-example-an-interrupt-is-configured-on-pin-2-to-trigger-on-any-change-both-rising-and-falling-edges-when-the-interrupt-occurs-the-interrupthandler-function-is-called-to-handle-the-event">
+            In this example, an interrupt is configured on pin 2 to trigger on any change (both rising and falling
+            edges). When the interrupt occurs, the <code>interruptHandler</code> function is called to handle the event.
+        </h3>
+        <h3 id="debouncing-mechanical-switches">Debouncing Mechanical Switches:</h3>
+        <h3
+            id="when-using-interrupts-with-mechanical-switches-or-buttons-its-essential-to-debounce-the-input-signal-to-prevent-false-triggering-caused-by-mechanical-bounce-debouncing-involves-adding-a-delay-or-filtering-mechanism-to-smooth-out-the-signal-and-ensure-reliable-detection-of-button-presses">
+            When using interrupts with mechanical switches or buttons, it&#39;s essential to debounce the input signal
+            to prevent false triggering caused by mechanical bounce. Debouncing involves adding a delay or filtering
+            mechanism to smooth out the signal and ensure reliable detection of button presses.</h3>
+        <pre><code class="language-cpp">void interruptHandler() {
+    delay(50); // Debounce delay
+    // Interrupt handling code here
+}
+</code></pre>
+        <h3
+            id="by-incorporating-debounce-mechanisms-into-your-interrupt-handling-logic-you-can-prevent-false-triggers-and-ensure-accurate-detection-of-external-events">
+            By incorporating debounce mechanisms into your interrupt handling logic, you can prevent false triggers and
+            ensure accurate detection of external events.</h3>
+        <hr>
+        <h1 id="7-timers-⏱️">7. Timers ⏱️:</h1>
+        <h3
+            id="timers-in-arduino-c-provide-a-versatile-way-to-schedule-tasks-generate-pwm-signals-or-measure-time-intervals-accurately-they-are-essential-for-various-timing-related-applications-in-embedded-systems">
+            Timers in Arduino C provide a versatile way to schedule tasks, generate PWM signals, or measure time
+            intervals accurately. They are essential for various timing-related applications in embedded systems.</h3>
+        <h3 id="configuring-timers">Configuring Timers:</h3>
+        <h3
+            id="arduino-boards-support-timers-that-can-be-configured-to-trigger-periodic-or-one-shot-events-at-specific-intervals-you-can-specify-the-timer-frequency-mode-and-callback-functions-to-execute-tasks-at-predetermined-times">
+            Arduino boards support timers that can be configured to trigger periodic or one-shot events at specific
+            intervals. You can specify the timer frequency, mode, and callback functions to execute tasks at
+            predetermined times.</h3>
+        <pre><code class="language-cpp">void setup() {
+    Timer1.initialize(1000000); // Set timer interval to 1 second
+    Timer1.attachInterrupt(timerCallback); // Attach interrupt handler
+}
+
+void loop() {
+    // Main code here
+}
+
+void timerCallback() {
+    // Timer callback code here
+}
+</code></pre>
+        <h3
+            id="in-this-example-timer1-is-configured-to-trigger-an-interrupt-every-second-when-the-timer-expires-the-timercallback-function-is-called-to-execute-the-desired-task">
+            In this example, Timer1 is configured to trigger an interrupt every second. When the timer expires, the
+            <code>timerCallback</code> function is called to execute the desired task.
+        </h3>
+        <h3
+            id="by-utilizing-timers-effectively-you-can-implement-precise-timing-control-and-synchronization-in-your-arduino-projects">
+            By utilizing timers effectively, you can implement precise timing control and synchronization in your
+            Arduino projects.</h3>
+        <hr>
+        <h1 id="8-serial-communication-📡">8. Serial Communication 📡:</h1>
+        <h3
+            id="serial-communication-is-a-fundamental-aspect-of-arduino-programming-allowing-you-to-exchange-data-between-the-arduino-board-and-external-devices-such-as-computers-sensors-and-displays">
+            Serial communication is a fundamental aspect of Arduino programming, allowing you to exchange data between
+            the Arduino board and external devices such as computers, sensors, and displays.</h3>
+        <h3 id="serial-communication-basics">Serial Communication Basics:</h3>
+        <h3
+            id="arduino-boards-feature-built-in-serial-communication-ports-eg-uart-usb-that-enable-bidirectional-data-transfer-you-can-use-the-serial-object-to-send-and-receive-data-over-these-ports">
+            Arduino boards feature built-in serial communication ports (e.g., UART, USB) that enable bidirectional data
+            transfer. You can use the <code>Serial</code> object to send and receive data over these ports.</h3>
+        <pre><code class="language-cpp">void setup() {
+    Serial.begin(9600); // Initialize serial communication at 9600 baud rate
+}
+
+void loop() {
+    if (Serial.available() &gt; 0) {
+        char receivedChar = Serial.read(); // Read incoming byte
+        Serial.print(&quot;Received: &quot;);
+        Serial.println(receivedChar); // Print received byte
+    }
+}
+</code></pre>
+        <h3
+            id="in-this-example-the-arduino-board-continuously-reads-incoming-bytes-from-the-serial-port-when-data-is-available-it-reads-the-byte-and-prints-it-to-the-serial-monitor">
+            In this example, the Arduino board continuously reads incoming bytes from the serial port. When data is
+            available, it reads the byte and prints it to the serial monitor.</h3>
+        <h3 id="serial-communication-protocols">Serial Communication Protocols:</h3>
+        <h3
+            id="arduino-supports-various-serial-communication-protocols-including-uart-spi-and-i2c-these-protocols-enable-communication-with-a-wide-range-of-devices-and-peripherals-such-as-sensors-displays-and-microcontrollers">
+            Arduino supports various serial communication protocols, including UART, SPI, and I2C. These protocols
+            enable communication with a wide range of devices and peripherals, such as sensors, displays, and
+            microcontrollers.</h3>
+        <pre><code class="language-cpp">#include &lt;Wire.h&gt;
+
+void setup() {
+    Wire.begin(); // Initialize I2C communication
+}
+
+void loop() {
+    Wire.requestFrom(8, 6); // Request 6 bytes from slave device with address 8
+    while (Wire.available()) {
+        char receivedChar = Wire.read(); // Read incoming byte
+        Serial.print(receivedChar); // Print received byte
+    }
+}
+</code></pre>
+        <h3
+            id="in-this-example-the-arduino-board-communicates-with-an-i2c-slave-device-by-requesting-data-and-reading-the-received-bytes">
+            In this example, the Arduino board communicates with an I2C slave device by requesting data and reading the
+            received bytes.</h3>
+        <h3
+            id="by-mastering-serial-communication-techniques-you-can-build-complex-and-interactive-arduino-projects-that-interface-with-external-devices-seamlessly">
+            By mastering serial communication techniques, you can build complex and interactive Arduino projects that
+            interface with external devices seamlessly.</h3>
+        <hr>
+        <h1 id="conclusion-🎉">Conclusion 🎉:</h1>
+        <h3
+            id="congratulations-on-completing-the-arduino-c-programming-guide-youve-learned-the-essential-concepts-and-techniques-for-programming-arduino-boards-using-c-with-this-knowledge-youre-ready-to-embark-on-your-arduino-journey-and-create-exciting-projects">
+            Congratulations on completing the Arduino C Programming Guide! You&#39;ve learned the essential concepts and
+            techniques for programming Arduino boards using C. With this knowledge, you&#39;re ready to embark on your
+            Arduino journey and create exciting projects.</h3>
+        <h3
+            id="stay-curious-keep-experimenting-and-happy-coding-if-you-have-any-questions-or-need-further-assistance-dont-hesitate-to-reach-out-the-arduino-community-is-always-here-to-help-you-succeed">
+            Stay curious, keep experimenting, and happy coding! If you have any questions or need further assistance,
+            don&#39;t hesitate to reach out. The Arduino community is always here to help you succeed.</h3>
+
+    </main>
+</body>
+
+</html>
