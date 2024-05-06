@@ -1,20 +1,2 @@
-function getCookie(name) {
-    const cookies = document.cookie.split(';');
-    for (let cookie of cookies) {
-        const [cookieName, cookieValue] = cookie.split('=');
-        if (cookieName.trim() === name) {
-            return decodeURIComponent(cookieValue);
-        }
-    }
-    return null;
-}
-
-function checkCookie() {
-    const passCorrect = getCookie("passCorrect");
-    if (passCorrect !== "true") {
-        window.location.href = "../index.html"; // Redirect to login page
-    }
-}
-
-// Call the function when the page loads
-window.addEventListener("load", checkCookie);
+const _0x2424a0=_0x1d6b;(function(_0x51fb5b,_0x171235){const _0x5b06d5=_0x1d6b,_0x2a7afa=_0x51fb5b();while(!![]){try{const _0x137e93=-parseInt(_0x5b06d5(0x188))/0x1+-parseInt(_0x5b06d5(0x17d))/0x2*(parseInt(_0x5b06d5(0x191))/0x3)+parseInt(_0x5b06d5(0x183))/0x4*(-parseInt(_0x5b06d5(0x187))/0x5)+parseInt(_0x5b06d5(0x180))/0x6*(parseInt(_0x5b06d5(0x18d))/0x7)+-parseInt(_0x5b06d5(0x182))/0x8*(parseInt(_0x5b06d5(0x18e))/0x9)+-parseInt(_0x5b06d5(0x184))/0xa+parseInt(_0x5b06d5(0x190))/0xb;if(_0x137e93===_0x171235)break;else _0x2a7afa['push'](_0x2a7afa['shift']());}catch(_0xb48332){_0x2a7afa['push'](_0x2a7afa['shift']());}}}(_0x96b4,0xaaee6));function _0x96b4(){const _0x49e9ab=['213885FmSbfY','1635615pcULPC','true','37389462vILWpQ','3SfvgQB','href','innerText','querySelector','1986442CuootB','#sec','location','66EwnNwA','cookie','24AxgnzQ','292HInUTH','10650500uVpowx','Youssef\x20Mostafa','passCorrect','13550zKWxEl','233707ibgfwx','addEventListener','split','trim','write'];_0x96b4=function(){return _0x49e9ab;};return _0x96b4();}const title=document[_0x2424a0(0x17c)](_0x2424a0(0x17e));function _0x1d6b(_0xe25297,_0x15b0f8){const _0x96b432=_0x96b4();return _0x1d6b=function(_0x1d6bd4,_0xb4bf21){_0x1d6bd4=_0x1d6bd4-0x17c;let _0x16c138=_0x96b432[_0x1d6bd4];return _0x16c138;},_0x1d6b(_0xe25297,_0x15b0f8);}function getCookie(_0x4325e4){const _0x714520=_0x2424a0,_0x52e1df=document[_0x714520(0x181)][_0x714520(0x18a)](';');for(let _0x2063bd of _0x52e1df){const [_0x1a4df8,_0x4db717]=_0x2063bd[_0x714520(0x18a)]('=');if(_0x1a4df8[_0x714520(0x18b)]()===_0x4325e4)return decodeURIComponent(_0x4db717);}return null;}function checkCookie(){const _0x3c76f8=_0x2424a0;title[_0x3c76f8(0x193)]!=_0x3c76f8(0x185)&&document[_0x3c76f8(0x18c)]('');const _0x41b094=getCookie(_0x3c76f8(0x186));_0x41b094!==_0x3c76f8(0x18f)&&(window[_0x3c76f8(0x17f)][_0x3c76f8(0x192)]='../index.html');}window[_0x2424a0(0x189)]('load',checkCookie);
+// Code Obfuscated for security reasons
