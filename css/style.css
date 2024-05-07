@@ -35,6 +35,14 @@ body {
     user-select: none;
 }
 
+section {
+    background-color: rgba(34, 88, 117, 0.33);
+    backdrop-filter: blur(6px);
+    margin: 20px;
+    padding: 20px;
+    border-radius: 16px;
+}
+
 code {
     display: inline-block;
     color: #1cafff;
@@ -58,7 +66,8 @@ header {
     color: #0e1c17;
     margin: 20px;
     border-radius: 16px;
-    background-color: #173c57;
+    background-color: rgb(23, 60, 87, 0.33);
+    backdrop-filter: blur(6px);
     width: 65%;
 }
 
@@ -87,7 +96,7 @@ main {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: #225875;
+    background-color: rgba(34, 88, 117, 1);
     margin: 20px;
     border-radius: 16px;
     padding: 10px;
@@ -100,11 +109,12 @@ main {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    gap: 30px;
     text-align: left;
     padding: 20px;
     border-radius: 8px;
     background-color: #051f2d;
-    width: 85%;
+    width: 52%;
 }
 /* rgba(151, 65, 252, 0.2) 0 15px 30px -5px */
 .option {
@@ -115,7 +125,6 @@ main {
     background-color: #6ec5d2;
     padding: 20px;
     border-radius: 4px;
-    margin: 15px;
     width: 410px;
     cursor: pointer;
     transition: all 0.2s;
@@ -134,10 +143,21 @@ main {
 }
 
 a[href="about.html"] {
+    display: inline-block;
     text-decoration: none;
+    padding: 5px;
+    border-radius: 4px;
     background: linear-gradient(to right, rgb(245, 81, 62), rgb(47, 15, 255));
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    transition: all 0.2s;
+}
+
+a[href="about.html"]:hover {
+    -webkit-text-fill-color: #fff;
+    background: #215470;
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 5px 10px 5px #356377;
 }
 
 img {

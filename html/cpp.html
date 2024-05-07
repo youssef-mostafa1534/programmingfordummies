@@ -22,60 +22,63 @@
         </nav>
     </header>
     <main>
-        <h1 id="1-basics-✨">1. Basics ✨:</h1>
-        <h3 id="how-to-include-files-or-libraries">How to include files or libraries:</h3>
-        <h3 id="you-need-to-type-include-then-the-file-name-or-a-library-name-">You need to type <code>#include</code> then the file name or a library name:</h3>
-        <pre><code class="language-cpp">#include &lt;file_name&gt;
+        <section>
+            <h1 id="1-basics-✨">1. Basics ✨:</h1>
+            <h3 id="how-to-include-files-or-libraries">How to include files or libraries:</h3>
+            <h3 id="you-need-to-type-include-then-the-file-name-or-a-library-name-">You need to type <code>#include</code> then the file name or a library name:</h3>
+            <pre><code class="language-cpp">#include &lt;file_name&gt;
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 </code></pre>
-        <h3 id="how-to-use-namespaces">How to use namespaces:</h3>
-        <h4 id="to-declare-a-namespace">To declare a namespace:</h4>
-        <pre><code class="language-cpp">namespace someName {
+            <h3 id="how-to-use-namespaces">How to use namespaces:</h3>
+            <h4 id="to-declare-a-namespace">To declare a namespace:</h4>
+            <pre><code class="language-cpp">namespace someName {
     int x = 1;
-}
+}</code></pre>
+            <h4
+                id="to-use-an-object-in-the-namespace-you-have-to-prefix-it-with-the-name-of-the-namespace-followed-by-to-colons-like-the-following">
+                To use an object in the namespace you have to prefix it with the name of the namespace followed by to colons
+                like the following:</h4>
+            <pre><code class="language-cpp">someName::x</code></pre>
+            <h4
+                id="or-if-youd-like-you-could-globalize-the-namespace-so-that-you-could-use-the-objects-inside-it-with-specifying-which-namespace-it-belongs-to">
+                Or if you&#39;d like, you could &quot;globalize&quot; the namespace so that you could use the objects inside
+                it with specifying which namespace it belongs to:</h4>
+            <pre><code class="language-cpp">using namespace someName;
 </code></pre>
-        <h4
-            id="to-use-an-object-in-the-namespace-you-have-to-prefix-it-with-the-name-of-the-namespace-followed-by-to-colons-like-the-following">
-            To use an object in the namespace you have to prefix it with the name of the namespace followed by to colons
-            like the following:</h4>
-        <pre><code class="language-cpp">someName::x
+            <h4
+                id="weve-reached-the-main-function-its-the-function-that-first-gets-run-as-soon-as-your-program-starts-the-main-function-has-to-have-a-return-type-of-int-and-has-to-return-a-value">
+                We&#39;ve reached the main function, it&#39;s the function that first gets run as soon as your program
+                starts, the main function has to have a return type of int and has to return a value.</h4>
+            <p>Note: Every line has to end with a semi-colon (;), unless it&#39;s a function definition, a loop, or another
+                code block that ends with braces.</p>
+</section>
+<hr>
+<section>
+            <h1 id="2-variables-🏷️">2. Variables 🏷️:</h1>
+            <h4
+                id="imagine-a-container-that-you-stuck-a-label-to-put-some-stuff-inside-and-stored-it-thats-basically-a-variable-you-give-a-variable-a-name-assign-it-a-some-value-and-store-it-in-memory-until-needed">
+                Imagine a container that you stuck a label to, put some stuff inside and stored it, that&#39;s basically a
+                variable, you give a variable a name, assign it a some value, and store it in memory until needed.</h4>
+            <h4 id="heres-how-to-declare-a-variable">Here&#39;s how to declare a variable:</h4>
+            <pre><code class="language-cpp">int x = 1;
 </code></pre>
-        <h4
-            id="or-if-youd-like-you-could-globalize-the-namespace-so-that-you-could-use-the-objects-inside-it-with-specifying-which-namespace-it-belongs-to">
-            Or if you&#39;d like, you could &quot;globalize&quot; the namespace so that you could use the objects inside
-            it with specifying which namespace it belongs to:</h4>
-        <pre><code class="language-cpp">using namespace someName;
+            <h4
+                id="you-start-with-the-type-of-the-variable-then-the-name-and-then-you-assign-a-value-to-it-with-the-equal-sign-you-can-also-make-constant-variables-which-cannot-be-changed-at-all-during-compile-time-or-run-time-example">
+                You start with the type of the variable then the name and then you assign a value to it with the equal sign,
+                you can also make constant variables which cannot be changed at all during compile-time or run-time,
+                example:</h4>
+            <pre><code class="language-cpp">const int x = 5;
 </code></pre>
-        <h4
-            id="weve-reached-the-main-function-its-the-function-that-first-gets-run-as-soon-as-your-program-starts-the-main-function-has-to-have-a-return-type-of-int-and-has-to-return-a-value">
-            We&#39;ve reached the main function, it&#39;s the function that first gets run as soon as your program
-            starts, the main function has to have a return type of int and has to return a value.</h4>
-        <p>Note: Every line has to end with a semi-colon (;), unless it&#39;s a function definition, a loop, or another
-            code block that ends with braces.</p>
-        <hr>
-        <h1 id="2-variables-🏷️">2. Variables 🏷️:</h1>
-        <h4
-            id="imagine-a-container-that-you-stuck-a-label-to-put-some-stuff-inside-and-stored-it-thats-basically-a-variable-you-give-a-variable-a-name-assign-it-a-some-value-and-store-it-in-memory-until-needed">
-            Imagine a container that you stuck a label to, put some stuff inside and stored it, that&#39;s basically a
-            variable, you give a variable a name, assign it a some value, and store it in memory until needed.</h4>
-        <h4 id="heres-how-to-declare-a-variable">Here&#39;s how to declare a variable:</h4>
-        <pre><code class="language-cpp">int x = 1;
-</code></pre>
-        <h4
-            id="you-start-with-the-type-of-the-variable-then-the-name-and-then-you-assign-a-value-to-it-with-the-equal-sign-you-can-also-make-constant-variables-which-cannot-be-changed-at-all-during-compile-time-or-run-time-example">
-            You start with the type of the variable then the name and then you assign a value to it with the equal sign,
-            you can also make constant variables which cannot be changed at all during compile-time or run-time,
-            example:</h4>
-        <pre><code class="language-cpp">const int x = 5;
-</code></pre>
-        <h4 id="now-x-will-stay-5-no-matter-what">Now x will stay 5 no matter what.</h4>
-        <hr>
-        <h1 id="3-data-types-📝">3. Data Types 📝:</h1>
-        <h4 id="data-has-many-types-in-programming">Data has many types in programming</h4>
-        <h3 id="here-are-all-the-data-types-youll-need-to-know-about">Here are all the data types you&#39;ll need to
-            know about:</h3>
-        <pre><code class="language-cpp">int x = 1; // Integer (A whole positive or negative number)
+            <h4 id="now-x-will-stay-5-no-matter-what">Now x will stay 5 no matter what.</h4>
+</section>
+<hr>
+<section>
+            <h1 id="3-data-types-📝">3. Data Types 📝:</h1>
+            <h4 id="data-has-many-types-in-programming">Data has many types in programming</h4>
+            <h3 id="here-are-all-the-data-types-youll-need-to-know-about">Here are all the data types you&#39;ll need to
+                know about:</h3>
+            <pre><code class="language-cpp">int x = 1; // Integer (A whole positive or negative number)
 
 long x = 87987182309; // Long (Big integers)
 
@@ -92,8 +95,8 @@ char letter = &#39;a&#39;; // Character (Can only store one character, Value has
 int array[size] = {1, 2, 3, 4, 5}; // Array (Has to have a type, any type, int, float, string, and it has to have a limit)
 
 int array[rows][columns] =  {{1, 2, 3},
-                            {4, 5, 6},
-                            {7, 8, 9}}; // 2D array (list with lists inside)
+                    {4, 5, 6},
+                    {7, 8, 9}}; // 2D array (list with lists inside)
 
 int *x = y; // Pointer (Has to have a type)
 
@@ -105,53 +108,57 @@ int *x = nullptr // Null Pointer
 //       V
 int x = NULL
 </code></pre>
-        <h4
-            id="note-some-types-have-to-be-explicitly-included-by-the-programmer-to-be-used-these-types-include-list-vector">
-            Note: Some types have to be explicitly included by the programmer to be used, these types include (list,
-            vector).</h4>
-        <h3 id="you-can-also-rename-a-data-type-to-ease-readability-using-typedef-like-this">You can also
-            &quot;rename&quot; a data type to ease readability using &quot;typedef&quot; like this:</h3>
-        <pre><code class="language-cpp">typedef int number_t;
+            <h4
+                id="note-some-types-have-to-be-explicitly-included-by-the-programmer-to-be-used-these-types-include-list-vector">
+                Note: Some types have to be explicitly included by the programmer to be used, these types include (list,
+                vector).</h4>
+            <h3 id="you-can-also-rename-a-data-type-to-ease-readability-using-typedef-like-this">You can also
+                &quot;rename&quot; a data type to ease readability using &quot;typedef&quot; like this:</h3>
+            <pre><code class="language-cpp">typedef int number_t;
 </code></pre>
-        <h4 id="now-you-can-make-a-variable-with-that-data-type-using-the-new-name-like-this">Now you can make a
-            variable with that data type using the new name like this:</h4>
-        <pre><code class="language-cpp">number_t someNumber = 5;
+            <h4 id="now-you-can-make-a-variable-with-that-data-type-using-the-new-name-like-this">Now you can make a
+                variable with that data type using the new name like this:</h4>
+            <pre><code class="language-cpp">number_t someNumber = 5;
 </code></pre>
-        <h4 id="note-new-data-type-name-must-end-with-_t-or-an-error-would-be-returned">Note: New data type name must
-            end with <code>_t</code> or an error would be returned.</h4>
-        <hr>
-        <h1 id="4-type-conversion-📝🔀📝">4. Type Conversion 📝🔀📝:</h1>
-        <h3 id="there-are-2-types-of-type-conversion-">There are 2 types of type conversion:-</h3>
-        <h3 id="1-implicit-">1. Implicit:-</h3>
-        <h4 id="the-automatic-conversion-of-a-data-type-due-to-conflicts-with-other-data-types-for-example">The
-            automatic conversion of a data type due to conflicts with other data types, for example:</h4>
-        <h3 id="code">Code:</h3>
-        <pre><code class="language-cpp">float x = 10;
+            <h4 id="note-new-data-type-name-must-end-with-_t-or-an-error-would-be-returned">Note: New data type name must
+                end with <code>_t</code> or an error would be returned.</h4>
+</section>
+<hr>
+<section>
+            <h1 id="4-type-conversion-📝🔀📝">4. Type Conversion 📝🔀📝:</h1>
+            <h3 id="there-are-2-types-of-type-conversion-">There are 2 types of type conversion:-</h3>
+            <h3 id="1-implicit-">1. Implicit:-</h3>
+            <h4 id="the-automatic-conversion-of-a-data-type-due-to-conflicts-with-other-data-types-for-example">The
+                automatic conversion of a data type due to conflicts with other data types, for example:</h4>
+            <h3 id="code">Code:</h3>
+            <pre><code class="language-cpp">float x = 10;
 float y = 3;
 int z = x/y;
 std::cout &lt;&lt; z;
 </code></pre>
-        <h3 id="output3">Output:<code data-highlighted="yes" class="hljs language-undefined">3</code></h3>
-        <h4
-            id="from-this-example-we-deduce-that-if-a-floating-point-number-was-stored-in-a-variable-with-integer-type-the-value-would-automatically-convert-to-an-integer">
-            From this example we deduce that if a floating point number was stored in a variable with integer type, the
-            value would automatically convert to an integer.</h4>
-        <h3 id="2-explicit-">2. Explicit:-</h3>
-        <h4 id="the-intentional-conversion-of-a-data-type-for-example">The intentional conversion of a data type, for
-            example:</h4>
-        <h3 id="code-1">Code:</h3>
-        <pre><code class="language-cpp">int x = 100;
+            <h3 id="output3">Output:<code data-highlighted="yes" class="hljs language-undefined">3</code></h3>
+            <h4
+                id="from-this-example-we-deduce-that-if-a-floating-point-number-was-stored-in-a-variable-with-integer-type-the-value-would-automatically-convert-to-an-integer">
+                From this example we deduce that if a floating point number was stored in a variable with integer type, the
+                value would automatically convert to an integer.</h4>
+            <h3 id="2-explicit-">2. Explicit:-</h3>
+            <h4 id="the-intentional-conversion-of-a-data-type-for-example">The intentional conversion of a data type, for
+                example:</h4>
+            <h3 id="code-1">Code:</h3>
+            <pre><code class="language-cpp">int x = 100;
 std::cout &lt;&lt; (char) x;
 </code></pre>
-        <h3 id="outputd">Output:<code data-highlighted="yes" class="hljs language-undefined">d</code></h3>
-        <h4
-            id="from-this-example-we-can-deduce-that-whenever-we-put-a-type-surrounded-by-braces-before-we-call-a-variable-we-can-convert-the-value-of-this-variable-to-that-type-in-this-case-we-converted-the-decimal-value-of-x-to-a-character-which-is-d">
-            From this example we can deduce that whenever we put a type surrounded by braces before we call a variable,
-            we can convert the value of this variable to that type, in this case we converted the decimal value of x to
-            a character which is d.</h4>
-        <hr>
-        <h1 id="5-symbols-🔣">5. Symbols 🔣:</h1>
-        <pre><code class="language-cpp">// Arithmetic Operators
+            <h3 id="outputd">Output:<code data-highlighted="yes" class="hljs language-undefined">d</code></h3>
+            <h4
+                id="from-this-example-we-can-deduce-that-whenever-we-put-a-type-surrounded-by-braces-before-we-call-a-variable-we-can-convert-the-value-of-this-variable-to-that-type-in-this-case-we-converted-the-decimal-value-of-x-to-a-character-which-is-d">
+                From this example we can deduce that whenever we put a type surrounded by braces before we call a variable,
+                we can convert the value of this variable to that type, in this case we converted the decimal value of x to
+                a character which is d.</h4>
+</section>
+<hr>
+<section>
+            <h1 id="5-symbols-🔣">5. Symbols 🔣:</h1>
+            <pre><code class="language-cpp">// Arithmetic Operators
 + // Addition operator
 - // Subtraction operator
 * // Multiplication operator AND can be used as Dereference operator
@@ -201,9 +208,11 @@ std::cout &lt;&lt; (char) x;
 ; // Semi-colon
 :: // Scope resolution operator
 </code></pre>
-        <hr>
-        <h1 id="6-some-useful-functions-and-namespaces-⚙️">6. Some Useful Functions and namespaces ⚙️:</h1>
-        <pre><code class="language-cpp">// Usful libraries to have using in your project
+</section>
+<hr>
+<section>
+            <h1 id="6-some-useful-functions-and-namespaces-⚙️">6. Some Useful Functions and namespaces ⚙️:</h1>
+            <pre><code class="language-cpp">// Usful libraries to have using in your project
 #inlcude &lt;iostream&gt;;
 #include &lt;cmath&gt;;
 #include &lt;stdio.h&gt;;
@@ -271,25 +280,29 @@ sizeof(x) // Returns the size of the array x (divide it by the size of an elemen
 
 fill(x, y, z) // Fills a range of elements with a specified value i.g. fill(begining, end, value)
 </code></pre>
-        <p>Get documentation <a href="https://www.cplusplus.com/reference">here</a></p>
-        <hr>
-        <h1 id="7-switch-statements-❓">7. Switch statements ❓:</h1>
-        <h4 id="theyre-basically-ifelse-chains-with-all-its-contents-in-one-statement-example">They&#39;re basically
-            if/else chains, with all it&#39;s contents in one statement, example:</h4>
-        <pre><code class="language-cpp">switch (x) {
+            <p>Get documentation <a href="https://www.cplusplus.com/reference">here</a></p>
+        </section>
+        <section>
+            </section>
+<hr>
+<section>
+            <h1 id="7-switch-statements-❓">7. Switch statements ❓:</h1>
+            <h4 id="theyre-basically-ifelse-chains-with-all-its-contents-in-one-statement-example">They&#39;re basically
+                if/else chains, with all it&#39;s contents in one statement, example:</h4>
+            <pre><code class="language-cpp">switch (x) {
     case 1:
-        std::cout &lt;&lt; &quot;x = 1&quot;;
-        break;
+std::cout &lt;&lt; &quot;x = 1&quot;;
+break;
     case 2:
-        std::cout &lt;&lt; &quot;x = 2&quot;;
-        break;
+std::cout &lt;&lt; &quot;x = 2&quot;;
+break;
     case 4:
-        std::cout &lt;&lt; &quot;x = 3&quot;;
-        break;
+std::cout &lt;&lt; &quot;x = 3&quot;;
+break;
 }
 </code></pre>
-        <h4 id="and-heres-what-it-means-in-if-statements">And here&#39;s what it means in if statements:</h4>
-        <pre><code class="language-cpp">if (x == 1) {
+            <h4 id="and-heres-what-it-means-in-if-statements">And here&#39;s what it means in if statements:</h4>
+            <pre><code class="language-cpp">if (x == 1) {
     std::cout &lt;&lt; &quot;x = 1&quot;;
 }
 else if (x == 2) {
@@ -299,20 +312,22 @@ else if (x == 3) {
     std::cout &lt;&lt; &quot;x = 3&quot;;
 }
 </code></pre>
-        <h4 id="theres-also-a-default-case-which-is-basically-the-else-statement-and-dont-forget-the-break-statement">
-            There&#39;s also a default case which is basically the else statement, and DON&#39;T FORGET THE BREAK
-            STATEMENT.</h4>
-        <hr>
-        <h1 id="8-for-loops-🔁">8. For Loops 🔁:</h1>
-        <h4 id="its-a-loop-that-iterates-over-an-entity-i-until-a-condition-is-met-example">It&#39;s a loop that
-            iterates over an entity <pre><code data-highlighted="yes" class="language-undefined">i</code></pre> until a condition is met, example:</h4>
-        <h3 id="code-2">Code:</h3>
-        <pre><code class="language-cpp">for (int i = 0; i&lt;11; i++) {
+            <h4 id="theres-also-a-default-case-which-is-basically-the-else-statement-and-dont-forget-the-break-statement">
+                There&#39;s also a default case which is basically the else statement, and DON&#39;T FORGET THE BREAK
+                STATEMENT.</h4>
+</section>
+<hr>
+<section>
+            <h1 id="8-for-loops-🔁">8. For Loops 🔁:</h1>
+            <h4 id="its-a-loop-that-iterates-over-an-entity-i-until-a-condition-is-met-example">It&#39;s a loop that
+                iterates over an entity <pre><code data-highlighted="yes" class="language-undefined">i</code></pre> until a condition is met, example:</h4>
+            <h3 id="code-2">Code:</h3>
+            <pre><code class="language-cpp">for (int i = 0; i&lt;11; i++) {
     std::cout &lt;&lt; &quot;Hello world &quot; &lt;&lt; i &lt;&lt; std::endl;
 }
 </code></pre>
-        <h3 id="output">Output:</h3>
-        <pre><code data-highlighted="yes" class="hljs language-undefined">Hello world 0
+            <h3 id="output">Output:</h3>
+            <pre><code data-highlighted="yes" class="hljs language-undefined">Hello world 0
 Hello world 1
 Hello world 2
 Hello world 3
@@ -324,76 +339,85 @@ Hello world 8
 Hello world 9
 Hello world 10
 </code></pre>
-<h4 id="explanation-">Explanation:</h4>
-<ul>
-<li><p><code>for</code>: This keyword is used to start a loop in C++. It&#39;s followed by three statements enclosed in parentheses: initialization, condition, and increment.</p>
-</li>
-<li><p><code>int i = 0;</code>: This is the initialization part of the <code>for</code> loop. It declares an integer variable <code>i</code> and initializes it to 0. This statement is executed once at the beginning of the loop.</p>
-</li>
-<li><p><code>i &lt; 11;</code>: This is the condition part of the <code>for</code> loop. It specifies the condition for the loop to continue iterating. As long as the condition <code>i &lt; 11</code> is true, the loop will continue executing. When the condition becomes false, the loop will terminate.</p>
-</li>
-<li><p><code>i++</code>: This is the increment part of the <code>for</code> loop. It specifies how the loop variable <code>i</code> should be updated after each iteration. In this case, <code>i++</code> means that <code>i</code> should be incremented by 1 after each iteration.</p>
-</li>
-<li><p><code>std::cout &lt;&lt; &quot;Hello world &quot; &lt;&lt; i &lt;&lt; std::endl;</code>: This line of code is executed each time the loop iterates. It prints the string &quot;Hello world&quot; followed by the current value of <code>i</code> to the standard output (usually the console). <code>std::endl</code> is used to insert a newline character after printing.</p>
-</li>
-</ul>
+            <h4 id="explanation-">Explanation:</h4>
+            <ul>
+            <li><p><code>for</code>: This keyword is used to start a loop in C++. It&#39;s followed by three statements enclosed in parentheses: initialization, condition, and increment.</p>
+            </li>
+            <li><p><code>int i = 0;</code>: This is the initialization part of the <code>for</code> loop. It declares an integer variable <code>i</code> and initializes it to 0. This statement is executed once at the beginning of the loop.</p>
+            </li>
+            <li><p><code>i &lt; 11;</code>: This is the condition part of the <code>for</code> loop. It specifies the condition for the loop to continue iterating. As long as the condition <code>i &lt; 11</code> is true, the loop will continue executing. When the condition becomes false, the loop will terminate.</p>
+            </li>
+            <li><p><code>i++</code>: This is the increment part of the <code>for</code> loop. It specifies how the loop variable <code>i</code> should be updated after each iteration. In this case, <code>i++</code> means that <code>i</code> should be incremented by 1 after each iteration.</p>
+            </li>
+            <li><p><code>std::cout &lt;&lt; &quot;Hello world &quot; &lt;&lt; i &lt;&lt; std::endl;</code>: This line of code is executed each time the loop iterates. It prints the string &quot;Hello world&quot; followed by the current value of <code>i</code> to the standard output (usually the console). <code>std::endl</code> is used to insert a newline character after printing.</p>
+            </li>
+            </ul>
+        </section>
 
-        <hr>
-        <h1 id="9-foreach-loops-🔁">9. Foreach Loops 🔁:</h1>
-        <h4 id="loops-that-ease-the-traversal-over-an-iterable-data-set-example">Loops that ease the traversal over an
-            iterable data set, example:</h4>
-        <h3 id="code-3">Code:</h3>
-        <pre><code class="language-cpp">std::string students[] = {&quot;Spongebob&quot;, &quot;patrick&quot;, &quot;Squidward&quot;}
+        </section>
+<hr>
+<section>
+            <h1 id="9-foreach-loops-🔁">9. Foreach Loops 🔁:</h1>
+            <h4 id="loops-that-ease-the-traversal-over-an-iterable-data-set-example">Loops that ease the traversal over an
+                iterable data set, example:</h4>
+            <h3 id="code-3">Code:</h3>
+            <pre><code class="language-cpp">std::string students[] = {&quot;Spongebob&quot;, &quot;patrick&quot;, &quot;Squidward&quot;}
 for(std::string student : students) {
     std::cout &lt;&lt; student &lt;&lt; std::endl;
 }
 </code></pre>
-        <h3 id="output-1">Output:</h3>
-        <pre><code data-highlighted="yes" class="hljs language-undefined">Spongebob
+            <h3 id="output-1">Output:</h3>
+            <pre><code data-highlighted="yes" class="hljs language-undefined">Spongebob
 Patrick
 Squidward
 </code></pre>
-        <hr>
-        <h1 id="10-while-loops-🔁">10. While Loops 🔁:</h1>
-        <h4 id="its-a-loop-that-repeats-until-a-conditions-is-met-example">It&#39;s a loop that repeats until a
-            conditions is met, example:</h4>
-        <pre><code class="language-cpp">while (name.empty()) {
+</section>
+<hr>
+<section>
+            <h1 id="10-while-loops-🔁">10. While Loops 🔁:</h1>
+            <h4 id="its-a-loop-that-repeats-until-a-conditions-is-met-example">It&#39;s a loop that repeats until a
+                conditions is met, example:</h4>
+            <pre><code class="language-cpp">while (name.empty()) {
     std::cout &lt;&lt; &quot;Enter your name: &quot;;
     std::getline(std::cin, name);
 }
 </code></pre>
-        <h3
-            id="in-this-example-if-the-user-inputs-an-empty-name-then-we-will-keep-asking-him-until-its-not-empty-anymore">
-            In this example if the user inputs an empty name then we will keep asking him until it&#39;s not empty
-            anymore.</h3>
-        <hr>
-        <h1 id="11-do-while-loops-🔁">11. Do While Loops 🔁:</h1>
-        <h4
-            id="its-a-loop-that-runs-a-block-of-code-and-then-checks-for-its-condition-so-its-like-this-run-some-code-first-then-repeat-if-condition-is-true-example">
-            It&#39;s a loop that runs a block of code, and THEN checks for it&#39;s condition, so it&#39;s like this:
-            run some code first, THEN repeat if condition is true. example:</h4>
-        <pre><code class="language-cpp">int number;
+            <h3
+                id="in-this-example-if-the-user-inputs-an-empty-name-then-we-will-keep-asking-him-until-its-not-empty-anymore">
+                In this example if the user inputs an empty name then we will keep asking him until it&#39;s not empty
+                anymore.</h3>
+</section>
+<hr>
+<section>
+            <h1 id="11-do-while-loops-🔁">11. Do While Loops 🔁:</h1>
+            <h4
+                id="its-a-loop-that-runs-a-block-of-code-and-then-checks-for-its-condition-so-its-like-this-run-some-code-first-then-repeat-if-condition-is-true-example">
+                It&#39;s a loop that runs a block of code, and THEN checks for it&#39;s condition, so it&#39;s like this:
+                run some code first, THEN repeat if condition is true. example:</h4>
+            <pre><code class="language-cpp">int number;
 do {
     std::cout &lt;&lt; &quot;Enter a positive number: &quot;;
     std::cin &gt;&gt; number;
 }while (number &lt; 0);
 </code></pre>
-        <h3
-            id="in-this-example-the-program-will-ask-for-an-input-and-then-check-if-its-less-than-0-if-it-is-then-it-will-repeat-the-code">
-            In this example the program will ask for an input and THEN check if it&#39;s less than 0, if it is then it
-            will repeat the code.</h3>
-        <h3
-            id="note-in-loops-you-can-use-the-keywords-break-and-continue-to-exit-out-of-the-loop-and-skip-that-iteration">
-            NOTE: In loops you can use the keywords &quot;break;&quot; and &quot;continue;&quot; to exit out of the loop
-            and skip that iteration.</h3>
-        <hr>
-        <h1 id="12-user-defined-functions-🛠️">12. User defined functions 🛠️:</h1>
-        <h4
-            id="i-think-the-name-reveals-what-it-is-they-have-two-sections-the-definitiondeclaration-and-the-callinvocation-example">
-            I think the name reveals what it is, they have two sections, the definition/declaration, and the
-            call/invocation, example:</h4>
-        <h3 id="code-4">Code:</h3>
-        <pre><code class="language-cpp">// Definition:
+            <h3
+                id="in-this-example-the-program-will-ask-for-an-input-and-then-check-if-its-less-than-0-if-it-is-then-it-will-repeat-the-code">
+                In this example the program will ask for an input and THEN check if it&#39;s less than 0, if it is then it
+                will repeat the code.</h3>
+            <h3
+                id="note-in-loops-you-can-use-the-keywords-break-and-continue-to-exit-out-of-the-loop-and-skip-that-iteration">
+                NOTE: In loops you can use the keywords &quot;break;&quot; and &quot;continue;&quot; to exit out of the loop
+                and skip that iteration.</h3>
+</section>
+<hr>
+<section>
+            <h1 id="12-user-defined-functions-🛠️">12. User defined functions 🛠️:</h1>
+            <h4
+                id="i-think-the-name-reveals-what-it-is-they-have-two-sections-the-definitiondeclaration-and-the-callinvocation-example">
+                I think the name reveals what it is, they have two sections, the definition/declaration, and the
+                call/invocation, example:</h4>
+            <h3 id="code-4">Code:</h3>
+            <pre><code class="language-cpp">// Definition:
 void someName() {
     std::cout &lt;&lt; &quot;The function is working&quot;;
 }
@@ -401,37 +425,39 @@ void someName() {
 // Call:
 someName();
 </code></pre>
-        <h3 id="outputthe-function-is-working">Output:<code data-highlighted="yes" class="hljs language-undefined">The function is working</code></h3>
-        <h4
-            id="from-this-example-we-deduce-that-the-definition-consists-of-4-parts-the-return-type-which-in-this-case-is-void-because-we-arent-returning-anything-the-name-braces-which-will-contain-the-parameter-of-our-function-and-curly-braces-which-will-contain-the-code-that-will-be-executed-on-function-call-the-call-on-the-other-hand-is-just-the-and-the-braces-so-that-you-can-input-the-arguments-in-you-also-have-to-end-it-with-a-semi-colon-unlike-the-definition-you-can-also-define-the-function-after-the-main-method-but-youll-have-to-declare-it-globally-first-and-dont-forget-to-specify-parameter-types">
-            From this example we deduce that the definition consists of 4 parts, the return type which in this case is
-            void because we aren&#39;t returning anything, the name, braces which will contain the parameter of our
-            function, and curly braces which will contain the code that will be executed on function call, the call on
-            the other hand is just the and the braces so that you can input the arguments in, you also have to end it
-            with a semi-colon unlike the definition, you can also define the function after the main method but
-            you&#39;ll have to declare it globally first, and don&#39;t forget to specify parameter types.</h4>
-        <h4 id="example-of-constant-parameters">Example of constant parameters:</h4>
-        <h4 id="code-5">Code:</h4>
-        <pre><code class="language-cpp">int num = 2;
+            <h3 id="outputthe-function-is-working">Output:<code data-highlighted="yes" class="hljs language-undefined">The function is working</code></h3>
+            <h4
+                id="from-this-example-we-deduce-that-the-definition-consists-of-4-parts-the-return-type-which-in-this-case-is-void-because-we-arent-returning-anything-the-name-braces-which-will-contain-the-parameter-of-our-function-and-curly-braces-which-will-contain-the-code-that-will-be-executed-on-function-call-the-call-on-the-other-hand-is-just-the-and-the-braces-so-that-you-can-input-the-arguments-in-you-also-have-to-end-it-with-a-semi-colon-unlike-the-definition-you-can-also-define-the-function-after-the-main-method-but-youll-have-to-declare-it-globally-first-and-dont-forget-to-specify-parameter-types">
+                From this example we deduce that the definition consists of 4 parts, the return type which in this case is
+                void because we aren&#39;t returning anything, the name, braces which will contain the parameter of our
+                function, and curly braces which will contain the code that will be executed on function call, the call on
+                the other hand is just the and the braces so that you can input the arguments in, you also have to end it
+                with a semi-colon unlike the definition, you can also define the function after the main method but
+                you&#39;ll have to declare it globally first, and don&#39;t forget to specify parameter types.</h4>
+            <h4 id="example-of-constant-parameters">Example of constant parameters:</h4>
+            <h4 id="code-5">Code:</h4>
+            <pre><code class="language-cpp">int num = 2;
 int printNum(const int num) {
     num += 1;
     cout &lt;&lt; num &lt;&lt; endl;
 }
 </code></pre>
-        <h4 id="output-error-assignment-of-read-only-parameter-num">Output:
-            <pre><code data-highlighted="yes" class="hljs language-undefined">ERROR: assignment of read-only parameter &#39;num&#39;</code></pre>
-        </h4>
-        <h4
-            id="from-this-example-we-deduce-that-by-preceding-the-parameters-with-const-weve-made-it-a-read-only-variable-which-prevents-it-from-being-modified-inside-the-function-this-could-be-useful-if-youre-passing-by-reference-and-dont-want-the-original-variable-to-be-modified">
-            From this example we deduce that by preceding the parameters with <code>const</code> we&#39;ve made it a
-            read-only variable which prevents it from being modified inside the function, this could be useful if
-            you&#39;re passing by reference and don&#39;t want the original variable to be modified.</h4>
-        <hr>
-        <h1 id="13-overloaded-functions-⚡">13. Overloaded Functions ⚡:</h1>
-        <h4 id="functions-with-multiple-versions-of-themselves-but-with-different-parameters-example">Functions with
-            multiple versions of themselves but with different parameters, example:</h4>
-        <h3 id="code-6">Code:</h3>
-        <pre><code class="language-cpp">void bakePizza() {
+            <h4 id="output-error-assignment-of-read-only-parameter-num">Output:
+                <pre><code data-highlighted="yes" class="hljs language-undefined">ERROR: assignment of read-only parameter &#39;num&#39;</code></pre>
+            </h4>
+            <h4
+                id="from-this-example-we-deduce-that-by-preceding-the-parameters-with-const-weve-made-it-a-read-only-variable-which-prevents-it-from-being-modified-inside-the-function-this-could-be-useful-if-youre-passing-by-reference-and-dont-want-the-original-variable-to-be-modified">
+                From this example we deduce that by preceding the parameters with <code>const</code> we&#39;ve made it a
+                read-only variable which prevents it from being modified inside the function, this could be useful if
+                you&#39;re passing by reference and don&#39;t want the original variable to be modified.</h4>
+</section>
+<hr>
+<section>
+            <h1 id="13-overloaded-functions-⚡">13. Overloaded Functions ⚡:</h1>
+            <h4 id="functions-with-multiple-versions-of-themselves-but-with-different-parameters-example">Functions with
+                multiple versions of themselves but with different parameters, example:</h4>
+            <h3 id="code-6">Code:</h3>
+            <pre><code class="language-cpp">void bakePizza() {
     std::cout &lt;&lt; &quot;Here&#39;s your pizza\n&quot;;
 }
 void bakePizza(std::string topping1) {
@@ -440,36 +466,38 @@ void bakePizza(std::string topping1) {
 bakePizza();
 bakePizza(&quot;Cheese&quot;);
 </code></pre>
-        <h3 id="output-2">Output:</h3>
-        <pre><code data-highlighted="yes" class="hljs language-undefined">Here&#39;s your pizza
-Here&#39;s your Cheese pizza
+            <h3 id="output-2">Output:</h3>
+            <pre><code data-highlighted="yes" class="hljs language-undefined">Here&#39;s your pizza
+            Here&#39;s your Cheese pizza
 </code></pre>
-        <h4 id="so-its-accepted-to-have-functions-with-the-same-name-but-with-different-parameters">So it&#39;s accepted
-            to have functions with the same name but with different parameters.</h4>
-        <hr>
-        <h1 id="14-memory-addresses-🧠">14. Memory addresses 🧠:</h1>
-        <h4
-            id="theyre-locations-in-memory-where-data-is-stored-a-memory-address-can-be-accessed-with-the--symbol-or-as-its-called-the-address-of-operator-example">
-            They&#39;re locations in memory where data is stored, a memory address can be accessed with the
-            &quot;&amp;&quot; symbol or as it&#39;s called, the &quot;address-of operator&quot;, example:</h4>
-        <h3 id="code-7">Code:</h3>
-        <pre><code class="language-cpp">std::string name = &quot;Youssef&quot;;
+            <h4 id="so-its-accepted-to-have-functions-with-the-same-name-but-with-different-parameters">So it&#39;s accepted
+                to have functions with the same name but with different parameters.</h4>
+</section>
+<hr>
+<section>
+            <h1 id="14-memory-addresses-🧠">14. Memory addresses 🧠:</h1>
+            <h4
+                id="theyre-locations-in-memory-where-data-is-stored-a-memory-address-can-be-accessed-with-the--symbol-or-as-its-called-the-address-of-operator-example">
+                They&#39;re locations in memory where data is stored, a memory address can be accessed with the
+                &quot;&amp;&quot; symbol or as it&#39;s called, the &quot;address-of operator&quot;, example:</h4>
+            <h3 id="code-7">Code:</h3>
+            <pre><code class="language-cpp">std::string name = &quot;Youssef&quot;;
 int age = 15;
 bool student = true;
 
 std::cout &lt;&lt; &amp;name &lt;&lt; &quot; &quot; &lt;&lt; &amp;age &lt;&lt; &quot; &quot; &lt;&lt; &amp;student &lt;&lt; std::endl;
 </code></pre>
-        <h3 id="output-0x61fde0-0x61fddc-0x61fddb">Output: <code data-highlighted="yes" class="hljs language-undefined">0x61fde0 0x61fddc 0x61fddb</code></h3>
-        <h4
-            id="note-the-output-is-going-to-change-every-time-the-code-is-executed-because-the-computer-stores-the-data-in-a-different-place-every-time-the-program-is-started">
-            Note: The output is going to change every time the code is executed because the computer stores the data in
-            a different place every time the program is started.</h4>
-        <h3 id="passing-by-reference-or-by-value">Passing by reference or by value:</h3>
-        <h4 id="the-address-of-operator-also-helps-us-to-pass-arguments-by-reference-instead-of-value-examples">The
-            address-of operator also helps us to pass arguments by reference instead of value, examples:</h4>
-        <h3 id="first-example">First example:</h3>
-        <h3 id="code-8">Code:</h3>
-        <pre><code class="language-cpp">#include &lt;iostream&gt;
+            <h3 id="output-0x61fde0-0x61fddc-0x61fddb">Output: <code data-highlighted="yes" class="hljs language-undefined">0x61fde0 0x61fddc 0x61fddb</code></h3>
+            <h4
+                id="note-the-output-is-going-to-change-every-time-the-code-is-executed-because-the-computer-stores-the-data-in-a-different-place-every-time-the-program-is-started">
+                Note: The output is going to change every time the code is executed because the computer stores the data in
+                a different place every time the program is started.</h4>
+            <h3 id="passing-by-reference-or-by-value">Passing by reference or by value:</h3>
+            <h4 id="the-address-of-operator-also-helps-us-to-pass-arguments-by-reference-instead-of-value-examples">The
+                address-of operator also helps us to pass arguments by reference instead of value, examples:</h4>
+            <h3 id="first-example">First example:</h3>
+            <h3 id="code-8">Code:</h3>
+            <pre><code class="language-cpp">#include &lt;iostream&gt;
 using namespace std;
 
 void swap(int x, int y) {
@@ -489,13 +517,13 @@ int main() {
     return 0;
 }
 </code></pre>
-        <h3 id="output-3">Output:</h3>
-        <pre><code data-highlighted="yes" class="hljs language-undefined">X is 25
+            <h3 id="output-3">Output:</h3>
+            <pre><code data-highlighted="yes" class="hljs language-undefined">X is 25
 Y is 75
 </code></pre>
-        <h3 id="second-example">Second example:</h3>
-        <h3 id="code-9">Code:</h3>
-        <pre><code class="language-cpp">#include &lt;iostream&gt;
+            <h3 id="second-example">Second example:</h3>
+            <h3 id="code-9">Code:</h3>
+            <pre><code class="language-cpp">#include &lt;iostream&gt;
 using namespace std;
 
 void swap(int &amp;x, int &amp;y) { // Added &quot;&amp;&quot;
@@ -515,35 +543,37 @@ int main() {
     return 0;
 }
 </code></pre>
-        <h3 id="output-4">Output:</h3>
-        <pre><code data-highlighted="yes" class="hljs language-undefined">X is 75
+            <h3 id="output-4">Output:</h3>
+            <pre><code data-highlighted="yes" class="hljs language-undefined">X is 75
 Y is 25
 </code></pre>
-        <h4
-            id="in-the-first-example-we-were-passing-arguments-by-value-which-means-that-we-were-just-assigning-the-value-of-x-and-y-to-copies-of-themselves-then-swapped-the-copies-not-the-originals-thats-why-they-stayed-the-same-in-the-first-example-in-the-second-one-though-we-passed-the-arguments-by-reference-using-the-address-of-operator-which-referenced-the-x-and-y-variables-directly-to-the-function-and-let-the-function-modify-it-without-creating-extra-instances">
-            In the first example we were passing arguments by value which means that we were just assigning the value of
-            x and y to copies of themselves then swapped the copies not the originals, that&#39;s why they stayed the
-            same in the first example, in the second one though, we passed the arguments by reference using the
-            address-of operator which referenced the x and y variables directly to the function, and let the function
-            modify it without creating extra instances.</h4>
-        <hr>
-        <h1 id="15-pointers-🥵">15. Pointers 🥵:</h1>
-        <h4
-            id="a-pointer-in-c-is-a-variable-that-stores-the-memory-address-of-another-variable-instead-of-directly-storing-a-value-a-pointer-holds-the-location-address-of-where-the-value-is-stored-in-the-computers-memory">
-            A pointer in C++ is a variable that stores the memory address of another variable. Instead of directly
-            storing a value, a pointer holds the location (address) of where the value is stored in the computer&#39;s
-            memory.</h4>
-        <p>Pointers are powerful tools in C++ that allow you to work directly with memory addresses. They enable dynamic
-            memory allocation, facilitate accessing and modifying data indirectly, and are essential for working with
-            data structures like linked lists and trees.</p>
-        <p>Think of as having a stack of pizzas (variables) that you want to share with the neighborhood (rest of the
-            code or other programs), instead of delivering the pizzas to each house you can just give them the address
-            to your house and let them come to you.</p>
-        <p>We can declare a pointer by placing the Dereference Operator before it like this:</p>
-        <pre><code class="language-cpp">int *x;
+            <h4
+                id="in-the-first-example-we-were-passing-arguments-by-value-which-means-that-we-were-just-assigning-the-value-of-x-and-y-to-copies-of-themselves-then-swapped-the-copies-not-the-originals-thats-why-they-stayed-the-same-in-the-first-example-in-the-second-one-though-we-passed-the-arguments-by-reference-using-the-address-of-operator-which-referenced-the-x-and-y-variables-directly-to-the-function-and-let-the-function-modify-it-without-creating-extra-instances">
+                In the first example we were passing arguments by value which means that we were just assigning the value of
+                x and y to copies of themselves then swapped the copies not the originals, that&#39;s why they stayed the
+                same in the first example, in the second one though, we passed the arguments by reference using the
+                address-of operator which referenced the x and y variables directly to the function, and let the function
+                modify it without creating extra instances.</h4>
+</section>
+<hr>
+<section>
+            <h1 id="15-pointers-🥵">15. Pointers 🥵:</h1>
+            <h4
+                id="a-pointer-in-c-is-a-variable-that-stores-the-memory-address-of-another-variable-instead-of-directly-storing-a-value-a-pointer-holds-the-location-address-of-where-the-value-is-stored-in-the-computers-memory">
+                A pointer in C++ is a variable that stores the memory address of another variable. Instead of directly
+                storing a value, a pointer holds the location (address) of where the value is stored in the computer&#39;s
+                memory.</h4>
+            <p>Pointers are powerful tools in C++ that allow you to work directly with memory addresses. They enable dynamic
+                memory allocation, facilitate accessing and modifying data indirectly, and are essential for working with
+                data structures like linked lists and trees.</p>
+            <p>Think of as having a stack of pizzas (variables) that you want to share with the neighborhood (rest of the
+                code or other programs), instead of delivering the pizzas to each house you can just give them the address
+                to your house and let them come to you.</p>
+            <p>We can declare a pointer by placing the Dereference Operator before it like this:</p>
+            <pre><code class="language-cpp">int *x;
 </code></pre>
-        <h3 id="example-code">Example code:</h3>
-        <pre><code class="language-cpp">#include &lt;iostream&gt;
+            <h3 id="example-code">Example code:</h3>
+            <pre><code class="language-cpp">#include &lt;iostream&gt;
 
 int main() {
     int number = 10; // Define an integer variable
@@ -559,38 +589,40 @@ int main() {
     return 0;
 }
 </code></pre>
-        <p>In this example:</p>
-        <ul>
-            <li>We declare an integer variable <code>number</code> with the value 10.</li>
-            <li>We declare a pointer variable <code>pointer</code> of type <code>int*</code>, which means it can store
-                the memory address of an integer variable.</li>
-            <li>We assign the address of the <code>number</code> variable to the <code>pointer</code> variable using the
-                address-of operator (<code>&amp;</code>).</li>
-            <li>We then print the value of <code>number</code>, the address of <code>number</code>, the value stored at
-                the memory location pointed to by <code>pointer</code> using the dereference operator (<code>*</code>),
-                and the address stored in <code>pointer</code>.</li>
-        </ul>
-        <h3 id="output-5">Output:</h3>
-        <pre><code data-highlighted="yes" class="hljs language-undefined">Value of number: 10
+            <p>In this example:</p>
+            <ul>
+                <li>We declare an integer variable <code>number</code> with the value 10.</li>
+                <li>We declare a pointer variable <code>pointer</code> of type <code>int*</code>, which means it can store
+                    the memory address of an integer variable.</li>
+                <li>We assign the address of the <code>number</code> variable to the <code>pointer</code> variable using the
+                    address-of operator (<code>&amp;</code>).</li>
+                <li>We then print the value of <code>number</code>, the address of <code>number</code>, the value stored at
+                    the memory location pointed to by <code>pointer</code> using the dereference operator (<code>*</code>),
+                    and the address stored in <code>pointer</code>.</li>
+            </ul>
+            <h3 id="output-5">Output:</h3>
+            <pre><code data-highlighted="yes" class="hljs language-undefined">Value of number: 10
 Address of number: 0x7ffeefbff4b4 (example address, actual address may vary)
 Value stored at pointer: 10
 Address stored in pointer: 0x7ffeefbff4b4 (same as the address of &#39;number&#39;)
 </code></pre>
-        <p>This demonstrates how a pointer can be used to indirectly access and manipulate the value of a variable by
-            storing its memory address.</p>
-        <p>**NOTE: Pointer can point to other pointer, functions, and functions that return pointers to other stuff, so
-            it is very complex and this is an oversimplification.</p>
-        <hr>
-        <h1 id="16-dynamic-memory-💾">16. Dynamic Memory 💾:</h1>
-        <p>Dynamic memory allocation in C++ allows you to allocate memory during runtime rather than compile time. This
-            enables you to manage memory more flexibly, especially when the size of data structures is not known until
-            runtime or when you need to manage memory explicitly.</p>
-        <h3 id="explanation">Explanation:</h3>
-        <p>In C++, you can allocate memory dynamically using the <code>new</code> operator. This operator allocates
-            memory on the heap, which is a region of memory managed by the operating system. Dynamic memory allocation
-            allows you to create objects or arrays whose size can be determined at runtime.</p>
-        <h3 id="code-10">Code:</h3>
-        <pre><code class="language-cpp">#include &lt;iostream&gt;
+            <p>This demonstrates how a pointer can be used to indirectly access and manipulate the value of a variable by
+                storing its memory address.</p>
+            <p>**NOTE: Pointer can point to other pointer, functions, and functions that return pointers to other stuff, so
+                it is very complex and this is an oversimplification.</p>
+</section>
+<hr>
+<section>
+            <h1 id="16-dynamic-memory-💾">16. Dynamic Memory 💾:</h1>
+            <p>Dynamic memory allocation in C++ allows you to allocate memory during runtime rather than compile time. This
+                enables you to manage memory more flexibly, especially when the size of data structures is not known until
+                runtime or when you need to manage memory explicitly.</p>
+            <h3 id="explanation">Explanation:</h3>
+            <p>In C++, you can allocate memory dynamically using the <code>new</code> operator. This operator allocates
+                memory on the heap, which is a region of memory managed by the operating system. Dynamic memory allocation
+                allows you to create objects or arrays whose size can be determined at runtime.</p>
+            <h3 id="code-10">Code:</h3>
+            <pre><code class="language-cpp">#include &lt;iostream&gt;
 
 int main() {
     int *ptr = new int; // Allocate memory for a single integer
@@ -603,57 +635,59 @@ int main() {
     return 0;
 }
 </code></pre>
-        <h3 id="output-10">Output: <code data-highlighted="yes" class="hljs language-undefined">10</code></h3>
-        <p>In this example:</p>
-        <ul>
-            <li>We use the <code>new</code> operator to dynamically allocate memory for an integer.</li>
-            <li>We assign the value 10 to the memory location pointed by <code>ptr</code>.</li>
-            <li>We print the value stored at the memory location pointed by <code>ptr</code>.</li>
-            <li>Finally, we use the <code>delete</code> operator to deallocate the memory allocated by <code>ptr</code>
-                to avoid memory leaks.</li>
-        </ul>
-        <h3 id="good-practices-for-dynamic-memory-management">Good Practices for Dynamic Memory Management:</h3>
-        <ol>
-            <li>
-                <p><strong>Always deallocate memory</strong>: After dynamically allocating memory with <code>new</code>,
-                    make sure to deallocate it using <code>delete</code> when it&#39;s no longer needed. Failing to do
-                    so can lead to memory leaks, where memory that is no longer in use is not freed. Ensure that every
-                    <code>new</code> is paired with a corresponding <code>delete</code> to release allocated memory.</p>
-            </li>
-            <li>
-                <p><strong>Avoid dangling pointers</strong>: After deallocating memory with <code>delete</code>, ensure
-                    that you don&#39;t access the memory pointed by the pointer anymore. Accessing memory that has been
-                    deallocated results in undefined behavior and can lead to difficult-to-debug errors.</p>
-            </li>
-            <li>
-                <p><strong>Use smart pointers</strong>: C++ provides smart pointers like <code>std::unique_ptr</code>
-                    and <code>std::shared_ptr</code> that manage the memory automatically. They automatically deallocate
-                    memory when they go out of scope, reducing the risk of memory leaks and dangling pointers. Consider
-                    using them instead of raw pointers whenever possible.</p>
-            </li>
-            <li>
-                <p><strong>Delete arrays correctly</strong>: When dynamically allocating arrays using
-                    <code>new[]</code>, remember to deallocate them using <code>delete[]</code>. Using
-                    <code>delete</code> instead of <code>delete[]</code> for dynamically allocated arrays can lead to
-                    undefined behavior and memory leaks.</p>
-            </li>
-            <li>
-                <p><strong>Avoid unnecessary dynamic memory allocation</strong>: Dynamically allocating memory incurs
-                    overhead and can lead to fragmentation of memory. Whenever possible, prefer stack allocation or use
-                    standard library containers like <code>std::vector</code> or <code>std::array</code> for managing
-                    dynamic data.</p>
-            </li>
-        </ol>
-        <p>By following these good practices, you can effectively manage dynamic memory in your C++ programs, prevent
-            memory leaks, and avoid common pitfalls associated with manual memory management.</p>
-        <hr>
-        <h1 id="17-recursion-🌀">17. Recursion 🌀:</h1>
-        <p>Recursion is a programming technique where a function calls itself, either directly or indirectly. It&#39;s
-            often used to solve problems that can be broken down into smaller, similar sub-problems. Recursion allows
-            you to write elegant and concise solutions to complex problems by expressing them in terms of simpler cases.
-        </p>
-        <h3 id="code-11">Code:</h3>
-        <pre><code class="language-cpp">#include &lt;iostream&gt;
+            <h3 id="output-10">Output: <code data-highlighted="yes" class="hljs language-undefined">10</code></h3>
+            <p>In this example:</p>
+            <ul>
+                <li>We use the <code>new</code> operator to dynamically allocate memory for an integer.</li>
+                <li>We assign the value 10 to the memory location pointed by <code>ptr</code>.</li>
+                <li>We print the value stored at the memory location pointed by <code>ptr</code>.</li>
+                <li>Finally, we use the <code>delete</code> operator to deallocate the memory allocated by <code>ptr</code>
+                    to avoid memory leaks.</li>
+            </ul>
+            <h3 id="good-practices-for-dynamic-memory-management">Good Practices for Dynamic Memory Management:</h3>
+            <ol>
+                <li>
+                    <p><strong>Always deallocate memory</strong>: After dynamically allocating memory with <code>new</code>,
+                        make sure to deallocate it using <code>delete</code> when it&#39;s no longer needed. Failing to do
+                        so can lead to memory leaks, where memory that is no longer in use is not freed. Ensure that every
+                        <code>new</code> is paired with a corresponding <code>delete</code> to release allocated memory.</p>
+                </li>
+                <li>
+                    <p><strong>Avoid dangling pointers</strong>: After deallocating memory with <code>delete</code>, ensure
+                        that you don&#39;t access the memory pointed by the pointer anymore. Accessing memory that has been
+                        deallocated results in undefined behavior and can lead to difficult-to-debug errors.</p>
+                </li>
+                <li>
+                    <p><strong>Use smart pointers</strong>: C++ provides smart pointers like <code>std::unique_ptr</code>
+                        and <code>std::shared_ptr</code> that manage the memory automatically. They automatically deallocate
+                        memory when they go out of scope, reducing the risk of memory leaks and dangling pointers. Consider
+                        using them instead of raw pointers whenever possible.</p>
+                </li>
+                <li>
+                    <p><strong>Delete arrays correctly</strong>: When dynamically allocating arrays using
+                        <code>new[]</code>, remember to deallocate them using <code>delete[]</code>. Using
+                        <code>delete</code> instead of <code>delete[]</code> for dynamically allocated arrays can lead to
+                        undefined behavior and memory leaks.</p>
+                </li>
+                <li>
+                    <p><strong>Avoid unnecessary dynamic memory allocation</strong>: Dynamically allocating memory incurs
+                        overhead and can lead to fragmentation of memory. Whenever possible, prefer stack allocation or use
+                        standard library containers like <code>std::vector</code> or <code>std::array</code> for managing
+                        dynamic data.</p>
+                </li>
+            </ol>
+            <p>By following these good practices, you can effectively manage dynamic memory in your C++ programs, prevent
+                memory leaks, and avoid common pitfalls associated with manual memory management.</p>
+</section>
+<hr>
+<section>
+            <h1 id="17-recursion-🌀">17. Recursion 🌀:</h1>
+            <p>Recursion is a programming technique where a function calls itself, either directly or indirectly. It&#39;s
+                often used to solve problems that can be broken down into smaller, similar sub-problems. Recursion allows
+                you to write elegant and concise solutions to complex problems by expressing them in terms of simpler cases.
+            </p>
+            <h3 id="code-11">Code:</h3>
+            <pre><code class="language-cpp">#include &lt;iostream&gt;
 
 int factorial(int n) {
     // Base case: If n is 0 or 1, return 1
@@ -672,72 +706,74 @@ int main() {
     return 0;
 }
 </code></pre>
-        <h3 id="explanation-1">Explanation:</h3>
-        <ul>
-            <li>If <code>n</code> is 5:<ul>
-                    <li><code>factorial(5)</code> calls <code>factorial(4)</code> because <code>5 * factorial(4)</code>
-                        equals <code>5!</code>.</li>
-                    <li><code>factorial(4)</code> calls <code>factorial(3)</code> because <code>4 * factorial(3)</code>
-                        equals <code>4!</code>.</li>
-                    <li>This continues until <code>factorial(1)</code> is reached, which returns 1.</li>
-                    <li>Then, the multiplication chain is resolved backwards, resulting in <code>5!</code> being
-                        calculated as <code>5 * 4 * 3 * 2 * 1</code>, which equals 120.</li>
-                </ul>
-            </li>
-        </ul>
-        <h3 id="iterative-vs-recursive-programming">Iterative vs. Recursive Programming:</h3>
-        <p>Both iterative and recursive programming are techniques used to solve problems, but they have different
-            approaches and trade-offs.</p>
-        <h3 id="iterative-programming">Iterative Programming:</h3>
-        <ul>
-            <li>Iterative programming involves using loops (such as <code>for</code> or <code>while</code> loops) to
-                repeatedly execute a block of code until a certain condition is met.</li>
-            <li>It&#39;s often more efficient in terms of memory usage and execution time, especially for problems with
-                large input sizes.</li>
-            <li>It&#39;s generally easier to understand and debug than recursion for many programmers.</li>
-            <li>However, some problems may be more naturally expressed using recursion, and translating them into
-                iterative solutions can be complex.</li>
-        </ul>
-        <h3 id="recursive-programming">Recursive Programming:</h3>
-        <ul>
-            <li>Recursive programming involves breaking down a problem into smaller sub-problems and solving each
-                sub-problem recursively.</li>
-            <li>It can lead to elegant and concise solutions for problems that have a recursive structure.</li>
-            <li>Recursive solutions are often easier to write and understand for problems that naturally exhibit a
-                recursive structure.</li>
-            <li>However, recursive solutions may suffer from increased memory usage and stack overflow errors if not
-                properly managed.</li>
-            <li>They may also be less efficient in terms of execution time compared to iterative solutions for certain
-                problems.</li>
-        </ul>
-        <h3 id="advantages-of-each-approach">Advantages of Each Approach:</h3>
-        <ul>
-            <li>
-                <p><strong>Iterative Programming</strong>:</p>
-                <ul>
-                    <li>Efficient use of memory and execution time, especially for large input sizes.</li>
-                    <li>Easier to understand and debug for many programmers.</li>
-                    <li>Well-suited for problems with straightforward, repetitive tasks.</li>
-                </ul>
-            </li>
-            <li>
-                <p><strong>Recursive Programming</strong>:</p>
-                <ul>
-                    <li>Can lead to elegant and concise solutions for problems with recursive structures.</li>
-                    <li>Easier to write and understand for problems that naturally exhibit recursion.</li>
-                    <li>Facilitates breaking down complex problems into simpler, more manageable sub-problems.</li>
-                </ul>
-            </li>
-        </ul>
-        <p>By understanding the differences between iterative and recursive programming, you can choose the most
-            appropriate approach based on the nature of the problem and the specific requirements of your project.</p>
-        <hr>
-        <h1 id="18-function-templates-📄">18. Function Templates 📄:</h1>
-        <p>Function templates in C++ allow you to create functions that work with any data type. They provide a way to
-            write a single function that can be used with different types of arguments, eliminating the need to
-            duplicate code for each data type.</p>
-        <h3 id="code-12">Code:</h3>
-        <pre><code class="language-cpp">#include &lt;iostream&gt;
+            <h3 id="explanation-1">Explanation:</h3>
+            <ul>
+                <li>If <code>n</code> is 5:<ul>
+                        <li><code>factorial(5)</code> calls <code>factorial(4)</code> because <code>5 * factorial(4)</code>
+                            equals <code>5!</code>.</li>
+                        <li><code>factorial(4)</code> calls <code>factorial(3)</code> because <code>4 * factorial(3)</code>
+                            equals <code>4!</code>.</li>
+                        <li>This continues until <code>factorial(1)</code> is reached, which returns 1.</li>
+                        <li>Then, the multiplication chain is resolved backwards, resulting in <code>5!</code> being
+                            calculated as <code>5 * 4 * 3 * 2 * 1</code>, which equals 120.</li>
+                    </ul>
+                </li>
+            </ul>
+            <h3 id="iterative-vs-recursive-programming">Iterative vs. Recursive Programming:</h3>
+            <p>Both iterative and recursive programming are techniques used to solve problems, but they have different
+                approaches and trade-offs.</p>
+            <h3 id="iterative-programming">Iterative Programming:</h3>
+            <ul>
+                <li>Iterative programming involves using loops (such as <code>for</code> or <code>while</code> loops) to
+                    repeatedly execute a block of code until a certain condition is met.</li>
+                <li>It&#39;s often more efficient in terms of memory usage and execution time, especially for problems with
+                    large input sizes.</li>
+                <li>It&#39;s generally easier to understand and debug than recursion for many programmers.</li>
+                <li>However, some problems may be more naturally expressed using recursion, and translating them into
+                    iterative solutions can be complex.</li>
+            </ul>
+            <h3 id="recursive-programming">Recursive Programming:</h3>
+            <ul>
+                <li>Recursive programming involves breaking down a problem into smaller sub-problems and solving each
+                    sub-problem recursively.</li>
+                <li>It can lead to elegant and concise solutions for problems that have a recursive structure.</li>
+                <li>Recursive solutions are often easier to write and understand for problems that naturally exhibit a
+                    recursive structure.</li>
+                <li>However, recursive solutions may suffer from increased memory usage and stack overflow errors if not
+                    properly managed.</li>
+                <li>They may also be less efficient in terms of execution time compared to iterative solutions for certain
+                    problems.</li>
+            </ul>
+            <h3 id="advantages-of-each-approach">Advantages of Each Approach:</h3>
+            <ul>
+                <li>
+                    <p><strong>Iterative Programming</strong>:</p>
+                    <ul>
+                        <li>Efficient use of memory and execution time, especially for large input sizes.</li>
+                        <li>Easier to understand and debug for many programmers.</li>
+                        <li>Well-suited for problems with straightforward, repetitive tasks.</li>
+                    </ul>
+                </li>
+                <li>
+                    <p><strong>Recursive Programming</strong>:</p>
+                    <ul>
+                        <li>Can lead to elegant and concise solutions for problems with recursive structures.</li>
+                        <li>Easier to write and understand for problems that naturally exhibit recursion.</li>
+                        <li>Facilitates breaking down complex problems into simpler, more manageable sub-problems.</li>
+                    </ul>
+                </li>
+            </ul>
+            <p>By understanding the differences between iterative and recursive programming, you can choose the most
+                appropriate approach based on the nature of the problem and the specific requirements of your project.</p>
+</section>
+<hr>
+<section>
+            <h1 id="18-function-templates-📄">18. Function Templates 📄:</h1>
+            <p>Function templates in C++ allow you to create functions that work with any data type. They provide a way to
+                write a single function that can be used with different types of arguments, eliminating the need to
+                duplicate code for each data type.</p>
+            <h3 id="code-12">Code:</h3>
+            <pre><code class="language-cpp">#include &lt;iostream&gt;
 
 // Define a function template to find the maximum of two values
 template &lt;typename T&gt;
@@ -754,69 +790,71 @@ int main() {
     return 0;
 }
 </code></pre>
-        <h3 id="explanation-2">Explanation:</h3>
-        <ol>
-            <li>
-                <p><strong>Function Template</strong>:</p>
-                <ul>
-                    <li>We define a function template called <code>max</code> using the <code>template</code> keyword
-                        followed by the keyword <code>typename</code> and a template parameter <code>T</code>.</li>
-                    <li>Inside angle brackets <code>&lt; &gt;</code>, we specify the template parameter <code>T</code>,
-                        which represents any data type.</li>
-                </ul>
-            </li>
-            <li>
-                <p><strong>Template Parameter</strong>:</p>
-                <ul>
-                    <li>The template parameter <code>T</code> acts as a placeholder for any data type. It allows us to
-                        write generic code that can work with different types of arguments.</li>
-                </ul>
-            </li>
-            <li>
-                <p><strong>Function Definition</strong>:</p>
-                <ul>
-                    <li>Inside the function template, we define a function to find the maximum of two values of type
-                        <code>T</code>.</li>
-                    <li>The function takes two parameters <code>a</code> and <code>b</code> of type <code>T</code> and
-                        returns the maximum of the two values.</li>
-                </ul>
-            </li>
-            <li>
-                <p><strong>Main Function</strong>:</p>
-                <ul>
-                    <li>In the <code>main</code> function, we call the <code>max</code> function with different data
-                        types: <code>int</code>, <code>double</code>, and <code>const char*</code>.</li>
-                    <li>The compiler automatically deduces the data type <code>T</code> based on the arguments passed to
-                        the function.</li>
-                </ul>
-            </li>
-        </ol>
-        <h3 id="example">Example:</h3>
-        <ul>
-            <li>When <code>max(5, 10)</code> is called:<ul>
-                    <li>The compiler deduces <code>T</code> as <code>int</code>, and the function returns the maximum of
-                        <code>5</code> and <code>10</code>, which is <code>10</code>.</li>
-                </ul>
-            </li>
-            <li>When <code>max(3.5, 7.8)</code> is called:<ul>
-                    <li>The compiler deduces <code>T</code> as <code>double</code>, and the function returns the maximum
-                        of <code>3.5</code> and <code>7.8</code>, which is <code>7.8</code>.</li>
-                </ul>
-            </li>
-            <li>When <code>max(&quot;hello&quot;, &quot;world&quot;)</code> is called:<ul>
-                    <li>The compiler deduces <code>T</code> as <code>const char*</code>, and the function returns the
-                        maximum of <code>&quot;hello&quot;</code> and <code>&quot;world&quot;</code>, which is
-                        determined lexicographically, resulting in <code>&quot;world&quot;</code>.</li>
-                </ul>
-            </li>
-        </ul>
-        <hr>
-        <h1 id="19-structs-🏗️">19. Structs 🏗️:</h1>
-        <p>It&#39;s a stucture that groups related variable under one name, structs can contain many different types.
-            Variables in a sruct are known as &quot;Members&quot;, members can be accessed using the &quot;Class Member
-            Access Operator&quot; (.)</p>
-        <h3 id="code-13">Code:</h3>
-        <pre><code class="language-cpp">struct Person {
+            <h3 id="explanation-2">Explanation:</h3>
+            <ol>
+                <li>
+                    <p><strong>Function Template</strong>:</p>
+                    <ul>
+                        <li>We define a function template called <code>max</code> using the <code>template</code> keyword
+                            followed by the keyword <code>typename</code> and a template parameter <code>T</code>.</li>
+                        <li>Inside angle brackets <code>&lt; &gt;</code>, we specify the template parameter <code>T</code>,
+                            which represents any data type.</li>
+                    </ul>
+                </li>
+                <li>
+                    <p><strong>Template Parameter</strong>:</p>
+                    <ul>
+                        <li>The template parameter <code>T</code> acts as a placeholder for any data type. It allows us to
+                            write generic code that can work with different types of arguments.</li>
+                    </ul>
+                </li>
+                <li>
+                    <p><strong>Function Definition</strong>:</p>
+                    <ul>
+                        <li>Inside the function template, we define a function to find the maximum of two values of type
+                            <code>T</code>.</li>
+                        <li>The function takes two parameters <code>a</code> and <code>b</code> of type <code>T</code> and
+                            returns the maximum of the two values.</li>
+                    </ul>
+                </li>
+                <li>
+                    <p><strong>Main Function</strong>:</p>
+                    <ul>
+                        <li>In the <code>main</code> function, we call the <code>max</code> function with different data
+                            types: <code>int</code>, <code>double</code>, and <code>const char*</code>.</li>
+                        <li>The compiler automatically deduces the data type <code>T</code> based on the arguments passed to
+                            the function.</li>
+                    </ul>
+                </li>
+            </ol>
+            <h3 id="example">Example:</h3>
+            <ul>
+                <li>When <code>max(5, 10)</code> is called:<ul>
+                        <li>The compiler deduces <code>T</code> as <code>int</code>, and the function returns the maximum of
+                            <code>5</code> and <code>10</code>, which is <code>10</code>.</li>
+                    </ul>
+                </li>
+                <li>When <code>max(3.5, 7.8)</code> is called:<ul>
+                        <li>The compiler deduces <code>T</code> as <code>double</code>, and the function returns the maximum
+                            of <code>3.5</code> and <code>7.8</code>, which is <code>7.8</code>.</li>
+                    </ul>
+                </li>
+                <li>When <code>max(&quot;hello&quot;, &quot;world&quot;)</code> is called:<ul>
+                        <li>The compiler deduces <code>T</code> as <code>const char*</code>, and the function returns the
+                            maximum of <code>&quot;hello&quot;</code> and <code>&quot;world&quot;</code>, which is
+                            determined lexicographically, resulting in <code>&quot;world&quot;</code>.</li>
+                    </ul>
+                </li>
+            </ul>
+</section>
+<hr>
+<section>
+            <h1 id="19-structs-🏗️">19. Structs 🏗️:</h1>
+            <p>It&#39;s a stucture that groups related variable under one name, structs can contain many different types.
+                Variables in a sruct are known as &quot;Members&quot;, members can be accessed using the &quot;Class Member
+                Access Operator&quot; (.)</p>
+            <h3 id="code-13">Code:</h3>
+            <pre><code class="language-cpp">struct Person {
     std::string name;
     int age;
     double height;
@@ -839,40 +877,40 @@ int main() {
     return 0;
 }
 </code></pre>
-        <h3 id="output-6">Output:</h3>
-        <pre><code data-highlighted="yes" class="hljs language-undefined">Name: John
+            <h3 id="output-6">Output:</h3>
+            <pre><code data-highlighted="yes" class="hljs language-undefined">Name: John
 Age: 30
 Height: 6.2
 </code></pre>
-        <h3 id="explanation-3">Explanation:</h3>
-        <ul>
-            <li><strong>Struct Declaration</strong>:<ul>
-                    <li>We define a <code>struct</code> named <code>Person</code> that contains three members:
-                        <code>name</code> of type <code>std::string</code>, <code>age</code> of type <code>int</code>,
-                        and <code>height</code> of type <code>double</code>, Structs must have semi-colons after the
-                        curly braces.</li>
-                </ul>
-            </li>
-            <li><strong>Variable Declaration</strong>:<ul>
-                    <li>We declare a variable <code>person1</code> of type <code>Person</code>.</li>
-                </ul>
-            </li>
-            <li><strong>Member Assignment</strong>:<ul>
-                    <li>We assign values to the members of <code>person1</code>.</li>
-                </ul>
-            </li>
-            <li><strong>Member Access</strong>:<ul>
-                    <li>We access and print the values of the members of <code>person1</code> using the dot operator
-                        (<code>.</code>) to access each member individually.</li>
-                </ul>
-            </li>
-        </ul>
-        <h3
-            id="structs-can-also-be-passed-as-arguments-to-functions-thats-if-the-function-accepts-structs-of-course-example">
-            Structs can also be passed as arguments to functions, that&#39;s if the function accepts structs of course,
-            example:</h3>
-        <h3 id="code-14">Code:</h3>
-        <pre><code class="language-cpp">#include &lt;iostream&gt;
+            <h3 id="explanation-3">Explanation:</h3>
+            <ul>
+                <li><strong>Struct Declaration</strong>:<ul>
+                        <li>We define a <code>struct</code> named <code>Person</code> that contains three members:
+                            <code>name</code> of type <code>std::string</code>, <code>age</code> of type <code>int</code>,
+                            and <code>height</code> of type <code>double</code>, Structs must have semi-colons after the
+                            curly braces.</li>
+                    </ul>
+                </li>
+                <li><strong>Variable Declaration</strong>:<ul>
+                        <li>We declare a variable <code>person1</code> of type <code>Person</code>.</li>
+                    </ul>
+                </li>
+                <li><strong>Member Assignment</strong>:<ul>
+                        <li>We assign values to the members of <code>person1</code>.</li>
+                    </ul>
+                </li>
+                <li><strong>Member Access</strong>:<ul>
+                        <li>We access and print the values of the members of <code>person1</code> using the dot operator
+                            (<code>.</code>) to access each member individually.</li>
+                    </ul>
+                </li>
+            </ul>
+            <h3
+                id="structs-can-also-be-passed-as-arguments-to-functions-thats-if-the-function-accepts-structs-of-course-example">
+                Structs can also be passed as arguments to functions, that&#39;s if the function accepts structs of course,
+                example:</h3>
+            <h3 id="code-14">Code:</h3>
+            <pre><code class="language-cpp">#include &lt;iostream&gt;
 #include &lt;string&gt;
 
 // Define the Person struct
@@ -904,31 +942,33 @@ int main() {
     return 0;
 }
 </code></pre>
-        <h3 id="output-7">Output:</h3>
-        <pre><code data-highlighted="yes" class="hljs language-undefined">Name: John
+            <h3 id="output-7">Output:</h3>
+            <pre><code data-highlighted="yes" class="hljs language-undefined">Name: John
 Age: 30
 Height: 6.2
 </code></pre>
-        <p>In this example:</p>
-        <ul>
-            <li>We define a function <code>displayPersonInfo</code> that takes a <code>Person</code> struct as an
-                argument.</li>
-            <li>Inside the function, we access and print the members of the <code>Person</code> struct passed as the
-                argument.</li>
-            <li>In the <code>main</code> function, we declare a variable <code>person1</code> of type
-                <code>Person</code>, assign values to its members, and then call the <code>displayPersonInfo</code>
-                function passing <code>person1</code> as an argument.</li>
-            <li>The function displays the information about the person stored in the <code>person1</code> variable.</li>
-            <li>NOTE: In this example the struct is passed into the function by value, if you want it to be passed by
-                reference don&#39;t forget the address-of operator (&amp;) before the parameter name in the declaration.
-            </li>
-        </ul>
-        <hr>
-        <h1 id="20-enums-🏷️">20. Enums 🏷️:</h1>
-        <p>Enums, short for enumerations, are a way to define named integer constants. They provide a convenient way to
-            represent a set of related named constants in code.</p>
-        <h3 id="code-15">Code:</h3>
-        <pre><code class="language-cpp">#include &lt;iostream&gt;
+            <p>In this example:</p>
+            <ul>
+                <li>We define a function <code>displayPersonInfo</code> that takes a <code>Person</code> struct as an
+                    argument.</li>
+                <li>Inside the function, we access and print the members of the <code>Person</code> struct passed as the
+                    argument.</li>
+                <li>In the <code>main</code> function, we declare a variable <code>person1</code> of type
+                    <code>Person</code>, assign values to its members, and then call the <code>displayPersonInfo</code>
+                    function passing <code>person1</code> as an argument.</li>
+                <li>The function displays the information about the person stored in the <code>person1</code> variable.</li>
+                <li>NOTE: In this example the struct is passed into the function by value, if you want it to be passed by
+                    reference don&#39;t forget the address-of operator (&amp;) before the parameter name in the declaration.
+                </li>
+            </ul>
+</section>
+<hr>
+<section>
+            <h1 id="20-enums-🏷️">20. Enums 🏷️:</h1>
+            <p>Enums, short for enumerations, are a way to define named integer constants. They provide a convenient way to
+                represent a set of related named constants in code.</p>
+            <h3 id="code-15">Code:</h3>
+            <pre><code class="language-cpp">#include &lt;iostream&gt;
 
 // Define an enum for days of the week
 enum class Day { Monday = 0, Tuesday = 2, Wednesday = 3, Thursday = 4, Friday = 5, Saturday = 6, Sunday = 7 };
@@ -965,57 +1005,58 @@ int main() {
     return 0;
 }
 </code></pre>
-        <h3 id="output-its-wednesday">Output: <code data-highlighted="yes" class="hljs language-undefined">It&#39;s Wednesday!</code></h3>
-        <h3 id="explanation-4">Explanation:</h3>
-        <ol>
-            <li>
-                <p><strong>Enum Definition</strong>:</p>
-                <p> Enum class <code>Day</code> is defined, representing the days of the week. Each day is assigned an
-                    integer value: Monday is 0, Tuesday is 2, Wednesday is 3, and so on.</p>
-            </li>
-            <li>
-                <p><strong>Main Function</strong>:</p>
-                <p> In the <code>main</code> function, a variable <code>today</code> of type <code>Day</code> is created
-                    and initialized with the value <code>Friday</code>.</p>
-                <p> A switch statement is used to check the value of <code>today</code>. Depending on the value of
-                    <code>today</code>, the corresponding case is executed. For example, if <code>today</code> is
-                    <code>Friday</code>, it will print &quot;It&#39;s Friday!&quot; to the console.</p>
-            </li>
-        </ol>
-        <p>In summary, this code demonstrates the use of enums to represent days of the week. It assigns integer values
-            to each day and uses a switch statement to print the corresponding day based on the value of the
-            <code>today</code> variable.</p>
-        <hr>
-        <h1 id="21-classes-and-constructors-object-oriented-programming-👷♂️">21. Classes and Constructors (Object
-            oriented Programming) 👷‍♂️:</h1>
-        <p>An Object is a collection of attributes and methods(functions), they are created using a Class which acts as
-            the blueprint for objects, Classes are like structs but much more complex.</p>
-        <h3 id="example-code-1">Example Code:</h3>
-        <pre><code class="language-cpp">#include &lt;iostream&gt;
+            <h3 id="output-its-wednesday">Output: <code data-highlighted="yes" class="hljs language-undefined">It&#39;s Wednesday!</code></h3>
+            <h3 id="explanation-4">Explanation:</h3>
+            <ol>
+                <li>
+                    <p><strong>Enum Definition</strong>:</p>
+                    <p> Enum class <code>Day</code> is defined, representing the days of the week. Each day is assigned an
+                        integer value: Monday is 0, Tuesday is 2, Wednesday is 3, and so on.</p>
+                </li>
+                <li>
+                    <p><strong>Main Function</strong>:</p>
+                    <p> In the <code>main</code> function, a variable <code>today</code> of type <code>Day</code> is created
+                        and initialized with the value <code>Friday</code>.</p>
+                    <p> A switch statement is used to check the value of <code>today</code>. Depending on the value of
+                        <code>today</code>, the corresponding case is executed. For example, if <code>today</code> is
+                        <code>Friday</code>, it will print &quot;It&#39;s Friday!&quot; to the console.</p>
+                </li>
+            </ol>
+            <p>In summary, this code demonstrates the use of enums to represent days of the week. It assigns integer values
+                to each day and uses a switch statement to print the corresponding day based on the value of the
+                <code>today</code> variable.</p>
+</section>
+<hr>
+<section>
+            <h1 id="21-classes-and-constructors-object-oriented-programming-👷♂️">21. Classes and Constructors (Object
+                oriented Programming) 👷‍♂️:</h1>
+            <p>An Object is a collection of attributes and methods(functions), they are created using a Class which acts as
+                the blueprint for objects, Classes are like structs but much more complex.</p>
+            <h3 id="example-code-1">Example Code:</h3>
+            <pre><code class="language-cpp">#include &lt;iostream&gt;
 using namespace std;
 class Human {
     public:
-        string name;
-        string profession;
-        int age;
-        bool hasEaten = false;
-        bool hasDrank = false;
-
-        void eat() {
-            cout &lt;&lt; name &lt;&lt; &quot; is eating&quot; &lt;&lt; endl;
-            hasEaten = true;
-        }
-        void drink() {
-            cout &lt;&lt; name &lt;&lt; &quot; is drinking&quot; &lt;&lt; endl;
-            hasDrank = true;
-        }
-        void stats() {
-            cout &lt;&lt; &quot;Name: &quot; &lt;&lt; name &lt;&lt; endl;
-            cout &lt;&lt; &quot;Profession: &quot; &lt;&lt; profession &lt;&lt; endl;
-            cout &lt;&lt; &quot;age: &quot; &lt;&lt; age &lt;&lt; endl;
-            cout &lt;&lt; &quot;Has Eaten: &quot; &lt;&lt; hasEaten &lt;&lt; endl;
-            cout &lt;&lt; &quot;Has Drank: &quot; &lt;&lt; hasDrank &lt;&lt; endl;
-        }
+string name;
+string profession;
+int age;
+bool hasEaten = false;
+bool hasDrank = false;
+void eat() {
+    cout &lt;&lt; name &lt;&lt; &quot; is eating&quot; &lt;&lt; endl;
+    hasEaten = true;
+}
+void drink() {
+    cout &lt;&lt; name &lt;&lt; &quot; is drinking&quot; &lt;&lt; endl;
+    hasDrank = true;
+}
+void stats() {
+    cout &lt;&lt; &quot;Name: &quot; &lt;&lt; name &lt;&lt; endl;
+    cout &lt;&lt; &quot;Profession: &quot; &lt;&lt; profession &lt;&lt; endl;
+    cout &lt;&lt; &quot;age: &quot; &lt;&lt; age &lt;&lt; endl;
+    cout &lt;&lt; &quot;Has Eaten: &quot; &lt;&lt; hasEaten &lt;&lt; endl;
+    cout &lt;&lt; &quot;Has Drank: &quot; &lt;&lt; hasDrank &lt;&lt; endl;
+}
 };
 
 int main() {
@@ -1029,8 +1070,8 @@ int main() {
     return 0;
 }
 </code></pre>
-        <h3 id="output-8">Output:</h3>
-        <pre><code data-highlighted="yes" class="hljs language-undefined">Joe is eating
+            <h3 id="output-8">Output:</h3>
+            <pre><code data-highlighted="yes" class="hljs language-undefined">Joe is eating
 Joe is drinking
 Name: Joe
 Profession: Homeless
@@ -1038,68 +1079,68 @@ age: 45
 Has Eaten: 1
 Has Drank: 1
 </code></pre>
-        <p>This code defines a class called <code>Human</code> with several member variables (<code>name</code>,
-            <code>profession</code>, <code>age</code>, <code>hasEaten</code>, <code>hasDrank</code>) and member
-            functions (<code>eat()</code>, <code>drink()</code>, <code>stats()</code>), note: Classes must have a
-            semi-colon after the curly braces.</p>
-        <ul>
-            <li>The <code>eat()</code> function prints a message indicating that the human is eating and sets the
-                <code>hasEaten</code> flag to <code>true</code>.</li>
-            <li>The <code>drink()</code> function prints a message indicating that the human is drinking and sets the
-                <code>hasDrank</code> flag to <code>true</code>.</li>
-            <li>The <code>stats()</code> function prints out the details of the human, including their name, profession,
-                age, and whether they have eaten or drunk.</li>
-        </ul>
-        <h4
-            id="in-the-main-function-an-instance-of-the-human-class-named-joe-is-created-joes-attributes-name-profession-age-are-set-and-then-he-eats-drinks-and-his-stats-are-displayed">
-            In the <code>main()</code> function, an instance of the <code>Human</code> class named <code>joe</code> is
-            created. Joe&#39;s attributes (<code>name</code>, <code>profession</code>, <code>age</code>) are set, and
-            then he eats, drinks, and his stats are displayed.</h4>
-        <h4 id="you-can-also-declare-the-class-itself-as-public-or-private-which-would-make-the-following-difference">
-            You can also declare the class itself as public or private which would make the following difference:</h4>
-        <ol>
-            <li>
-                <p><strong>Public Class</strong>: If a class is declared as <code>public</code>, it can be accessed from
-                    any part of the program, including other files or translation units. This means that the class can
-                    be instantiated and its members accessed from any other part of the program where its definition is
-                    visible. Public classes are typically used when the class is intended to be part of the interface of
-                    a library or module, allowing users of the library to create instances of the class and use its
-                    functionality.</p>
-            </li>
-            <li>
-                <p><strong>Private Class</strong>: Conversely, if a class is declared as <code>private</code>, it is
-                    only accessible within the scope in which it is defined. This means that the class cannot be
-                    accessed or instantiated from outside its containing scope, such as from other files or translation
-                    units. Private classes are typically used when the class is intended to be an internal
-                    implementation detail and should not be visible or accessible to users of the containing scope.</p>
-            </li>
-        </ol>
-        <h4 id="were-not-done-with-classes-yet-we-still-need-to-know-about-constructors">We&#39;re not done with classes
-            yet, we still need to know about Constructors</h4>
-        <p>Constructors are special member functions in a class that are automatically called when an object of that
-            class is created. Their main purpose is to initialize the object&#39;s data members or perform any other
-            setup tasks necessary for the object to be used.</p>
-        <p>In C++, there are several types of constructors:</p>
-        <ol>
-            <li>
-                <p><strong>Default Constructor</strong>: A constructor that is called automatically when an object is
-                    created with no arguments. It initializes the object&#39;s data members to default values.</p>
-            </li>
-            <li>
-                <p><strong>Parameterized Constructor</strong>: A constructor that accepts parameters, allowing the
-                    caller to specify initial values for the object&#39;s data members during object creation.</p>
-            </li>
-            <li>
-                <p><strong>Copy Constructor</strong>: A constructor that initializes an object using another object of
-                    the same class as a template. It is called when an object is initialized with another object of the
-                    same class.</p>
-            </li>
-        </ol>
-        <p>Here are examples of how constructors can be defined in the <code>Human</code> class:</p>
-        <ol>
-            <li>Default Constructor:</li>
-        </ol>
-        <pre><code class="language-cpp">class Human {
+            <p>This code defines a class called <code>Human</code> with several member variables (<code>name</code>,
+                <code>profession</code>, <code>age</code>, <code>hasEaten</code>, <code>hasDrank</code>) and member
+                functions (<code>eat()</code>, <code>drink()</code>, <code>stats()</code>), note: Classes must have a
+                semi-colon after the curly braces.</p>
+            <ul>
+                <li>The <code>eat()</code> function prints a message indicating that the human is eating and sets the
+                    <code>hasEaten</code> flag to <code>true</code>.</li>
+                <li>The <code>drink()</code> function prints a message indicating that the human is drinking and sets the
+                    <code>hasDrank</code> flag to <code>true</code>.</li>
+                <li>The <code>stats()</code> function prints out the details of the human, including their name, profession,
+                    age, and whether they have eaten or drunk.</li>
+            </ul>
+            <h4
+                id="in-the-main-function-an-instance-of-the-human-class-named-joe-is-created-joes-attributes-name-profession-age-are-set-and-then-he-eats-drinks-and-his-stats-are-displayed">
+                In the <code>main()</code> function, an instance of the <code>Human</code> class named <code>joe</code> is
+                created. Joe&#39;s attributes (<code>name</code>, <code>profession</code>, <code>age</code>) are set, and
+                then he eats, drinks, and his stats are displayed.</h4>
+            <h4 id="you-can-also-declare-the-class-itself-as-public-or-private-which-would-make-the-following-difference">
+                You can also declare the class itself as public or private which would make the following difference:</h4>
+            <ol>
+                <li>
+                    <p><strong>Public Class</strong>: If a class is declared as <code>public</code>, it can be accessed from
+                        any part of the program, including other files or translation units. This means that the class can
+                        be instantiated and its members accessed from any other part of the program where its definition is
+                        visible. Public classes are typically used when the class is intended to be part of the interface of
+                        a library or module, allowing users of the library to create instances of the class and use its
+                        functionality.</p>
+                </li>
+                <li>
+                    <p><strong>Private Class</strong>: Conversely, if a class is declared as <code>private</code>, it is
+                        only accessible within the scope in which it is defined. This means that the class cannot be
+                        accessed or instantiated from outside its containing scope, such as from other files or translation
+                        units. Private classes are typically used when the class is intended to be an internal
+                        implementation detail and should not be visible or accessible to users of the containing scope.</p>
+                </li>
+            </ol>
+            <h4 id="were-not-done-with-classes-yet-we-still-need-to-know-about-constructors">We&#39;re not done with classes
+                yet, we still need to know about Constructors</h4>
+            <p>Constructors are special member functions in a class that are automatically called when an object of that
+                class is created. Their main purpose is to initialize the object&#39;s data members or perform any other
+                setup tasks necessary for the object to be used.</p>
+            <p>In C++, there are several types of constructors:</p>
+            <ol>
+                <li>
+                    <p><strong>Default Constructor</strong>: A constructor that is called automatically when an object is
+                        created with no arguments. It initializes the object&#39;s data members to default values.</p>
+                </li>
+                <li>
+                    <p><strong>Parameterized Constructor</strong>: A constructor that accepts parameters, allowing the
+                        caller to specify initial values for the object&#39;s data members during object creation.</p>
+                </li>
+                <li>
+                    <p><strong>Copy Constructor</strong>: A constructor that initializes an object using another object of
+                        the same class as a template. It is called when an object is initialized with another object of the
+                        same class.</p>
+                </li>
+            </ol>
+            <p>Here are examples of how constructors can be defined in the <code>Human</code> class:</p>
+            <ol>
+                <li>Default Constructor:</li>
+            </ol>
+            <pre><code class="language-cpp">class Human {
 public:
     // Default Constructor
     Human() {
@@ -1111,10 +1152,10 @@ public:
     }
 };
 </code></pre>
-        <ol start="2">
-            <li>Parameterized Constructor:</li>
-        </ol>
-        <pre><code class="language-cpp">class Human {
+            <ol start="2">
+                <li>Parameterized Constructor:</li>
+            </ol>
+            <pre><code class="language-cpp">class Human {
 public:
     // Parameterized Constructor
     Human(string n, string p, int a) {
@@ -1126,12 +1167,12 @@ public:
     }
 };
 </code></pre>
-        <p>NOTE: You may use <code>this -&gt; someAttribute</code> to specify the class&#39; attribute to avoid naming
-            conflicts</p>
-        <ol start="3">
-            <li>Copy Constructor:</li>
-        </ol>
-        <pre><code class="language-cpp">class Human {
+            <p>NOTE: You may use <code>this -&gt; someAttribute</code> to specify the class&#39; attribute to avoid naming
+                conflicts</p>
+            <ol start="3">
+                <li>Copy Constructor:</li>
+            </ol>
+            <pre><code class="language-cpp">class Human {
 public:
     // Copy Constructor
     Human(const &amp;Human other) {
@@ -1143,16 +1184,16 @@ public:
     }
 };
 </code></pre>
-        <p>In this example:</p>
-        <ul>
-            <li>The default constructor initializes the object&#39;s data members to default values.</li>
-            <li>The parameterized constructor accepts arguments for the <code>name</code>, <code>profession</code>, and
-                <code>age</code> of the <code>Human</code> object and initializes them accordingly.</li>
-            <li>The copy constructor initializes a new <code>Human</code> object using the data from another
-                <code>Human</code> object.</li>
-        </ul>
-        <p>We can pass arguments to the parameterized constructor like this:</p>
-        <pre><code class="language-cpp">int main() {
+            <p>In this example:</p>
+            <ul>
+                <li>The default constructor initializes the object&#39;s data members to default values.</li>
+                <li>The parameterized constructor accepts arguments for the <code>name</code>, <code>profession</code>, and
+                    <code>age</code> of the <code>Human</code> object and initializes them accordingly.</li>
+                <li>The copy constructor initializes a new <code>Human</code> object using the data from another
+                    <code>Human</code> object.</li>
+            </ul>
+            <p>We can pass arguments to the parameterized constructor like this:</p>
+            <pre><code class="language-cpp">int main() {
     // Create a Human object using the parameterized constructor
     Human joe(&quot;Joe&quot;, &quot;Homeless&quot;, 45);
 
@@ -1164,33 +1205,35 @@ public:
     return 0;
 }
 </code></pre>
-        <p>In this example:</p>
-        <ul>
-            <li>
-                <p><code>Human joe(&quot;Joe&quot;, &quot;Homeless&quot;, 45);</code> creates a <code>Human</code>
-                    object named <code>joe</code> using the parameterized constructor. The values
-                    <code>&quot;Joe&quot;</code>, <code>&quot;Homeless&quot;</code>, and <code>45</code> are passed as
-                    arguments to initialize the <code>name</code>, <code>profession</code>, and <code>age</code> data
-                    members of the <code>joe</code> object, respectively.</p>
-            </li>
-            <li>
-                <p>You can pass different values for the constructor parameters to initialize the object with different
-                    initial states as needed.</p>
-            </li>
-        </ul>
-        <p>Further more, in C++, classes can have member variables and functions that are categorized into two access
-            levels: public and private. When a member variable or function is declared as <code>public</code>, it means
-            that it can be accessed from outside the class. This allows other parts of the program, such as the
-            <code>main()</code> function or other classes, to interact with these members directly. On the other hand,
-            when a member is declared as <code>private</code>, it is only accessible within the class itself. This
-            encapsulation ensures that the internal workings of the class remain hidden from the outside world,
-            promoting data hiding and abstraction. By using <code>private</code> members, the class can control how its
-            data is accessed and manipulated, enhancing the security and integrity of the program.</p>
-        <hr>
-        <h1 id="22-overloaded-constructors-👷♂️⚡️">22. Overloaded Constructors 👷‍♂️⚡️:</h1>
-        <p>Just like Overloaded Functions, Overloaded Constructors are Constructors with multiple versions of themselves
-            but with different parameters, example:</p>
-        <pre><code class="language-cpp">#include &lt;iostream&gt;
+            <p>In this example:</p>
+            <ul>
+                <li>
+                    <p><code>Human joe(&quot;Joe&quot;, &quot;Homeless&quot;, 45);</code> creates a <code>Human</code>
+                        object named <code>joe</code> using the parameterized constructor. The values
+                        <code>&quot;Joe&quot;</code>, <code>&quot;Homeless&quot;</code>, and <code>45</code> are passed as
+                        arguments to initialize the <code>name</code>, <code>profession</code>, and <code>age</code> data
+                        members of the <code>joe</code> object, respectively.</p>
+                </li>
+                <li>
+                    <p>You can pass different values for the constructor parameters to initialize the object with different
+                        initial states as needed.</p>
+                </li>
+            </ul>
+            <p>Further more, in C++, classes can have member variables and functions that are categorized into two access
+                levels: public and private. When a member variable or function is declared as <code>public</code>, it means
+                that it can be accessed from outside the class. This allows other parts of the program, such as the
+                <code>main()</code> function or other classes, to interact with these members directly. On the other hand,
+                when a member is declared as <code>private</code>, it is only accessible within the class itself. This
+                encapsulation ensures that the internal workings of the class remain hidden from the outside world,
+                promoting data hiding and abstraction. By using <code>private</code> members, the class can control how its
+                data is accessed and manipulated, enhancing the security and integrity of the program.</p>
+</section>
+<hr>
+<section>
+            <h1 id="22-overloaded-constructors-👷♂️⚡️">22. Overloaded Constructors 👷‍♂️⚡️:</h1>
+            <p>Just like Overloaded Functions, Overloaded Constructors are Constructors with multiple versions of themselves
+                but with different parameters, example:</p>
+            <pre><code class="language-cpp">#include &lt;iostream&gt;
 using namespace std;
 class Pizza {
     public:
@@ -1205,7 +1248,7 @@ class Pizza {
         this -&gt; topping1 = topping1;
         this -&gt; topping2 = topping2;
     }
-    Pizza (string topping1, string topping2, string topping3) {	
+    Pizza (string topping1, string topping2, string topping3) {
         this -&gt; topping1 = topping1;
         this -&gt; topping2 = topping2;
         this -&gt; topping3 = topping3;
@@ -1231,43 +1274,45 @@ int main() {
     return 0;
 }
 </code></pre>
-        <h3
-            id="in-the-pizza-class-we-have-multiple-constructors-that-are-overloaded-based-on-the-number-of-parameters-they-accept-each-constructor-initializes-the-topping1-topping2-and-topping3-member-variables-based-on-the-arguments-passed-to-it">
-            In the <code>Pizza</code> class, we have multiple constructors that are overloaded based on the number of
-            parameters they accept. Each constructor initializes the <code>topping1</code>, <code>topping2</code>, and
-            <code>topping3</code> member variables based on the arguments passed to it.</h3>
-        <ul>
-            <li>The first constructor takes one parameter <code>topping1</code> and initializes only
-                <code>topping1</code>.</li>
-            <li>The second constructor takes two parameters <code>topping1</code> and <code>topping2</code> and
-                initializes both <code>topping1</code> and <code>topping2</code>.</li>
-            <li>The third constructor takes three parameters <code>topping1</code>, <code>topping2</code>, and
-                <code>topping3</code> and initializes all three member variables.</li>
-        </ul>
-        <h3 id="in-the-main-function-we-create-four-instances-of-the-pizza-class">In the <code>main</code> function, we
-            create four instances of the <code>Pizza</code> class:</h3>
-        <ol>
-            <li><code>pizza1</code> is created with one topping (<code>&quot;Pepperoni&quot;</code>).</li>
-            <li><code>pizza2</code> is created with two toppings (<code>&quot;Pepperoni&quot;</code> and
-                <code>&quot;Mushrooms&quot;</code>).</li>
-            <li><code>pizza3</code> is created with three toppings (<code>&quot;Pepperoni&quot;</code>,
-                <code>&quot;Cheese&quot;</code>, and <code>&quot;Pineapple&quot;</code>).</li>
-            <li><code>pizza4</code> is created using the default constructor, which initializes no toppings.
-                Finally, we print out the toppings for each pizza instance to verify that the constructors have
-                initialized the member variables correctly.</li>
-        </ol>
-        <p>Notice that <code>pizza4</code> didn&#39;t have anything printed, that&#39;s because we initiated it with the
-            default constructor in which we never initialized any variables.</p>
-        <hr>
-        <h1 id="23-getters--setters-🔍">23. Getters &amp; Setters 🔍:</h1>
-        <h3 id="1-getters">1. Getters:</h3>
-        <h3
-            id="a-getter-is-a-function-that-is-included-in-a-class-that-makes-a-private-attribute-readable-so-lets-say-theres-a-private-attribute-in-your-class-and-you-want-to-use-its-value-outside-the-class-without-making-it-public-then-youd-make-a-getter-function-to-return-that-value-for-example">
-            A getter is a function that is included in a class that makes a private attribute READABLE, so let&#39;s say
-            there&#39;s a private attribute in your class and you want to use it&#39;s value outside the class without
-            making it public, then you&#39;d make a getter function to return that value, for example:</h3>
-        <h3 id="code-16">Code:</h3>
-        <pre><code class="language-cpp">#include &lt;iostream&gt;
+            <h3
+                id="in-the-pizza-class-we-have-multiple-constructors-that-are-overloaded-based-on-the-number-of-parameters-they-accept-each-constructor-initializes-the-topping1-topping2-and-topping3-member-variables-based-on-the-arguments-passed-to-it">
+                In the <code>Pizza</code> class, we have multiple constructors that are overloaded based on the number of
+                parameters they accept. Each constructor initializes the <code>topping1</code>, <code>topping2</code>, and
+                <code>topping3</code> member variables based on the arguments passed to it.</h3>
+            <ul>
+                <li>The first constructor takes one parameter <code>topping1</code> and initializes only
+                    <code>topping1</code>.</li>
+                <li>The second constructor takes two parameters <code>topping1</code> and <code>topping2</code> and
+                    initializes both <code>topping1</code> and <code>topping2</code>.</li>
+                <li>The third constructor takes three parameters <code>topping1</code>, <code>topping2</code>, and
+                    <code>topping3</code> and initializes all three member variables.</li>
+            </ul>
+            <h3 id="in-the-main-function-we-create-four-instances-of-the-pizza-class">In the <code>main</code> function, we
+                create four instances of the <code>Pizza</code> class:</h3>
+            <ol>
+                <li><code>pizza1</code> is created with one topping (<code>&quot;Pepperoni&quot;</code>).</li>
+                <li><code>pizza2</code> is created with two toppings (<code>&quot;Pepperoni&quot;</code> and
+                    <code>&quot;Mushrooms&quot;</code>).</li>
+                <li><code>pizza3</code> is created with three toppings (<code>&quot;Pepperoni&quot;</code>,
+                    <code>&quot;Cheese&quot;</code>, and <code>&quot;Pineapple&quot;</code>).</li>
+                <li><code>pizza4</code> is created using the default constructor, which initializes no toppings.
+                    Finally, we print out the toppings for each pizza instance to verify that the constructors have
+                    initialized the member variables correctly.</li>
+            </ol>
+            <p>Notice that <code>pizza4</code> didn&#39;t have anything printed, that&#39;s because we initiated it with the
+                default constructor in which we never initialized any variables.</p>
+</section>
+<hr>
+<section>
+            <h1 id="23-getters--setters-🔍">23. Getters &amp; Setters 🔍:</h1>
+            <h3 id="1-getters">1. Getters:</h3>
+            <h3
+                id="a-getter-is-a-function-that-is-included-in-a-class-that-makes-a-private-attribute-readable-so-lets-say-theres-a-private-attribute-in-your-class-and-you-want-to-use-its-value-outside-the-class-without-making-it-public-then-youd-make-a-getter-function-to-return-that-value-for-example">
+                A getter is a function that is included in a class that makes a private attribute READABLE, so let&#39;s say
+                there&#39;s a private attribute in your class and you want to use it&#39;s value outside the class without
+                making it public, then you&#39;d make a getter function to return that value, for example:</h3>
+            <h3 id="code-16">Code:</h3>
+            <pre><code class="language-cpp">#include &lt;iostream&gt;
 
 using namespace std;
 
@@ -1286,14 +1331,14 @@ int main() {
     return 0;
 }
 </code></pre>
-        <h3 id="output-error-househousestdstring-is-private-within-this-context">Output:
-            <code data-highlighted="yes" class="hljs language-undefined">error: ‘House::House(std::string)’ is private within this context</code></h3>
-        <h3
-            id="in-this-example-we-couldnt-print-the-address-of-myhouse-because-its-set-as-a-private-attribute-now-lets-fix-this-by-adding-a-getter-function-to-the-house-class">
-            In this example we couldn&#39;t print the address of <code>myHouse</code> because it&#39;s set as a private
-            attribute, now let&#39;s fix this by adding a getter function to the <code>House</code> class.</h3>
-        <h3 id="code-17">Code:</h3>
-        <pre><code class="language-cpp">#include &lt;iostream&gt;
+            <h3 id="output-error-househousestdstring-is-private-within-this-context">Output:
+                <code data-highlighted="yes" class="hljs language-undefined">error: ‘House::House(std::string)’ is private within this context</code></h3>
+            <h3
+                id="in-this-example-we-couldnt-print-the-address-of-myhouse-because-its-set-as-a-private-attribute-now-lets-fix-this-by-adding-a-getter-function-to-the-house-class">
+                In this example we couldn&#39;t print the address of <code>myHouse</code> because it&#39;s set as a private
+                attribute, now let&#39;s fix this by adding a getter function to the <code>House</code> class.</h3>
+            <h3 id="code-17">Code:</h3>
+            <pre><code class="language-cpp">#include &lt;iostream&gt;
 
 using namespace std;
 
@@ -1315,20 +1360,20 @@ int main() {
     return 0;
 }
 </code></pre>
-        <h3 id="output-123-kedwani-street">Output: <code data-highlighted="yes" class="hljs language-undefined">123, Kedwani Street</code></h3>
-        <h3
-            id="in-this-example-we-created-a-getaddress-methodfunction-inside-the-house-class-methods-inside-the-class-can-access-private-values-so-we-use-them-to-get-those-values-and-use-them-in-the-rest-of-the-program">
-            In this example we created a <code>getAddress()</code> method/function inside the <code>House</code> class,
-            methods inside the class can access private values, so we use them to get those values and use them in the
-            rest of the program</h3>
-        <h3 id="2-setters">2. Setters:</h3>
-        <h3
-            id="a-setter-is-a-function-that-is-included-in-a-class-that-makes-a-private-attribute-writable-so-lets-say-theres-a-private-attribute-in-your-class-and-you-want-to-change-its-value-outside-the-class-without-making-it-public-then-youd-make-a-setter-function-to-set-that-value-for-example">
-            A setter is a function that is included in a class that makes a private attribute WRITABLE, so let&#39;s say
-            there&#39;s a private attribute in your class and you want to change it&#39;s value outside the class
-            without making it public, then you&#39;d make a setter function to set that value, for example:</h3>
-        <h3 id="code-18">Code:</h3>
-        <pre><code class="language-cpp">#include &lt;iostream&gt;
+            <h3 id="output-123-kedwani-street">Output: <code data-highlighted="yes" class="hljs language-undefined">123, Kedwani Street</code></h3>
+            <h3
+                id="in-this-example-we-created-a-getaddress-methodfunction-inside-the-house-class-methods-inside-the-class-can-access-private-values-so-we-use-them-to-get-those-values-and-use-them-in-the-rest-of-the-program">
+                In this example we created a <code>getAddress()</code> method/function inside the <code>House</code> class,
+                methods inside the class can access private values, so we use them to get those values and use them in the
+                rest of the program</h3>
+            <h3 id="2-setters">2. Setters:</h3>
+            <h3
+                id="a-setter-is-a-function-that-is-included-in-a-class-that-makes-a-private-attribute-writable-so-lets-say-theres-a-private-attribute-in-your-class-and-you-want-to-change-its-value-outside-the-class-without-making-it-public-then-youd-make-a-setter-function-to-set-that-value-for-example">
+                A setter is a function that is included in a class that makes a private attribute WRITABLE, so let&#39;s say
+                there&#39;s a private attribute in your class and you want to change it&#39;s value outside the class
+                without making it public, then you&#39;d make a setter function to set that value, for example:</h3>
+            <h3 id="code-18">Code:</h3>
+            <pre><code class="language-cpp">#include &lt;iostream&gt;
 
 using namespace std;
 
@@ -1351,15 +1396,15 @@ int main() {
     return 0;
 }
 </code></pre>
-        <h3 id="output-error-househousestdstring-is-private-within-this-context-1">Output:
-            <code data-highlighted="yes" class="hljs language-undefined">error: ‘House::House(std::string)’ is private within this context</code></h3>
-        <h3
-            id="in-this-example-we-couldnt-change-the-address-of-myhouse-to-456-forty-street-because-its-set-as-a-private-attribute-now-lets-fix-this-by-adding-a-setter-function-to-the-house-class">
-            In this example we couldn&#39;t change the address of <code>myHouse</code> to <code>456, Forty Street</code>
-            because it&#39;s set as a private attribute, now let&#39;s fix this by adding a setter function to the
-            <code>House</code> class.</h3>
-        <h3 id="code-19">Code:</h3>
-        <pre><code class="language-cpp">#include &lt;iostream&gt;
+            <h3 id="output-error-househousestdstring-is-private-within-this-context-1">Output:
+                <code data-highlighted="yes" class="hljs language-undefined">error: ‘House::House(std::string)’ is private within this context</code></h3>
+            <h3
+                id="in-this-example-we-couldnt-change-the-address-of-myhouse-to-456-forty-street-because-its-set-as-a-private-attribute-now-lets-fix-this-by-adding-a-setter-function-to-the-house-class">
+                In this example we couldn&#39;t change the address of <code>myHouse</code> to <code>456, Forty Street</code>
+                because it&#39;s set as a private attribute, now let&#39;s fix this by adding a setter function to the
+                <code>House</code> class.</h3>
+            <h3 id="code-19">Code:</h3>
+            <pre><code class="language-cpp">#include &lt;iostream&gt;
 
 using namespace std;
 
@@ -1369,7 +1414,7 @@ class House {
     public:
         string getAddress() {
             return this -&gt; address;
-        }
+        }       
         void setAddress(string newAddress) {
             this -&gt; address = newAddress;
         }
@@ -1386,79 +1431,81 @@ int main() {
     return 0;
 }
 </code></pre>
-        <h3 id="output-9">Output:</h3>
-        <pre><code data-highlighted="yes" class="hljs language-undefined">123, Kedwani Street
-456, Forty Street
+            <h3 id="output-9">Output:</h3>
+            <pre><code data-highlighted="yes" class="hljs language-undefined">123, Kedwani Street
+            456, Forty Street
 </code></pre>
-        <h3
-            id="in-this-example-we-created-a-setaddress-methodfunction-that-doesnt-return-any-value-hence-we-used-void-as-the-type-inside-the-house-class-methods-inside-the-class-can-access-private-values-so-we-use-them-to-set-those-values-and-use-the-updated-values-in-the-rest-of-the-program">
-            In this example we created a <code>setAddress()</code> method/function that doesn&#39;t return any value
-            (hence we used void as the type) inside the <code>House</code> class, methods inside the class can access
-            private values, so we use them to set those values and use the updated values in the rest of the program
-        </h3>
-        <hr>
-        <h1 id="24-inheritance-👪️">24. Inheritance 👪️:</h1>
-        <h3
-            id="c-inheritance-is-when-a-class-inheritstakes-properties-from-another-class-in-this-case-the-class-takinginheriting-the-properties-would-be-called-the-childsub-class-and-the-class-from-which-the-properties-are-being-takeninherited-from-would-called-the-parentsuper-class-its-similar-to-how-children-inherit-traits-from-their-parents-in-the-real-world-you-inherit-from-a-class-using-the-">
-            C++ inheritance is when a class inherits/takes properties from another class, in this case the class
-            taking/inheriting the properties would be called the child/sub-class and the class from which the properties
-            are being taken/inherited from would called the parent/super-class, it&#39;s similar to how children inherit
-            traits from their parents in the real world, you inherit from a class using the (:).</h3>
-        <h3 id="heres-a-breakdown-of-how-inheritance-works">Here&#39;s a breakdown of how inheritance works:</h3>
-        <ol>
-            <li>
-                <p><strong>Base Class (Super-class/Parent)</strong>: The base class is the existing class from which
-                    properties and behaviors are inherited. It serves as the blueprint for the subclass. The super-class
-                    defines common attributes and methods that are shared by multiple sub-classes.</p>
-            </li>
-            <li>
-                <p><strong>Derived Class (Sub-class/Child)</strong>: The derived class is the new class that inherits
-                    properties and behaviors from the super-class. It extends or modifies the functionality of the
-                    super-class by adding new attributes or methods or by overriding existing ones.</p>
-            </li>
-            <li>
-                <p><strong>Syntax</strong>: In most object-oriented languages like C++, inheritance is declared using a
-                    colon followed by the access specifier and the name of the base class. For example:</p>
-            </li>
-        </ol>
-        <pre><code class="language-cpp">class Subclass : access_specifier BaseClass {
-    // subclass members and methods
-};
+            <h3
+                id="in-this-example-we-created-a-setaddress-methodfunction-that-doesnt-return-any-value-hence-we-used-void-as-the-type-inside-the-house-class-methods-inside-the-class-can-access-private-values-so-we-use-them-to-set-those-values-and-use-the-updated-values-in-the-rest-of-the-program">
+                In this example we created a <code>setAddress()</code> method/function that doesn&#39;t return any value
+                (hence we used void as the type) inside the <code>House</code> class, methods inside the class can access
+                private values, so we use them to set those values and use the updated values in the rest of the program
+            </h3>
+</section>
+<hr>
+<section>
+            <h1 id="24-inheritance-👪️">24. Inheritance 👪️:</h1>
+            <h3
+                id="c-inheritance-is-when-a-class-inheritstakes-properties-from-another-class-in-this-case-the-class-takinginheriting-the-properties-would-be-called-the-childsub-class-and-the-class-from-which-the-properties-are-being-takeninherited-from-would-called-the-parentsuper-class-its-similar-to-how-children-inherit-traits-from-their-parents-in-the-real-world-you-inherit-from-a-class-using-the-">
+                C++ inheritance is when a class inherits/takes properties from another class, in this case the class
+                taking/inheriting the properties would be called the child/sub-class and the class from which the properties
+                are being taken/inherited from would called the parent/super-class, it&#39;s similar to how children inherit
+                traits from their parents in the real world, you inherit from a class using the (:).</h3>
+            <h3 id="heres-a-breakdown-of-how-inheritance-works">Here&#39;s a breakdown of how inheritance works:</h3>
+            <ol>
+                <li>
+                    <p><strong>Base Class (Super-class/Parent)</strong>: The base class is the existing class from which
+                        properties and behaviors are inherited. It serves as the blueprint for the subclass. The super-class
+                        defines common attributes and methods that are shared by multiple sub-classes.</p>
+                </li>
+                <li>
+                    <p><strong>Derived Class (Sub-class/Child)</strong>: The derived class is the new class that inherits
+                        properties and behaviors from the super-class. It extends or modifies the functionality of the
+                        super-class by adding new attributes or methods or by overriding existing ones.</p>
+                </li>
+                <li>
+                    <p><strong>Syntax</strong>: In most object-oriented languages like C++, inheritance is declared using a
+                        colon followed by the access specifier and the name of the base class. For example:</p>
+                </li>
+            </ol>
+            <pre><code class="language-cpp">class Subclass : access_specifier BaseClass {
+                // subclass members and methods
+            };
 </code></pre>
-        <ol>
-            <li>
-                <p>Here, <code>access_specifier</code> can be <code>public</code>, <code>protected</code>, or
-                    <code>private</code>, specifying the level of access to the inherited members.</p>
-            </li>
-            <li>
-                <p><strong>Types of Inheritance</strong>:</p>
-                <ul>
-                    <li><strong>Single Inheritance</strong>: A subclass inherits from only one super-class.</li>
-                    <li><strong>Multiple Inheritance</strong>: A subclass inherits from multiple super-classes.</li>
-                    <li><strong>Multilevel Inheritance</strong>: A subclass inherits from another subclass, creating a
-                        hierarchy of classes.</li>
-                    <li><strong>Hierarchical Inheritance</strong>: Multiple sub-classes inherit from a single
-                        super-class.</li>
-                    <li><strong>Hybrid Inheritance</strong>: A combination of multiple types of inheritance.</li>
-                </ul>
-            </li>
-            <li>
-                <p><strong>Benefits of Inheritance</strong>:</p>
-                <ul>
-                    <li><strong>Code Reusability</strong>: Inheritance promotes code reuse by allowing sub-classes to
-                        inherit common attributes and methods from a super-class.</li>
-                    <li><strong>Modularity and Maintainability</strong>: By organizing classes into hierarchies,
-                        inheritance enhances modularity and maintainability of code.</li>
-                    <li><strong>Polymorphism</strong>: Inheritance enables polymorphic behavior, where objects of
-                        different sub-classes can be treated as objects of the super-class, allowing for flexibility and
-                        extensibility in the code.</li>
-                </ul>
-            </li>
-        </ol>
-        <h3 id="youd-be-able-to-understand-better-with-working-code">You&#39;d be able to understand better with working
-            code:</h3>
-        <h3 id="code-20">Code:</h3>
-        <pre><code class="language-cpp">#include &lt;iostream&gt;
+            <ol>
+                <li>
+                    <p>Here, <code>access_specifier</code> can be <code>public</code>, <code>protected</code>, or
+                        <code>private</code>, specifying the level of access to the inherited members.</p>
+                </li>
+                <li>
+                    <p><strong>Types of Inheritance</strong>:</p>
+                    <ul>
+                        <li><strong>Single Inheritance</strong>: A subclass inherits from only one super-class.</li>
+                        <li><strong>Multiple Inheritance</strong>: A subclass inherits from multiple super-classes.</li>
+                        <li><strong>Multilevel Inheritance</strong>: A subclass inherits from another subclass, creating a
+                            hierarchy of classes.</li>
+                        <li><strong>Hierarchical Inheritance</strong>: Multiple sub-classes inherit from a single
+                            super-class.</li>
+                        <li><strong>Hybrid Inheritance</strong>: A combination of multiple types of inheritance.</li>
+                    </ul>
+                </li>
+                <li>
+                    <p><strong>Benefits of Inheritance</strong>:</p>
+                    <ul>
+                        <li><strong>Code Reusability</strong>: Inheritance promotes code reuse by allowing sub-classes to
+                            inherit common attributes and methods from a super-class.</li>
+                        <li><strong>Modularity and Maintainability</strong>: By organizing classes into hierarchies,
+                            inheritance enhances modularity and maintainability of code.</li>
+                        <li><strong>Polymorphism</strong>: Inheritance enables polymorphic behavior, where objects of
+                            different sub-classes can be treated as objects of the super-class, allowing for flexibility and
+                            extensibility in the code.</li>
+                    </ul>
+                </li>
+            </ol>
+            <h3 id="youd-be-able-to-understand-better-with-working-code">You&#39;d be able to understand better with working
+                code:</h3>
+            <h3 id="code-20">Code:</h3>
+            <pre><code class="language-cpp">#include &lt;iostream&gt;
 
 using namespace std;
 
@@ -1483,18 +1530,18 @@ int main() {
     return 0;
 }
 </code></pre>
-        <h3 id="output-rocky-is-eating">Output: <code data-highlighted="yes" class="hljs language-undefined">Rocky is eating</code></h3>
-        <h3
-            id="the-output-of-the-code-is-rocky-is-eating-even-though-the-dog-class-is-empty-indicating-that-the-eat-method-inherited-from-the-animal-class-is-successfully-called-on-an-instance-of-the-dog-class-this-demonstrates-how-the-dog-class-inherits-the-behavior-of-the-animal-class-showcasing-the-principle-of-inheritance-in-action">
-            The output of the code is <code>&quot;Rocky is eating&quot;</code>, even though the <code>Dog</code> class
-            is empty, indicating that the <code>eat()</code> method inherited from the <code>Animal</code> class is
-            successfully called on an instance of the <code>Dog</code> class. This demonstrates how the <code>Dog</code>
-            class inherits the behavior of the <code>Animal</code> class, showcasing the principle of inheritance in
-            action.</h3>
-        <h3 id="but-that-doesnt-mean-were-copying-the-animal-class-to-the-dog-as-well-demonstrate-here">But that
-            doesn&#39;t mean we&#39;re copying the <code>Animal</code> class to the <code>Dog</code> as we&#39;ll
-            demonstrate here:</h3>
-        <pre><code class="language-cpp">#include &lt;iostream&gt;
+            <h3 id="output-rocky-is-eating">Output: <code data-highlighted="yes" class="hljs language-undefined">Rocky is eating</code></h3>
+            <h3
+                id="the-output-of-the-code-is-rocky-is-eating-even-though-the-dog-class-is-empty-indicating-that-the-eat-method-inherited-from-the-animal-class-is-successfully-called-on-an-instance-of-the-dog-class-this-demonstrates-how-the-dog-class-inherits-the-behavior-of-the-animal-class-showcasing-the-principle-of-inheritance-in-action">
+                The output of the code is <code>&quot;Rocky is eating&quot;</code>, even though the <code>Dog</code> class
+                is empty, indicating that the <code>eat()</code> method inherited from the <code>Animal</code> class is
+                successfully called on an instance of the <code>Dog</code> class. This demonstrates how the <code>Dog</code>
+                class inherits the behavior of the <code>Animal</code> class, showcasing the principle of inheritance in
+                action.</h3>
+            <h3 id="but-that-doesnt-mean-were-copying-the-animal-class-to-the-dog-as-well-demonstrate-here">But that
+                doesn&#39;t mean we&#39;re copying the <code>Animal</code> class to the <code>Dog</code> as we&#39;ll
+                demonstrate here:</h3>
+            <pre><code class="language-cpp">#include &lt;iostream&gt;
 
 using namespace std;
 
@@ -1523,18 +1570,18 @@ int main() {
     return 0;
 }
 </code></pre>
-        <h3 id="output-11">Output:</h3>
-        <pre><code data-highlighted="yes" class="hljs language-undifined">Rocky is easting
-Rocky is barking
+            <h3 id="output-11">Output:</h3>
+            <pre><code data-highlighted="yes" class="hljs language-undifined">Rocky is easting
+            Rocky is barking
 </code></pre>
-        <h4
-            id="here-we-added-a-bark-function-to-the-dog-class-and-it-successfully-ran-without-errors-which-means-that-not-only-can-the-childsub-class-have-members-and-functions-of-its-own-it-can-also-use-those-inherited-ones">
-            Here, we added a <code>bark</code> function to the <code>dog</code> class, and it successfully ran without
-            errors which means that not only can the child/sub-class have members and functions of it&#39;s own it can
-            also use those inherited ones.</h4>
-        <h3 id="we-can-also-have-multiple-classes-inherit-from-a-single-class">We can also have multiple classes inherit
-            from a single class:</h3>
-        <pre><code class="language-cpp">#include &lt;iostream&gt;
+            <h4
+                id="here-we-added-a-bark-function-to-the-dog-class-and-it-successfully-ran-without-errors-which-means-that-not-only-can-the-childsub-class-have-members-and-functions-of-its-own-it-can-also-use-those-inherited-ones">
+                Here, we added a <code>bark</code> function to the <code>dog</code> class, and it successfully ran without
+                errors which means that not only can the child/sub-class have members and functions of it&#39;s own it can
+                also use those inherited ones.</h4>
+            <h3 id="we-can-also-have-multiple-classes-inherit-from-a-single-class">We can also have multiple classes inherit
+                from a single class:</h3>
+            <pre><code class="language-cpp">#include &lt;iostream&gt;
 
 using namespace std;
 
@@ -1573,24 +1620,27 @@ int main() {
     return 0;
 }
 </code></pre>
-        <h3 id="output-12">Output:</h3>
-        <pre><code data-highlighted="yes" class="hljs language-undefined">Rocky is easting
+            <h3 id="output-12">Output:</h3>
+            <pre><code data-highlighted="yes" class="hljs language-undefined">Rocky is easting
 Rocky is barking
 Daisy is eating
 Daisy is Mewing 🤫🧏‍♂️
 </code></pre>
-        <h1 id="25-scope-🔭">25. Scope 🔭:</h1>
-        <h3
-            id="scope-in-programming-refers-to-the-visibility-and-accessibility-of-variables-functions-and-other-symbols-within-a-program-it-determines-where-in-the-code-certain-symbols-can-be-referenced-or-manipulated">
-            Scope in programming refers to the visibility and accessibility of variables, functions, and other symbols
-            within a program. It determines where in the code certain symbols can be referenced or manipulated.</h3>
-        <ol>
-            <li><strong>Global Scope</strong>:<ul>
-                    <li>Variables and functions declared outside of any function or class have global scope.</li>
-                    <li>They can be accessed from anywhere in the program, including inside functions, classes, and
-                        other files (if properly declared).</li>
-                    <li>Example:
-                        <pre><code class="language-cpp">#include &lt;iostream&gt;
+</section>
+<hr>
+<section>
+            <h1 id="25-scope-🔭">25. Scope 🔭:</h1>
+            <h3
+                id="scope-in-programming-refers-to-the-visibility-and-accessibility-of-variables-functions-and-other-symbols-within-a-program-it-determines-where-in-the-code-certain-symbols-can-be-referenced-or-manipulated">
+                Scope in programming refers to the visibility and accessibility of variables, functions, and other symbols
+                within a program. It determines where in the code certain symbols can be referenced or manipulated.</h3>
+            <ol>
+                <li><strong>Global Scope</strong>:<ul>
+                        <li>Variables and functions declared outside of any function or class have global scope.</li>
+                        <li>They can be accessed from anywhere in the program, including inside functions, classes, and
+                            other files (if properly declared).</li>
+                        <li>Example:
+                            <pre><code class="language-cpp">#include &lt;iostream&gt;
 using namespace std;
 
 int globalVar = 10;
@@ -1605,18 +1655,18 @@ int main() {
     return 0;
 }
 </code></pre>
-                        Output:
-                        <pre><code data-highlighted="yes" class="hljs language-undefined">Global variable: 10
-Global variable: 10
+                            Output:
+                            <pre><code data-highlighted="yes" class="hljs language-undefined">Global variable: 10
+            Global variable: 10
 </code></pre>
-                    </li>
-                </ul>
-            </li>
-            <li><strong>Local Scope</strong>:<ul>
-                    <li>Variables declared inside a block, function, or class have local scope.</li>
-                    <li>They are only accessible within the block, function, or class where they are declared.</li>
-                    <li>Example:
-                        <pre><code class="language-cpp">#include &lt;iostream&gt;
+                        </li>
+                    </ul>
+                </li>
+                <li><strong>Local Scope</strong>:<ul>
+                        <li>Variables declared inside a block, function, or class have local scope.</li>
+                        <li>They are only accessible within the block, function, or class where they are declared.</li>
+                        <li>Example:
+                            <pre><code class="language-cpp">#include &lt;iostream&gt;
 using namespace std;
 
 void myFunction() {
@@ -1630,17 +1680,17 @@ int main() {
     return 0;
 }
 </code></pre>
-                        Output:
-                        <pre><code data-highlighted="yes" class="hljs language-undefined">Local variable: 20
+                            Output:
+                            <pre><code data-highlighted="yes" class="hljs language-undefined">Local variable: 20
 </code></pre>
-                    </li>
-                </ul>
-            </li>
-            <li><strong>Function Scope</strong>:<ul>
-                    <li>Variables declared inside a function have function scope.</li>
-                    <li>They are only accessible within the function where they are declared.</li>
-                    <li>Example:
-                        <pre><code class="language-cpp">#include &lt;iostream&gt;
+                        </li>
+                    </ul>
+                </li>
+                <li><strong>Function Scope</strong>:<ul>
+                        <li>Variables declared inside a function have function scope.</li>
+                        <li>They are only accessible within the function where they are declared.</li>
+                        <li>Example:
+                            <pre><code class="language-cpp">#include &lt;iostream&gt;
 using namespace std;
 
 void myFunction() {
@@ -1654,44 +1704,44 @@ int main() {
     return 0;
 }
 </code></pre>
-                        Output:
-                        <pre><code data-highlighted="yes" class="hljs language-undefined">Local variable: 30
+                            Output:
+                            <pre><code data-highlighted="yes" class="hljs language-undefined">Local variable: 30
 </code></pre>
-                    </li>
-                </ul>
-            </li>
-            <li><strong>Block Scope</strong>:<ul>
-                    <li>Variables declared inside a block of code (within curly braces <code>{}</code>) have block
-                        scope.</li>
-                    <li>They are only accessible within that block and any nested blocks.</li>
-                    <li>Example:
-                        <pre><code class="language-cpp">#include &lt;iostream&gt;
+                        </li>
+                    </ul>
+                </li>
+                <li><strong>Block Scope</strong>:<ul>
+                        <li>Variables declared inside a block of code (within curly braces <code>{}</code>) have block
+                            scope.</li>
+                        <li>They are only accessible within that block and any nested blocks.</li>
+                        <li>Example:
+                            <pre><code class="language-cpp">#include &lt;iostream&gt;
 using namespace std;
 
 int main() {
-    {
-        int blockVar = 40;
-        cout &lt;&lt; &quot;Block variable: &quot; &lt;&lt; blockVar &lt;&lt; endl;
-    }
+{
+int blockVar = 40;
+cout &lt;&lt; &quot;Block variable: &quot; &lt;&lt; blockVar &lt;&lt; endl;
+}
     // cout &lt;&lt; &quot;Block variable: &quot; &lt;&lt; blockVar &lt;&lt; endl; // This would cause an error
     return 0;
 }
 </code></pre>
-                        Output:
-                        <pre><code data-highlighted="yes" class="hljs language-undefined">Block variable: 40
+                            Output:
+                            <pre><code data-highlighted="yes" class="hljs language-undefined">Block variable: 40
 </code></pre>
-                    </li>
-                    <li>Variables declared in outer blocks are not accessible in inner blocks, but variables declared in
-                        inner blocks can shadow variables declared in outer blocks.</li>
-                    <li>NOTE: A block is some code that is surrounded by curly braces</li>
-                </ul>
-            </li>
-            <li><strong>Namespace Scope</strong>:<ul>
-                    <li>Variables, functions, and other symbols declared within a namespace have namespace scope.</li>
-                    <li>They are accessible within that namespace and can be accessed using the scope resolution
-                        operator <code>::</code>.</li>
-                    <li>Example:
-                        <pre><code class="language-cpp">#include &lt;iostream&gt;
+                        </li>
+                        <li>Variables declared in outer blocks are not accessible in inner blocks, but variables declared in
+                            inner blocks can shadow variables declared in outer blocks.</li>
+                        <li>NOTE: A block is some code that is surrounded by curly braces</li>
+                    </ul>
+                </li>
+                <li><strong>Namespace Scope</strong>:<ul>
+                        <li>Variables, functions, and other symbols declared within a namespace have namespace scope.</li>
+                        <li>They are accessible within that namespace and can be accessed using the scope resolution
+                            operator <code>::</code>.</li>
+                        <li>Example:
+                            <pre><code class="language-cpp">#include &lt;iostream&gt;
 using namespace std;
 
 namespace MyNamespace {
@@ -1703,15 +1753,16 @@ int main() {
     return 0;
 }
 </code></pre>
-                        Output:
-                        <pre><code data-highlighted="yes" class="hljs language-undefined">Namespace variable: 50
+                            Output:
+                            <pre><code data-highlighted="yes" class="hljs language-undefined">Namespace variable: 50
 </code></pre>
-                    </li>
-                    <li>Symbols declared within a namespace can be accessed using the <code>namespace::symbol</code>
-                        syntax.</li>
-                </ul>
-            </li>
-        </ol>
+                        </li>
+                        <li>Symbols declared within a namespace can be accessed using the <code>namespace::symbol</code>
+                            syntax.</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
     </main>
     <script src="../js/secCookieCheck.js"></script>
 </body>

@@ -27,7 +27,8 @@
             NOTE: To fully understand what&#39;s going on here, you should go back to the <a
                 href="https://youssef-mostafa1534.github.io/programmingfordummies/html/py.html">Python</a> page to learn
             the basics and syntax.</h3>
-        <h1 id="1-basics-✨">1. Basics ✨:</h1>
+        <section>
+            <h1 id="1-basics-✨">1. Basics ✨:</h1>
         <h3
             id="micropython-is-a-modified-version-of-python-modified-and-configured-to-fit-the-needs-of-embedded-systems-it-has-special-functions-classes-and-modules-that-will-benefit-us-in-our-learning-journey">
             MicroPython is a modified version of Python, modified and configured to fit the needs of embedded systems,
@@ -69,7 +70,9 @@ if __name__ == &#39;__main__&#39;:
                     nothing.</p>
             </li>
         </ol>
-        <hr>
+        </section>
+<hr>
+<section>
         <h1 id="2-the-machine-module-🦾">2. The Machine Module 🦾:</h1>
         <h3
             id="the-biggest-difference-between-python-and-micropython-is-the-machine-module-its-module-thats-not-present-in-traditional-python-that-lets-you-interact-with-the-hardware-of-the-mcu-it-allows-you-to-control-the-gpio-pins-set-hardware-timers-and-more">
@@ -79,7 +82,9 @@ if __name__ == &#39;__main__&#39;:
         <h3 id="you-import-it-by-typing-this-as-the-first-line">you import it by typing this as the first line:</h3>
         <pre><code class="language-python">import machine
 </code></pre>
-        <hr>
+        </section>
+<hr>
+<section>
         <h1 id="3-initializing-gpio-pins-⚡️">3. Initializing GPIO pins ⚡️:</h1>
         <h3
             id="when-we-initialize-a-pin-were-just-telling-the-mcu-what-mode-we-want-the-pin-to-be-in-is-it-input-or-output-is-it-pull_up-or-pull_down-we-are-supposed-to-answer-these-questions-by-initializing-our-pins">
@@ -106,7 +111,9 @@ pin2 = machine.Pin(1, machine.Pin.IN)
 pin1 = Pin(0, Pin.OUT)
 pin2 = Pin(1, Pin.IN)
 </code></pre>
-        <hr>
+        </section>
+<hr>
+<section>
         <h1 id="4-working-with-gpio-pins-🧷-continued">4. Working with GPIO Pins 🧷 (Continued):</h1>
         <h3
             id="once-weve-initialized-our-gpio-pins-we-can-start-working-with-them-which-involves-tasks-like-setting-their-state-reading-their-state-and-toggling-them-lets-delve-into-each-of-these-tasks">
@@ -182,7 +189,9 @@ if __name__ == &#39;__main__&#39;:
             id="by-mastering-these-operations-we-can-effectively-control-the-behavior-of-our-gpio-pins-enabling-us-to-interact-with-external-components-and-peripherals-seamlessly">
             By mastering these operations, we can effectively control the behavior of our GPIO pins, enabling us to
             interact with external components and peripherals seamlessly.</h3>
-        <hr>
+        </section>
+<hr>
+<section>
         <h1 id="5-pull-up-and-pull-down-resistors-🧱">5. Pull-Up and Pull-Down Resistors 🧱:</h1>
         <h3
             id="in-electronics-pull-up-and-pull-down-resistors-play-a-crucial-role-in-ensuring-the-stability-and-reliability-of-digital-signals-especially-in-scenarios-where-pins-are-configured-as-inputs-lets-explore-what-pull-up-and-pull-down-resistors-are-and-how-they-are-used-in-micropython-with-examples">
@@ -272,7 +281,9 @@ if __name__ == &#39;__main__&#39;:
             By understanding and utilizing pull-up and pull-down resistors effectively, we can improve the reliability
             and accuracy of our MicroPython projects, especially when interfacing with external components and sensors.
         </h3>
-        <hr>
+        </section>
+<hr>
+<section>
         <h3 id="6-interrupts-🚨">6. Interrupts 🚨:</h3>
         <h3 id="introduction-to-interrupts">Introduction to Interrupts:</h3>
         <h3
@@ -369,7 +380,9 @@ def main() -&gt; None:
             In this example, an analog pin (pin 36) is configured for reading analog inputs. The resolution is set to 12
             bits, and the attenuation is set to 11 dB. The <code>read()</code> method is then used to obtain the analog
             value from the pin.</h3>
-        <hr>
+        </section>
+<hr>
+<section>
         <h1 id="9-pulse-width-modulation-🌊">9. Pulse Width Modulation 🌊:</h1>
         <h3 id="introduction-to-pwm">Introduction to PWM:</h3>
         <h3
@@ -424,7 +437,9 @@ if __name__ == &#39;__main__&#39;:
             id="by-mastering-pwm-signals-in-micropython-you-can-implement-a-wide-range-of-applications-that-require-precise-control-of-analog-like-signals-adding-versatility-and-functionality-to-your-embedded-projects">
             By mastering PWM signals in MicroPython, you can implement a wide range of applications that require precise
             control of analog-like signals, adding versatility and functionality to your embedded projects.</h3>
-        <hr>
+        </section>
+<hr>
+<section>
         <h3 id="9-timers-⏱️">9. Timers ⏱️:</h3>
         <h3 id="introduction-to-timers">Introduction to Timers:</h3>
         <h3
@@ -454,13 +469,15 @@ timer.init(period=1000, mode=Timer.PERIODIC, callback=timer_callback)
             id="by-incorporating-these-features-into-your-micropython-projects-you-can-enhance-their-functionality-and-versatility-opening-up-new-possibilities-for-embedded-system-development">
             By incorporating these features into your MicroPython projects, you can enhance their functionality and
             versatility, opening up new possibilities for embedded system development.</h3>
-        <hr>
+        </section>
+<hr>
+<section>
         <h2
             id="and-there-you-go-that-was-micropython-very-simple-of-course-this-isnt-all-of-it-and-you-have-to-go-deeper-but-the-rest-of-the-stuff-youll-see-other-than-this-requires-external-librariesmodules-anyways-but-for-now-the-basics-will-have-to-do">
             And there you go, that was MicroPython, very simple, of course, this isn&#39;t all of it and you have to go
             deeper but the rest of the stuff you&#39;ll see other than this requires external libraries/modules anyways,
             but for now, the basics will have to do.</h2>
-
+</section>
     </main>
     <script src="../js/secCookieCheck.js"></script>
 </body>

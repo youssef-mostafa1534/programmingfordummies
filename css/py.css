@@ -34,6 +34,14 @@ body {
     scroll-behavior: smooth;
 }
 
+section {
+    background-color: rgba(34, 88, 117, 0.33);
+    backdrop-filter: blur(6px);
+    margin: 20px;
+    padding: 20px;
+    border-radius: 16px;
+}
+
 main {
     max-width: 50%;
     align-self: center;
@@ -42,7 +50,6 @@ main {
     left: 50%;
     transform: translate(-50%);
 }
-
 
 code {
     color: #1cafff;
@@ -103,7 +110,8 @@ header {
     margin: 20px;
     padding: 20px;
     border-radius: 16px;
-    background-color: #173c57;
+    background-color: rgba(34, 88, 117, 0.33);
+    backdrop-filter: blur(6px);
 }
 
 header h1 {

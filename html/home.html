@@ -66,20 +66,7 @@ while True:
                     </code>
                 </pre>
             </a>
-            <a class="option" id="op4" href="asm.html">
-                <h2 class="opTitle">Assembly</h2>
-                <pre>
-                    <code class="language-x86asm block">
-global _start
-_start:
-mov ebx, 10 ; set 10 to ebx
-mov eax, 1  ; sys_exit
-add ebx, 5  ; add 5 to ebx
-syscall     ; syscall
-                    </code>
-                </pre>
-            </a>
-            <a class="option" id="op5" href="ino.html">
+            <a class="option" id="op4" href="ino.html">
                 <h2>Arduino C</h2>
                 <pre>
                     <code class="language-cpp block">
@@ -91,6 +78,19 @@ void setup(){
     digitalWrite(0, LOW)
     delay(500);
 }
+                    </code>
+                </pre>
+            </a>
+            <a class="option" id="op5" href="asm.html">
+                <h2 class="opTitle">Assembly</h2>
+                <pre>
+                    <code class="language-x86asm block">
+global _start
+_start:
+mov ebx, 10 ; set 10 to ebx
+mov eax, 1  ; sys_exit
+add ebx, 5  ; add 5 to ebx
+syscall     ; syscall
                     </code>
                 </pre>
             </a>
