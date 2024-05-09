@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap'); */
 
 ::-webkit-scrollbar {
     width: 16px;
@@ -69,6 +69,7 @@ header {
     background-color: rgb(23, 60, 87, 0.33);
     backdrop-filter: blur(6px);
     width: 65%;
+    z-index: -1;
 }
 
 header h1 {
@@ -116,6 +117,7 @@ main {
     background-color: #051f2d;
     width: 52%;
 }
+
 /* rgba(151, 65, 252, 0.2) 0 15px 30px -5px */
 .option {
     display: block;
@@ -168,6 +170,79 @@ img {
     border-radius: 8px;
 }
 
+.container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+.modal {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 30%;
+    transform: translate(-50%, -50%);
+    background-color: lightseagreen;
+    color: #051f2d;
+    box-shadow: 0 0 30px seagreen;
+    padding: 20px;
+    border-radius: 16px;
+    z-index: 20;
+}
+
+.modal h1 {
+    text-align: center;
+}
+
+.modal p {
+    font-size: 23px;
+}
+
+.modal button {
+    border: none;
+    width: 100px;
+    background-color: #6ec5d2;
+    color: #0e1c17;
+    border-radius: 12px;
+    padding: 15px;
+    margin: 10px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.modal button:hover {
+    background-color: #6fc9a2;
+    color: #fff;
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 5px 5px 10px 0;
+}
+
+.exit {
+    color: lightcoral;
+    margin-right: 10px;
+    padding: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #051f2d;
+    width: max-content;
+    border-radius: 8px;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.2s;
+}
+
+.exit:hover {
+    background-color: rgb(255, 97, 97);
+    color: #fff;
+    box-shadow: 0 0 5px 0 #000;
+    transform: translateY(-10px) scale(1.2);
+}
+
+.exit:active {
+    background-color: rgb(200, 75, 75);
+    transform: translateY(0) scale(1);
+}
+
 @media only screen and (max-width: 1538px) {
 
     .block {
@@ -211,6 +286,14 @@ img {
     header h1 {
         font-size: 20px;
     }
+
+    .modal {
+        width: 50%;
+    }
+
+    .modal p {
+        font-size: 20px;
+    }
 }
 
 @media only screen and (max-width: 525px) {
@@ -220,15 +303,5 @@ img {
 
     header h1 {
         font-size: 16px;
-    }
-}
-
-@media only screen and (max-width: 420px) {
-    header h1 {
-        font-size: 12px;
-    }
-
-    .option {
-        transform: scale(0.8);
     }
 }
