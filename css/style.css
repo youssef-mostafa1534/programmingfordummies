@@ -17,11 +17,11 @@
     background: #008e68;
 }
 
-/* html,
+html,
 body {
     margin: 0;
     height: 100%;
-} */
+}
 
 body {
     display: flex;
@@ -69,7 +69,7 @@ header {
     background-color: rgb(23, 60, 87, 0.33);
     backdrop-filter: blur(6px);
     width: 65%;
-    z-index: -1;
+    z-index: 1;
 }
 
 header h1 {
@@ -200,21 +200,22 @@ img {
 
 .modal button {
     border: none;
-    width: 100px;
-    background-color: #6ec5d2;
-    color: #0e1c17;
+    width: max-content;
+    background-color: #051f2d;
+    color: lightcoral;
+    font-weight: 700;
     border-radius: 12px;
     padding: 15px;
     margin: 10px;
     cursor: pointer;
-    transition: all 0.5s;
+    transition: all 0.2s;
 }
 
 .modal button:hover {
-    background-color: #6fc9a2;
+    background-color: rgb(255, 97, 97);
     color: #fff;
     transform: translateY(-5px) scale(1.1);
-    box-shadow: 5px 5px 10px 0;
+    box-shadow: 0 0 10px 0 #000;
 }
 
 .exit {
@@ -239,6 +240,32 @@ img {
 }
 
 .exit:active {
+    background-color: rgb(200, 75, 75);
+    transform: translateY(0) scale(1);
+}
+
+#dev {
+    text-decoration: none;
+    color: lightcoral;
+    margin: 15px;
+    padding: 20px;
+    background-color: #051f2d;
+    width: max-content;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.2s;
+}
+
+#dev:hover {
+    background-color: rgb(255, 97, 97);
+    color: #fff;
+    box-shadow: 0 0 5px 0 #000;
+    transform: translateY(-10px) scale(1.2);
+}
+
+#dev:active {
     background-color: rgb(200, 75, 75);
     transform: translateY(0) scale(1);
 }

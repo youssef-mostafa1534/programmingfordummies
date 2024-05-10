@@ -9,11 +9,16 @@
     <link rel="shortcut icon" href="https://github.com/youssef-mostafa1534/programmingfordummies/blob/main/img/_9b1e200d-9842-49f0-9819-fef3902533e5.jpeg?raw=true" type="image/x-icon">
     <link rel="stylesheet" href="../highlight/styles/a11y-dark.css">
     <script src="../highlight/highlight.min.js"></script>
+    <script defer src="../js/secCookieCheck.js"></script>
+    <script defer src="../js/scroll.js"></script>
 
     <script>hljs.highlightAll();</script>
 </head>
 
 <body>
+    <div id="progress-bar"></div>
+    <a class="stt" href="#" title="Scroll to top">^</a>
+
     <header>
         <h1>Python</h1>
         <nav id="btns">
@@ -22,7 +27,8 @@
         </nav>
     </header>
     <main>
-    <section>
+    
+    <section class="hidden">
         <h1 id="1-basics-✨">1. Basics ✨:</h1>
         <h3 id="how-to-include-files-or-libraries">How to include files or libraries:</h3>
         <h3 id="you-need-to-type-import-then-the-file-name-or-a-library-name">You need to type <code>import</code> then
@@ -50,7 +56,7 @@ if __name__ == &#39;__main__&#39;:
             Another Note: Python is case and indent sensitive, the primary file in python should be called main</h3>
         </section>
 <hr>
-<section>
+<section class="hidden">
         <h1 id="2-variables-🏷️">2. Variables 🏷️:</h1>
         <h3
             id="imagine-a-container-that-you-stuck-a-label-to-put-some-stuff-inside-and-stored-it-thats-basically-a-variable-you-give-a-variable-a-name-assign-it-a-some-value-and-store-it-in-memory-until-needed">
@@ -78,7 +84,7 @@ if __name__ == &#39;__main__&#39;:
             future update we&#39;ll get a way to do it.</h3>
         </section>
 <hr>
-<section>
+<section class="hidden">
         <h1 id="3-data-types-📝">3. Data Types 📝:</h1>
         <h3 id="data-comes-in-many-types-in-programming">Data comes in many types in programming.</h3>
         <h3 id="here-are-all-the-data-types-youll-need-to-know-about">Here are all the data types you&#39;ll need to
@@ -138,7 +144,7 @@ none_value: NoneType = None  # None (Represents the absence of a value)
         <h3 id="output-5">Output: <code data-highlighted="yes" class="language-undefined hljs">5</code></h3>
         </section>
 <hr>
-<section>
+<section class="hidden">
         <h1 id="4-type-conversion-📝🔀📝">4. Type Conversion 📝🔀📝:</h1>
         <h3 id="there-are-2-types-of-type-conversion-">There are 2 types of type conversion:-</h3>
         <h3 id="1-implicit-">1. Implicit:-</h3>
@@ -170,7 +176,7 @@ print(chr(x))
             is <code>d</code>.</h3>
         </section>
 <hr>
-<section>
+<section class="hidden">
         <h1 id="5-symbols-and-keywords-🔣">5. Symbols and Keywords 🔣:</h1>
         <h3 id="arithmetic-operators">Arithmetic Operators</h3>
         <ul>
@@ -227,7 +233,7 @@ print(chr(x))
         </ul>
         </section>
 <hr>
-<section>
+<section class="hidden">
         <h1 id="6-some-useful-functions-and-modules-⚙️">6. Some Useful Functions and Modules ⚙️:</h1>
         <h3 id="useful-modules-to-import-in-your-project">Useful Modules to Import in Your Project</h3>
         <h3 id="sys"><code>sys</code>:</h3>
@@ -301,7 +307,7 @@ print(chr(x))
         <p>For more information, refer to the <a href="https://docs.python.org/">Python documentation</a>.</p>
         </section>
 <hr>
-<section>
+<section class="hidden">
         <h1 id="7-ifelse-statements-🎛️">7. If/Else statements 🎛️:</h1>
         <h3 id="conditionally-executing-code-with-ifelse-statements">Conditionally executing code with If/Else
             statements:</h3>
@@ -389,7 +395,7 @@ if __name__ == __main__:
         <p>Here&#39;s the translation into Python:</p>
         </section>
 <hr>
-<section>
+<section class="hidden">
         <h1 id="8-for-loops-🔁">8. For Loops 🔁:</h1>
         <h3 id="its-a-loop-that-iterates-over-an-sequence-object-and-sets-its-value-to-i-example">It&#39;s a loop that
             iterates over an sequence object and sets it&#39;s value to <code>i</code>, example:</h3>
@@ -442,7 +448,7 @@ Hello world 10
             a new line.</p>
         </section>
 <hr>
-<section>
+<section class="hidden">
         <h1 id="9-while-loops-🔁">9. While Loops 🔁:</h1>
         <h4 id="its-a-loop-that-repeats-until-a-condition-is-met-example">It&#39;s a loop that repeats until a condition
             is met, example:</h4>
@@ -481,7 +487,7 @@ if __name__ == __main__:
             name. Once a non-empty name is entered, the loop will terminate.</p>
         </section>
 <hr>
-<section>
+<section class="hidden">
         <h1 id="10-user-defined-functions-🛠️">10. User defined functions 🛠️:</h1>
         <h3 id="i-think-the-name-reveals-what-it-is-they-have-two-sections-the-definition-and-the-call-example">I think
             the name reveals what it is, they have two sections, the definition and the call, example:</h3>
@@ -546,7 +552,7 @@ greet(&quot;Alice&quot;)  # Output: Hello, Alice
             common or expected value in most cases, but can be overridden when necessary.</h3>
         </section>
 <hr>
-<section>
+<section class="hidden">
         <h1 id="11-overloaded-functions-⚡">11. Overloaded Functions ⚡:</h1>
         <h3 id="functions-with-multiple-versions-of-themselves-but-with-different-parameters-example">Functions with
             multiple versions of themselves but with different parameters, example:</h3>
@@ -573,7 +579,7 @@ Here&#39;s your Cheese pizza
             to have functions with the same name but with different parameters.</h3>
         </section>
 <hr>
-<section>
+<section class="hidden">
         <h1 id="12-string-manipulation-🧵">12. String Manipulation 🧵:</h1>
         <h3
             id="string-manipulation-refers-to-the-process-of-modifying-or-manipulating-strings-in-various-ways-such-as-extracting-sub-strings-concatenating-strings-converting-case-and-more-python-offers-a-rich-set-of-built-in-functions-and-methods-for-performing-string-manipulation-tasks">
@@ -633,7 +639,7 @@ Split string: [&#39;Hello&#39;, &#39; World!&#39;]
             with strings efficiently.</h3>
         </section>
 <hr>
-<section>
+<section class="hidden">
         <h1 id="13-array-manipulation-📖">13. Array Manipulation 📖:</h1>
         <h3
             id="array-manipulation-involves-performing-various-operations-on-arrays-such-as-accessing-elements-modifying-values-sorting-filtering-and-more-in-python-arrays-are-typically-represented-using-lists-and-the-language-provides-built-in-functions-and-methods-for-array-manipulation">
@@ -691,7 +697,7 @@ print(arr)
             operations on arrays to meet your programming needs.</h3>
         </section>
 <hr>
-<section>
+<section class="hidden">
         <h1 id="14-classes-and-constructors-object-oriented-programming-👷♂️">14. Classes and Constructors (Object
             oriented Programming) 👷‍♂️:</h1>
         <h3
@@ -801,7 +807,7 @@ Has Drank: True
         </p>
         </section>
 <hr>
-<section>
+<section class="hidden">
         <h1 id="15-getters-and-setters-🔎">15. Getters and Setters 🔎:</h1>
         <h3
             id="in-object-oriented-programming-getters-and-setters-are-methods-used-to-access-and-modify-the-attributes-properties-of-an-object-respectively-they-provide-a-controlled-way-to-retrieve-and-update-the-state-of-an-objects-attributes-allowing-for-encapsulation-and-data-abstraction">
@@ -881,7 +887,7 @@ Alice
             modular and maintainable code.</p>
         </section>
 <hr>
-<section>
+<section class="hidden">
         <h1 id="16-inheritance-👪️">16. Inheritance 👪️:</h1>
         <p>Inheritance is a fundamental concept in object-oriented programming that allows a class (sub-class or derived
             class or child) to inherit attributes and methods from another class (super-class or base class or parent).
@@ -993,7 +999,7 @@ Cat Breed: Siamese
             classes into hierarchies based on their relationships and common characteristics.</h3>
         </section>
 <hr>
-<section>
+<section class="hidden">
         <h1 id="17-scope-🔭">17. Scope 🔭:</h1>
         <h3
             id="in-programming-scope-refers-to-the-region-of-code-where-a-variable-or-identifier-is-accessible-it-defines-the-visibility-and-lifetime-of-variables-determining-where-they-can-be-referenced-and-modified-within-a-program">
@@ -1090,7 +1096,7 @@ if __name__ == &quot;__main__&quot;:
             used and modified.</h3>
         </section>
 <hr>
-<section>
+<section class="hidden">
         <h1 id="18-recursion-🌀">18. Recursion 🌀:</h1>
         <h3
             id="recursion-is-a-programming-technique-where-a-function-calls-itself-to-solve-a-smaller-instance-of-the-same-problem-it-is-particularly-useful-for-solving-problems-that-can-be-broken-down-into-smaller-similar-sub-problems">
@@ -1262,7 +1268,7 @@ if __name__ == &quot;__main__&quot;:
             base case and converge towards it to prevent infinite recursion.</h3>
         </section>
 <hr>
-<section>
+<section class="hidden">
         <h1 id="18-exception-handling-🛑">18. Exception Handling 🛑:</h1>
         <h3 id="try-except-block">Try-Except Block:</h3>
         <h3
@@ -1298,7 +1304,7 @@ finally:
 </code></pre>
         </section>
 <hr>
-<section>
+<section class="hidden">
         <h1 id="19-file-handling">19. File Handling:</h1>
         <h3 id="reading-from-a-file">Reading from a File:</h3>
         <h3 id="you-can-read-from-a-file-using-the-open-function-and-the-read-or-readline-methods">You can read from a
@@ -1321,7 +1327,7 @@ print(content)
 </code></pre>
         </section>
 <hr>
-<section>
+<section class="hidden">
         <h1 id="20-functional-programming">20. Functional Programming:</h1>
         <h3 id="lambda-functions">Lambda Functions</h3>
         <h3
@@ -1415,7 +1421,7 @@ invalid_ip is not a valid IPv4 address.
             validating email addresses, URLs, and IP addresses.</h3>
         </section>
 <hr>
-<section>
+<section class="hidden">
         <h1 id="23-using-external-librariesmodule-📚️">23. Using External libraries/module 📚️:</h1>
         <h4 id="importing">Importing:</h4>
         <h4 id="importing-mean-to-include-the-functions-and-variables-of-the-module-in-your-code-heres-how-you-do-it">
@@ -1475,7 +1481,7 @@ if __name__ == &#39;__main__&#39;:
             use any function from the time module without typing <code>time.</code> then the function&#39;s name.</h4>
         </section>
 <hr>
-<section>
+<section class="hidden">
         <h4
             id="weve-reached-the-end-of-our-learning-journey-if-youre-ready-to-expand-on-your-python-knowledge-and-learn-micropython-to-work-with-embedded-systems-and-become-an-embedded-systems-engineer-click-here">
             We&#39;ve reached the end of our learning journey, if you&#39;re ready to expand on your python knowledge
@@ -1483,7 +1489,6 @@ if __name__ == &#39;__main__&#39;:
                 href="https://youssef-mostafa5134.github.io/programmingfordummies/mpy.html">here</a></h4>
 </section>
     </main>
-    <script src="../js/secCookieCheck.js"></script>
 </body>
 
 </html>

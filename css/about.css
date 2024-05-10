@@ -34,8 +34,7 @@ body {
 }
 
 section {
-    background-color: rgba(34, 88, 117, 0.33);
-    backdrop-filter: blur(6px);
+    background-color: rgba(34, 88, 117);
     margin: 20px;
     padding: 20px;
     border-radius: 16px;
@@ -131,4 +130,29 @@ header h1 {
     width: max-content;
     height: 100%;
     border-radius: 8px;
+}
+
+#cac {
+    border: none;
+    width: max-content;
+    background-color: #051f2d;
+    color: lightcoral;
+    font-weight: 700;
+    border-radius: 12px;
+    padding: 15px;
+    margin: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+#cac:hover {
+    background-color: rgb(255, 97, 97);
+    color: #fff;
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 0 10px 0 #000;
+}
+
+#cac:active {
+    background-color: rgb(200, 75, 75);
+    transform: translateY(0) scale(1);
 }

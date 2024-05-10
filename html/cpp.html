@@ -9,11 +9,15 @@
     <link rel="shortcut icon" href="https://github.com/youssef-mostafa1534/programmingfordummies/blob/main/img/_9b1e200d-9842-49f0-9819-fef3902533e5.jpeg?raw=true" type="image/x-icon">
     <link rel="stylesheet" href="../highlight/styles/a11y-dark.css">
     <script src="../highlight/highlight.min.js"></script>
+    <script defer src="../js/secCookieCheck.js"></script>
+    <script defer src="../js/scroll.js"></script>
 
     <script>hljs.highlightAll();</script>
 </head>
 
 <body>
+    <div id="progress-bar"></div>
+    <a class="stt" href="#" title="Scroll to top">^</a>
     <header>
         <h1>C++</h1>
         <nav id="btns">
@@ -22,7 +26,7 @@
         </nav>
     </header>
     <main>
-        <section>
+        <section class="hidden">
             <h1 id="1-basics-✨">1. Basics ✨:</h1>
             <h3 id="how-to-include-files-or-libraries">How to include files or libraries:</h3>
             <h3 id="you-need-to-type-include-then-the-file-name-or-a-library-name-">You need to type <code>#include</code> then the file name or a library name:</h3>
@@ -54,7 +58,7 @@
                 code block that ends with braces.</p>
 </section>
 <hr>
-<section>
+<section class="hidden">
             <h1 id="2-variables-🏷️">2. Variables 🏷️:</h1>
             <h4
                 id="imagine-a-container-that-you-stuck-a-label-to-put-some-stuff-inside-and-stored-it-thats-basically-a-variable-you-give-a-variable-a-name-assign-it-a-some-value-and-store-it-in-memory-until-needed">
@@ -73,7 +77,7 @@
             <h4 id="now-x-will-stay-5-no-matter-what">Now x will stay 5 no matter what.</h4>
 </section>
 <hr>
-<section>
+<section class="hidden">
             <h1 id="3-data-types-📝">3. Data Types 📝:</h1>
             <h4 id="data-has-many-types-in-programming">Data has many types in programming</h4>
             <h3 id="here-are-all-the-data-types-youll-need-to-know-about">Here are all the data types you&#39;ll need to
@@ -124,7 +128,7 @@ int x = NULL
                 end with <code>_t</code> or an error would be returned.</h4>
 </section>
 <hr>
-<section>
+<section class="hidden">
             <h1 id="4-type-conversion-📝🔀📝">4. Type Conversion 📝🔀📝:</h1>
             <h3 id="there-are-2-types-of-type-conversion-">There are 2 types of type conversion:-</h3>
             <h3 id="1-implicit-">1. Implicit:-</h3>
@@ -156,7 +160,7 @@ std::cout &lt;&lt; (char) x;
                 a character which is d.</h4>
 </section>
 <hr>
-<section>
+<section class="hidden">
             <h1 id="5-symbols-🔣">5. Symbols 🔣:</h1>
             <pre><code class="language-cpp">// Arithmetic Operators
 + // Addition operator
@@ -210,7 +214,7 @@ std::cout &lt;&lt; (char) x;
 </code></pre>
 </section>
 <hr>
-<section>
+<section class="hidden">
             <h1 id="6-some-useful-functions-and-namespaces-⚙️">6. Some Useful Functions and namespaces ⚙️:</h1>
             <pre><code class="language-cpp">// Usful libraries to have using in your project
 #inlcude &lt;iostream&gt;;
@@ -282,10 +286,8 @@ fill(x, y, z) // Fills a range of elements with a specified value i.g. fill(begi
 </code></pre>
             <p>Get documentation <a href="https://www.cplusplus.com/reference">here</a></p>
         </section>
-        <section>
-            </section>
 <hr>
-<section>
+<section class="hidden">
             <h1 id="7-switch-statements-❓">7. Switch statements ❓:</h1>
             <h4 id="theyre-basically-ifelse-chains-with-all-its-contents-in-one-statement-example">They&#39;re basically
                 if/else chains, with all it&#39;s contents in one statement, example:</h4>
@@ -317,10 +319,10 @@ else if (x == 3) {
                 STATEMENT.</h4>
 </section>
 <hr>
-<section>
+<section class="hidden">
             <h1 id="8-for-loops-🔁">8. For Loops 🔁:</h1>
             <h4 id="its-a-loop-that-iterates-over-an-entity-i-until-a-condition-is-met-example">It&#39;s a loop that
-                iterates over an entity <pre><code data-highlighted="yes" class="language-undefined">i</code></pre> until a condition is met, example:</h4>
+                iterates over an entity <pre><code data-highlighted="no">i</code></pre> until a condition is met, example:</h4>
             <h3 id="code-2">Code:</h3>
             <pre><code class="language-cpp">for (int i = 0; i&lt;11; i++) {
     std::cout &lt;&lt; &quot;Hello world &quot; &lt;&lt; i &lt;&lt; std::endl;
@@ -356,7 +358,7 @@ Hello world 10
 
         </section>
 <hr>
-<section>
+<section class="hidden">
             <h1 id="9-foreach-loops-🔁">9. Foreach Loops 🔁:</h1>
             <h4 id="loops-that-ease-the-traversal-over-an-iterable-data-set-example">Loops that ease the traversal over an
                 iterable data set, example:</h4>
@@ -373,7 +375,7 @@ Squidward
 </code></pre>
 </section>
 <hr>
-<section>
+<section class="hidden">
             <h1 id="10-while-loops-🔁">10. While Loops 🔁:</h1>
             <h4 id="its-a-loop-that-repeats-until-a-conditions-is-met-example">It&#39;s a loop that repeats until a
                 conditions is met, example:</h4>
@@ -388,7 +390,7 @@ Squidward
                 anymore.</h3>
 </section>
 <hr>
-<section>
+<section class="hidden">
             <h1 id="11-do-while-loops-🔁">11. Do While Loops 🔁:</h1>
             <h4
                 id="its-a-loop-that-runs-a-block-of-code-and-then-checks-for-its-condition-so-its-like-this-run-some-code-first-then-repeat-if-condition-is-true-example">
@@ -410,7 +412,7 @@ do {
                 and skip that iteration.</h3>
 </section>
 <hr>
-<section>
+<section class="hidden">
             <h1 id="12-user-defined-functions-🛠️">12. User defined functions 🛠️:</h1>
             <h4
                 id="i-think-the-name-reveals-what-it-is-they-have-two-sections-the-definitiondeclaration-and-the-callinvocation-example">
@@ -452,7 +454,7 @@ int printNum(const int num) {
                 you&#39;re passing by reference and don&#39;t want the original variable to be modified.</h4>
 </section>
 <hr>
-<section>
+<section class="hidden">
             <h1 id="13-overloaded-functions-⚡">13. Overloaded Functions ⚡:</h1>
             <h4 id="functions-with-multiple-versions-of-themselves-but-with-different-parameters-example">Functions with
                 multiple versions of themselves but with different parameters, example:</h4>
@@ -474,7 +476,7 @@ bakePizza(&quot;Cheese&quot;);
                 to have functions with the same name but with different parameters.</h4>
 </section>
 <hr>
-<section>
+<section class="hidden">
             <h1 id="14-memory-addresses-🧠">14. Memory addresses 🧠:</h1>
             <h4
                 id="theyre-locations-in-memory-where-data-is-stored-a-memory-address-can-be-accessed-with-the--symbol-or-as-its-called-the-address-of-operator-example">
@@ -556,7 +558,7 @@ Y is 25
                 modify it without creating extra instances.</h4>
 </section>
 <hr>
-<section>
+<section class="hidden">
             <h1 id="15-pointers-🥵">15. Pointers 🥵:</h1>
             <h4
                 id="a-pointer-in-c-is-a-variable-that-stores-the-memory-address-of-another-variable-instead-of-directly-storing-a-value-a-pointer-holds-the-location-address-of-where-the-value-is-stored-in-the-computers-memory">
@@ -612,7 +614,7 @@ Address stored in pointer: 0x7ffeefbff4b4 (same as the address of &#39;number&#3
                 it is very complex and this is an oversimplification.</p>
 </section>
 <hr>
-<section>
+<section class="hidden">
             <h1 id="16-dynamic-memory-💾">16. Dynamic Memory 💾:</h1>
             <p>Dynamic memory allocation in C++ allows you to allocate memory during runtime rather than compile time. This
                 enables you to manage memory more flexibly, especially when the size of data structures is not known until
@@ -680,7 +682,7 @@ int main() {
                 memory leaks, and avoid common pitfalls associated with manual memory management.</p>
 </section>
 <hr>
-<section>
+<section class="hidden">
             <h1 id="17-recursion-🌀">17. Recursion 🌀:</h1>
             <p>Recursion is a programming technique where a function calls itself, either directly or indirectly. It&#39;s
                 often used to solve problems that can be broken down into smaller, similar sub-problems. Recursion allows
@@ -767,7 +769,7 @@ int main() {
                 appropriate approach based on the nature of the problem and the specific requirements of your project.</p>
 </section>
 <hr>
-<section>
+<section class="hidden">
             <h1 id="18-function-templates-📄">18. Function Templates 📄:</h1>
             <p>Function templates in C++ allow you to create functions that work with any data type. They provide a way to
                 write a single function that can be used with different types of arguments, eliminating the need to
@@ -848,7 +850,7 @@ int main() {
             </ul>
 </section>
 <hr>
-<section>
+<section class="hidden">
             <h1 id="19-structs-🏗️">19. Structs 🏗️:</h1>
             <p>It&#39;s a stucture that groups related variable under one name, structs can contain many different types.
                 Variables in a sruct are known as &quot;Members&quot;, members can be accessed using the &quot;Class Member
@@ -963,7 +965,7 @@ Height: 6.2
             </ul>
 </section>
 <hr>
-<section>
+<section class="hidden">
             <h1 id="20-enums-🏷️">20. Enums 🏷️:</h1>
             <p>Enums, short for enumerations, are a way to define named integer constants. They provide a convenient way to
                 represent a set of related named constants in code.</p>
@@ -1027,7 +1029,7 @@ int main() {
                 <code>today</code> variable.</p>
 </section>
 <hr>
-<section>
+<section class="hidden">
             <h1 id="21-classes-and-constructors-object-oriented-programming-👷♂️">21. Classes and Constructors (Object
                 oriented Programming) 👷‍♂️:</h1>
             <p>An Object is a collection of attributes and methods(functions), they are created using a Class which acts as
@@ -1229,7 +1231,7 @@ public:
                 data is accessed and manipulated, enhancing the security and integrity of the program.</p>
 </section>
 <hr>
-<section>
+<section class="hidden">
             <h1 id="22-overloaded-constructors-👷♂️⚡️">22. Overloaded Constructors 👷‍♂️⚡️:</h1>
             <p>Just like Overloaded Functions, Overloaded Constructors are Constructors with multiple versions of themselves
                 but with different parameters, example:</p>
@@ -1303,7 +1305,7 @@ int main() {
                 default constructor in which we never initialized any variables.</p>
 </section>
 <hr>
-<section>
+<section class="hidden">
             <h1 id="23-getters--setters-🔍">23. Getters &amp; Setters 🔍:</h1>
             <h3 id="1-getters">1. Getters:</h3>
             <h3
@@ -1443,7 +1445,7 @@ int main() {
             </h3>
 </section>
 <hr>
-<section>
+<section class="hidden">
             <h1 id="24-inheritance-👪️">24. Inheritance 👪️:</h1>
             <h3
                 id="c-inheritance-is-when-a-class-inheritstakes-properties-from-another-class-in-this-case-the-class-takinginheriting-the-properties-would-be-called-the-childsub-class-and-the-class-from-which-the-properties-are-being-takeninherited-from-would-called-the-parentsuper-class-its-similar-to-how-children-inherit-traits-from-their-parents-in-the-real-world-you-inherit-from-a-class-using-the-">
@@ -1628,7 +1630,7 @@ Daisy is Mewing 🤫🧏‍♂️
 </code></pre>
 </section>
 <hr>
-<section>
+<section class="hidden">
             <h1 id="25-scope-🔭">25. Scope 🔭:</h1>
             <h3
                 id="scope-in-programming-refers-to-the-visibility-and-accessibility-of-variables-functions-and-other-symbols-within-a-program-it-determines-where-in-the-code-certain-symbols-can-be-referenced-or-manipulated">
@@ -1764,7 +1766,6 @@ int main() {
             </ol>
         </section>
     </main>
-    <script src="../js/secCookieCheck.js"></script>
 </body>
 
 </html>

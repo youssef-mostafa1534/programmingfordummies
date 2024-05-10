@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
     width: 16px;
 }
 
@@ -16,12 +16,20 @@
 
 ::-webkit-scrollbar-thumb:hover {
     background: #008e68;
+} */
+
+::-webkit-scrollbar {
+    width: 0;
 }
 
 html,
 body {
     margin: 0;
     height: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -35,8 +43,7 @@ body {
 }
 
 section {
-    background-color: rgba(34, 88, 117, 0.33);
-    backdrop-filter: blur(6px);
+    background-color: rgba(34, 88, 117);
     margin: 20px;
     padding: 20px;
     border-radius: 16px;
@@ -133,4 +140,61 @@ header h1 {
     width: max-content;
     height: 100%;
     border-radius: 8px;
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.show {
+    filter: blur(0);
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.stt {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    position: fixed;
+    right: 2%;
+    bottom: 2%;
+    width: 100px;
+    height: 100px;
+    transform: translateY(500%);
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(34, 88, 117);
+    color: #fff;
+    font-size: 50px;
+    cursor: pointer;
+    transition: all 0.4s;
+    opacity: 0;
+}
+
+.stt:hover {
+    background-color: #fff;
+    color: #276690;
+}
+
+.stt:active {
+    background-color: rgb(109, 109, 109);
+}
+
+.stt.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+#progress-bar {
+    --progress: 0;
+    position: fixed;
+    top: 0;
+    width: var(--progress);
+    height: 10px;
+    background: linear-gradient(to left, magenta, orange);
+    z-index: 5;
 }

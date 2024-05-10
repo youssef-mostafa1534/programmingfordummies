@@ -15,8 +15,7 @@ body {
 }
 
 section {
-    background-color: rgba(34, 88, 117, 0.33);
-    backdrop-filter: blur(6px);
+    background-color: rgba(34, 88, 117);
     margin: 20px;
     padding: 20px;
     border-radius: 16px;
@@ -30,8 +29,7 @@ section {
     padding: 15px;
     width: 40%;
     height: 65%;
-    background-color: rgb(46, 139, 87, 0.33);
-    backdrop-filter: blur(6px);
+    background-color: rgb(46, 139, 87);
     border-radius: 20px;
     border: 10px solid lightseagreen;
 }
