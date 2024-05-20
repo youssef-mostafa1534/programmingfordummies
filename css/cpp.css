@@ -198,3 +198,132 @@ header h1 {
     background: linear-gradient(to left, magenta, orange);
     z-index: 5;
 }
+
+.terminal-loader {
+    border: 0.1em solid #333;
+    background-color: #1a1a1a;
+    color: #0f0;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 1em;
+    padding: 1.5em 1em;
+    width: 50%;
+    height: 50%;
+    margin: 100px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.terminal-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background-color: #333;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    padding: 0 0.4em;
+    box-sizing: border-box;
+}
+
+.terminal-title {
+    margin-top: 7px;
+}
+
+.terminal-controls {
+    float: right;
+}
+
+.control {
+    display: inline-block;
+    width: 0.9em;
+    height: 0.9em;
+    margin-top: 7px;
+    border-radius: 50%;
+    background-color: #777;
+    cursor: pointer;
+}
+
+.control.close {
+    background-color: rgb(255, 97, 97);
+}
+
+.control.minimize {
+    background-color: #ee0;
+}
+
+.control.maximize {
+    background-color: #0b0;
+}
+
+.terminal-title {
+    float: left;
+    line-height: 1.5em;
+    color: #eee;
+}
+
+.text {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 0.2em solid green;
+    font-size: 25px;
+    /* Cursor */
+    animation: typeAndDelete 4s steps(10) infinite,
+        blinkCursor 0.4s step-end infinite alternate;
+    margin-top: 1.5em;
+}
+
+.splash span {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 25px;
+}
+
+.splash {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 50;
+    background-color: #008e68;
+    transition: opacity 0.75s, visibility 0.75s;
+}
+
+.splash-hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+@keyframes blinkCursor {
+    50% {
+        border-right-color: transparent;
+    }
+}
+
+@keyframes typeAndDelete {
+
+    0%,
+    10% {
+        width: 0;
+    }
+
+    45%,
+    55% {
+        width: 6.2em;
+    }
+
+    /* adjust width based on content */
+    90%,
+    100% {
+        width: 0;
+    }
+}
