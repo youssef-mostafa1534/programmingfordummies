@@ -53,7 +53,7 @@ h1 {
     color: #afe3ff;
 }
 
-a {
+/* a {
     display: inline-block;
     text-decoration: none;
     background-color: #008e68;
@@ -68,7 +68,158 @@ a:hover {
     transform: scale(1.2);
     transform: translateY(-5px) scale(1.1);
     box-shadow: 5px 5px 10px 0;
+} */
+
+
+.socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
+
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.up {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.down {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.card1 {
+    width: 90px;
+    height: 90px;
+    outline: none;
+    border: none;
+    background: #fff;
+    border-radius: 90px 5px 5px 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: .2s ease-in-out;
+}
+
+.youtube {
+    margin-top: 1.5em;
+    margin-left: 1.2em;
+    fill: #eb4949;
+    transition: .2s ease-in-out;
+}
+
+.card2 {
+    width: 90px;
+    height: 90px;
+    outline: none;
+    border: none;
+    background: #fff;
+    border-radius: 5px 90px 5px 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: .2s ease-in-out;
+}
+
+.portfolio {
+    margin-top: 1.5em;
+    margin-left: -.9em;
+    fill: #43af86;
+    transition: .2s ease-in-out;
+}
+
+.card3 {
+    width: 90px;
+    height: 90px;
+    outline: none;
+    border: none;
+    background: #fff;
+    border-radius: 5px 5px 5px 90px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: .2s ease-in-out;
+}
+
+.github {
+    margin-top: -.6em;
+    margin-left: 1.2em;
+    transition: .2s ease-in-out;
+    fill: rgb(60, 60, 60);
+}
+
+.card4 {
+    width: 90px;
+    height: 90px;
+    outline: none;
+    border: none;
+    background: #fff;
+    border-radius: 5px 5px 90px 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: .2s ease-in-out;
+}
+
+.facebook {
+    margin-top: -.9em;
+    margin-left: -1.2em;
+    fill: #348ef5;
+    transition: .2s ease-in-out;
+}
+
+.card1:hover {
+    border-radius: 5px;
+    cursor: pointer;
+    scale: 1.1;
+    background-color: #eb4949;
+}
+
+.card1:hover .youtube {
+    fill: #fff;
+    margin-top: 0;
+    margin-left: 0;
+}
+
+.card2:hover {
+    border-radius: 5px;
+    cursor: pointer;
+    scale: 1.1;
+    background-color: #43af86;
+}
+
+.card2:hover .portfolio {
+    fill: #fff;
+    margin-top: 0;
+    margin-left: 0;
+}
+
+.card3:hover {
+    border-radius: 5px;
+    cursor: pointer;
+    scale: 1.1;
+    background-color: rgb(99, 99, 99);
+}
+
+.card3:hover .github {
+    fill: #fff;
+    margin-top: 0;
+    margin-left: 0;
+}
+
+.card4:hover {
+    border-radius: 5px;
+    cursor: pointer;
+    scale: 1.1;
+    background-color: #348ef5;
+}
+
+.card4:hover .facebook {
+    fill: #fff;
+    margin-top: 0;
+    margin-left: 0;
+}
+
 
 .btn {
     text-align: center;
