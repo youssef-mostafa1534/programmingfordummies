@@ -304,7 +304,7 @@ if __name__ == &#39;__main__&#39;:
         </section>
 <hr>
 <section class="hidden">
-        <h3 id="6-interrupts-🚨">6. Interrupts 🚨:</h3>
+        <h1 id="6-interrupts-🚨">6. Interrupts 🚨:</h1>
         <h3 id="introduction-to-interrupts">Introduction to Interrupts:</h3>
         <h3
             id="interrupts-in-micropython-allow-you-to-respond-to-external-events-or-signals-without-the-need-for-continuous-polling-when-an-interrupt-occurs-the-processor-temporarily-suspends-its-current-execution-to-handle-the-interrupt-ensuring-timely-responses-to-critical-events-interrupts-also-count-as-being-setup-elements-so-they-arent-included-in-the-main-function">
@@ -368,7 +368,7 @@ button_pin.irq(trigger=Pin.IRQ_FALLING, handler=button_interrupt_handler)
             id="by-incorporating-debounce-into-your-interrupt-handling-logic-you-can-ensure-reliable-and-stable-detection-of-button-presses-enhancing-the-usability-and-robustness-of-your-micropython-projects">
             By incorporating debounce into your interrupt handling logic, you can ensure reliable and stable detection
             of button presses, enhancing the usability and robustness of your MicroPython projects.</h3>
-        <h3 id="7-analog-pins-📊">7. Analog Pins 📊:</h3>
+        <!-- <h3 id="7-analog-pins-📊">7. Analog Pins 📊:</h3>
         <h3 id="introduction-to-analog-pins">Introduction to Analog Pins:</h3>
         <h3
             id="analog-pins-in-micropython-allow-you-to-read-analog-signals-from-sensors-or-other-devices-that-provide-continuous-voltage-levels-unlike-digital-pins-which-can-only-represent-discrete-logic-levels-high-or-low">
@@ -399,11 +399,11 @@ def main() -&gt; None:
             id="in-this-example-an-analog-pin-pin-36-is-configured-for-reading-analog-inputs-the-resolution-is-set-to-12-bits-and-the-attenuation-is-set-to-11-db-the-read-method-is-then-used-to-obtain-the-analog-value-from-the-pin">
             In this example, an analog pin (pin 36) is configured for reading analog inputs. The resolution is set to 12
             bits, and the attenuation is set to 11 dB. The <code>read()</code> method is then used to obtain the analog
-            value from the pin.</h3>
+            value from the pin.</h3> -->
         </section>
 <hr>
 <section class="hidden">
-        <h1 id="9-pulse-width-modulation-🌊">9. Pulse Width Modulation 🌊:</h1>
+        <h1 id="9-pulse-width-modulation-🌊">7. Pulse Width Modulation 🌊:</h1>
         <h3 id="introduction-to-pwm">Introduction to PWM:</h3>
         <h3
             id="pulse-width-modulation-pwm-is-a-technique-used-to-generate-analog-like-signals-with-digital-devices-in-micropython-pwm-signals-are-commonly-used-for-tasks-such-as-controlling-the-brightness-of-leds-generating-audio-tones-or-controlling-the-speed-of-motors">
@@ -460,7 +460,41 @@ if __name__ == &#39;__main__&#39;:
         </section>
 <hr>
 <section class="hidden">
-        <h3 id="9-timers-⏱️">9. Timers ⏱️:</h3>
+    <h1 id="adc-🔄">8. ADC 🔄:</h1>
+    <h3 id="analog-to-digital-converters-adcs-are-essential-components-in-microcontroller-systems-they-allow-us-to-convert-analog-signals-from-sensors-and-other-input-devices-into-digital-signals-that-can-be-processed-by-the-mcu">
+        Analog-to-Digital Converters (ADCs) are essential components in microcontroller systems. They allow us to convert analog signals from sensors and other input devices into digital signals that can be processed by the MCU.</h3>
+    <h3 id="initializing-adc">Initializing ADC:</h3>
+    <pre><code class="language-python">from machine import ADC, Pin
+
+# Initialize ADC on Pin 26 (GPIO26)
+adc = ADC(Pin(26))
+</code></pre>
+    <h3 id="in-this-example-we-initialize-an-adc-object-on-pin-26-which-is-connected-to-gpio26-on-the-raspberry-pi-pico">
+        In this example, we initialize an <code>ADC</code> object on Pin 26, which is connected to GPIO26 on the Raspberry Pi Pico.</h3>
+    <h3 id="reading-values-from-the-adc">Reading Values from the ADC:</h3>
+    <pre><code class="language-python">from machine import ADC, Pin
+import time
+
+adc = ADC(Pin(26))
+
+def main() -> None:
+    while True:
+        value = adc.read_u16()  # Read the ADC value (0-65535)
+        voltage = value * 3.3 / 65535  # Convert the value to voltage (assuming a 3.3V reference)
+        print(f"ADC Value: {value}, Voltage: {voltage:.2f}V")
+        time.sleep(1)
+
+if __name__ == '__main__':
+    main()
+</code></pre>
+    <h3 id="the-read_u16-method-reads-a-16-bit-value-from-the-adc-and-we-convert-it-to-a-voltage-assuming-a-33v-reference-voltage">
+        The <code>read_u16()</code> method reads a 16-bit value from the ADC, and we convert it to a voltage assuming a 3.3V reference voltage.</h3>
+    <h3 id="with-these-basics-you-can-start-working-with-adcs-in-micropython-to-read-analog-signals-and-convert-them-to-digital-form-for-processing-by-your-mcu">
+        With these basics, you can start working with ADCs in MicroPython to read analog signals and convert them to digital form for processing by your MCU.</h3>
+</section>
+<hr>
+<section class="hidden">
+        <h1 id="9-timers-⏱️">9. Timers ⏱️:</h1>
         <h3 id="introduction-to-timers">Introduction to Timers:</h3>
         <h3
             id="timers-in-micropython-provide-a-versatile-way-to-schedule-tasks-generate-pwm-signals-or-measure-time-intervals-accurately-they-are-essential-for-various-timing-related-applications-in-embedded-systems">
