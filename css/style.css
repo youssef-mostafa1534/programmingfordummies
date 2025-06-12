@@ -201,7 +201,7 @@ img {
     box-shadow: 0 0 30px seagreen;
     padding: 20px;
     border-radius: 16px;
-    z-index: 20;
+    z-index: 100;
 }
 
 .modal h1 {
